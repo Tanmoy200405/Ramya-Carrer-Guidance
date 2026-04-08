@@ -14,7 +14,7 @@ const HowItWorks = () => {
         </h1>
 
         {/* 📱 MOBILE (VERTICAL) */}
-        <div className="flex flex-col items-center gap-8 md:hidden">
+        <div className="flex flex-col items-center gap-8 lg:hidden">
 
           {howItWorksData.map((step, index) => {
             const Icon = step.icon;
@@ -43,7 +43,7 @@ const HowItWorks = () => {
         </div>
 
         {/* 💻 DESKTOP (FIXED ALIGNMENT) */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block w-full">
 
           {/* 🔥 ICON ROW (ARROWS PERFECTLY CENTERED) */}
           <div className="flex items-center justify-between mb-6">
@@ -55,7 +55,7 @@ const HowItWorks = () => {
                 <React.Fragment key={step.id}>
 
                   {/* ICON */}
-                  <div className="flex justify-center w-[200px]">
+                  <div className="flex justify-center flex-1">
                     <div className="bg-[var(--primary-green)] text-white p-4 rounded-xl text-2xl shadow-md">
                       <Icon />
                     </div>
@@ -63,7 +63,7 @@ const HowItWorks = () => {
 
                   {/* ARROW */}
                   {index !== howItWorksData.length - 1 && (
-                    <div className="flex items-center justify-center w-[80px]">
+                    <div className="flex items-center justify-center w-[50px] xl:w-[80px]">
                       <IoArrowForward className="text-3xl text-gray-400 animate-pulse" />
                     </div>
                   )}
@@ -77,11 +77,11 @@ const HowItWorks = () => {
           <div className="flex items-start justify-between">
 
             {howItWorksData.map((step) => (
-              <div key={step.id} className="flex flex-col items-center text-center w-[200px]">
+              <div key={step.id} className="flex flex-col items-center text-center flex-1 px-2">
 
                 <h2 className="font-semibold">{step.title}</h2>
-                <p className="font-medium">{step.heading}</p>
-                <span className="text-sm text-gray-500">{step.desc}</span>
+                <p className="font-medium text-sm lg:text-base">{step.heading}</p>
+                <span className="text-xs lg:text-sm text-gray-500">{step.desc}</span>
 
               </div>
             ))}

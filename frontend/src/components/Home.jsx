@@ -11,7 +11,7 @@ const Home = () => {
       <div className="absolute inset-0 z-0 bg-[linear-gradient(120deg,#04130f_0%,#06251d_40%,#0b3d2c_70%,#0f5132_100%)]" />
 
       {/* 🖼️ IMAGE */}
-      <div className="absolute right-0 top-0 h-full w-full md:w-[60%] lg:w-[55%] z-0">
+      <div className="absolute right-0 top-0 h-full w-full lg:w-[55%] z-0">
         <img
           src={image2}
           alt="Mentor"
