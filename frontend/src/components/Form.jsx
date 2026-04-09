@@ -39,12 +39,12 @@ const Form = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-[#fdfce8] px-4">
+    <div className="w-full min-h-screen flex items-center justify-center bg-[#F5F5F0] px-4">
 
       <div className="w-full max-w-3xl bg-white shadow-lg rounded-2xl p-8">
 
         {/* HEADING */}
-        <h1 className="text-2xl md:text-3xl font-bold text-center text-[var(--primary-green)] mb-6">
+        <h1 className="text-2xl md:text-3xl font-bold text-center text-[var(--primary)] mb-6">
           Student Registration Form
         </h1>
 
@@ -78,7 +78,7 @@ const Form = () => {
               name="stream"
               value={formData.stream}
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)]"
+              className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
             >
               <option value="">Select Stream</option>
               <option value="Science">Science</option>
@@ -91,7 +91,7 @@ const Form = () => {
           <div className="col-span-1 md:col-span-2">
             <button
               type="submit"
-              className="w-full bg-[var(--primary-green)] text-white py-3 rounded-lg font-semibold hover:bg-[var(--secondary-green)] transition"
+              className="w-full bg-[var(--primary)] text-white py-3 rounded-lg font-semibold hover:bg-[var(--secondary)] active:bg-[var(--secondary)] active:scale-95 transition-all duration-300"
             >
               Submit
             </button>
@@ -117,7 +117,7 @@ const Input = ({ label, name, value, onChange, type = "text" }) => {
         value={value}
         onChange={onChange}
         required
-        className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)]"
+        className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]"
       />
     </div>
   );

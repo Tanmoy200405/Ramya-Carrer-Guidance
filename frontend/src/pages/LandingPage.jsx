@@ -6,12 +6,16 @@ import Home from '../components/Home'
 import CollegePartners from '../components/CollegePartners'
 import HowItWorks from '../components/HowItWorks'
 import Courses from '../components/Courses'
+import FounderMessage from '../components/FounderMessage'
 import Testimonials from '../components/Testimonials'
+import ContactForm from '../components/ContactForm'
+import StartJourney from '../components/StartJourney'
 import Footer from '../components/Footer'
 
 const LandingPage = () => {
 
   const [showHead, setShowHead] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,10 +37,10 @@ const LandingPage = () => {
       <Head show={showHead} />
 
       {/* 🔹 NAV */}
-      <Nav showHead={showHead} />
+      <Nav showHead={showHead} open={isMenuOpen} setOpen={setIsMenuOpen} />
 
       {/* 🔹 FLOAT BUTTON */}
-      <WhatsAppFloat />
+      {!isMenuOpen && <WhatsAppFloat />}
 
       {/* 🔹 CONTENT */}
       <div className="pt-[130px]">
@@ -44,7 +48,10 @@ const LandingPage = () => {
         <CollegePartners />
         <HowItWorks />
         <Courses />
+        <FounderMessage />
         <Testimonials />
+        <ContactForm />
+        <StartJourney />
         <Footer />
       </div>
 

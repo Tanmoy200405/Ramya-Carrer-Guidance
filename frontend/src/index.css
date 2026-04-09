@@ -1,22 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-/* ✅ Fonts (Fix paths if needed) */
-@font-face {
-  font-family: 'PrimaryFont';
-  src: url('./font/Martel_Sans/MartelSans-Regular.ttf');
+@theme {
+  --font-sans: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Newsreader', ui-serif, Georgia, serif;
 }
 
-@font-face {
-  font-family: 'SecondaryFont';
-  src: url('./font/Open_Sans/OpenSans-Regular.ttf');
-}
-
-/* 🌿 ROOT VARIABLES */
+/* 🌿 ROOT VARIABLES (Academic Excellence) */
 :root {
-  --primary-green: #064E3B;
-  --secondary-green: #065F46;
-  --accent-gold: #D4AF37;
-  --brand-cream: #FDFCE8;
+  --primary: #002147;
+  --secondary: #A50021;
+  --tertiary: #D4AF37;
+  --neutral: #F5F5F0;
 
   --text-main: #111827;
   --text-muted: #4B5563;
@@ -24,16 +19,15 @@
   --bg-light-gray: #F9FAFB;
 }
 
-
-
 body {
-  font-family: PrimaryFont, sans-serif;
+  font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-color: var(--neutral);
 }
 
 /* 🔤 HEADINGS */
 h1, h2, h3, h4, h5, h6 {
-  font-family: SecondaryFont, sans-serif;
+  font-family: 'Newsreader', serif;
 }
 
 
@@ -107,3 +101,35 @@ h1, h2, h3, h4, h5, h6 {
 
 
 //courses card
+
+.footer-link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--tertiary);
+  transition: width 0.3s ease-out;
+}
+
+.footer-link:hover {
+  color: var(--tertiary) !important;
+  transform: translateX(8px);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: var(--tertiary);
+  text-decoration-thickness: 1px;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
