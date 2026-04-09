@@ -24,7 +24,7 @@ const Head = ({ show }) => {
 
           <div className="flex items-center gap-2">
             <FaPhoneAlt className="text-[var(--tertiary)]" />
-            <span>+91 98765 43210</span>
+            <span>+9170441 87556</span>
           </div>
 
           <div className="hidden sm:flex items-center gap-2">
