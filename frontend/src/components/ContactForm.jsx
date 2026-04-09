@@ -67,6 +67,9 @@ const ContactForm = () => {
           <p className="text-gray-500 font-serif italic max-w-lg mx-auto leading-relaxed">
              Take the first step towards your dream career. Fill out the details below and our experts will reach out to you.
           </p>
+          <p className="text-gray-600 font-medium mt-4">
+            For inquiries, contact us at: <span className="text-[var(--tertiary)] font-bold">+91 70441 87556</span>
+          </p>
         </div>
 
         {/* FORM */}
