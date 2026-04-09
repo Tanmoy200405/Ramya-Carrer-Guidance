@@ -2,7 +2,7 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const WhatsAppFloat = ({ showPopup }) => {
-  const phoneNumber = "919876543210";
+  const phoneNumber = "917044187556";
   const message = "Hi, I need guidance regarding college admissions.";
 
   const handleClick = () => {
@@ -15,7 +15,6 @@ const WhatsAppFloat = ({ showPopup }) => {
       className={`fixed right-6 z-50 transition-all duration-300
       ${showPopup ? "bottom-28" : "bottom-6"}`}
     >
-
       <button
         onClick={handleClick}
         className="flex items-center justify-center bg-green-500 text-white 
@@ -24,7 +23,6 @@ const WhatsAppFloat = ({ showPopup }) => {
       >
         <FaWhatsapp className="text-2xl" />
       </button>
-
     </div>
   );
 };
