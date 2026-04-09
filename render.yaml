@@ -1,0 +1,7 @@
+services:
+  - type: static
+    name: ramya-career-guidance
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    publishPath: frontend/dist
+    autoDeploy: true
