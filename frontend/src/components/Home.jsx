@@ -1,117 +1,75 @@
 import React from "react";
-import { GoDotFill } from "react-icons/go";
-import { FaShieldAlt, FaHandshake, FaUserGraduate } from "react-icons/fa";
+import { FaGraduationCap } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <div className="relative min-h-screen w-full flex items-center">
-
-      {/* 🌿 EDUCATIONAL BACKGROUND */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-fixed md:bg-scroll"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80')`,
-        }}
-      />
-
-      {/* 🎯 COLOR MERGE & OVERLAY TO MATCH WEBSITE THEME */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-r from-[#000B18] via-[#001126]/90 to-[#0b3d2c]/60" />
-      <div className="absolute inset-0 z-0 bg-[#000B18]/40" />
-
-      {/* ☀️ LIGHT GLOW */}
-      <div className="absolute left-1/4 top-1/4 h-[50%] w-[50%] z-0 bg-[radial-gradient(circle_at_center,rgba(255,200,120,0.15),transparent_70%)] blur-3xl rounded-full" />
-
-      {/* 📦 CONTENT */}
-      <div className="relative z-10 w-full flex flex-col lg:flex-row px-6 sm:px-10 lg:px-20 xl:px-32">
-
-        {/* LEFT SECTION */}
-        <div className="flex flex-col gap-5 sm:gap-6 w-full lg:w-[65%] py-16 sm:py-20 mt-10 md:mt-16">
-
-          {/* TAG */}
-          <div
-            className="text-xs sm:text-sm md:text-base font-semibold px-4 sm:px-6 py-2 rounded-full w-fit shadow-md border border-[#D4AF37]/30"
-            style={{
-              background: "linear-gradient(90deg,#f1d27a,#D4AF37)",
-              color: "#000B18",
-            }}
-          >
-            ADMISSIONS OPEN FOR 2026 BATCH
-          </div>
-
-          {/* HEADINGS */}
-          <div className="font-bold leading-tight tracking-tight space-y-1">
-
-            <h1 className="text-[rgba(255,255,255,0.95)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-md">
-              Confused After 12th?
+    <div className="min-h-screen w-full bg-white flex flex-col items-center relative overflow-hidden">
+      {/* 🏛️ Heritage Header Image Section */}
+      <div className="w-full h-[55vh] lg:h-[65vh] relative overflow-hidden">
+         <img 
+            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80" 
+            className="w-full h-full object-cover scale-105" 
+            alt="Classic University Campus" 
+         />
+         {/* Academic Overlay */}
+         <div className="absolute inset-0 bg-[var(--primary)]/65 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-6 sm:p-10">
+            <div className="w-16 lg:w-24 h-[3px] bg-[var(--tertiary)] mb-8 animate-blink shadow-[0_0_15px_rgba(212,175,55,0.4)]" />
+            <h1 className="text-white text-3xl sm:text-4xl lg:text-7xl font-serif max-w-5xl italic leading-tight drop-shadow-2xl">
+              “Education is the key to unlock <br className="hidden md:block" /> 
+              the golden door of freedom.”
             </h1>
+         </div>
+         {/* Subtle Vignette */}
+         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.3))] pointer-events-none" />
+      </div>
+      
+      {/* 📜 Content Card Section */}
+      <div className="container mx-auto px-6 sm:px-10 lg:px-20 relative z-10 -mt-24 sm:-mt-32 pb-24">
+         <div className="bg-white p-8 sm:p-12 lg:p-24 shadow-[0_40px_100px_rgba(0,0,0,0.08)] rounded-sm border-t-[6px] border-[var(--tertiary)] grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            
+            {/* Left Content */}
+            <div className="space-y-8 sm:space-y-10">
+               <div className="flex items-center gap-4 animate-fadeUp">
+                  <div className="p-3 bg-[var(--tertiary)]/10 rounded-full">
+                     <FaGraduationCap className="text-[var(--tertiary)] text-2xl lg:text-3xl" />
+                  </div>
+                  <div className="text-[var(--primary)] font-bold tracking-[0.25em] text-[10px] lg:text-xs uppercase animate-blink">
+                    2026 Batch Admissions Open
+                  </div>
+               </div>
+               
+               <h2 className="text-4xl sm:text-5xl lg:text-[5.5rem] font-serif text-[var(--primary)] leading-[1] tracking-tighter sm:tracking-normal">
+                 Your Direct Path <br /> 
+                 <span className="text-[var(--tertiary)] italic">Into Excellence.</span>
+               </h2>
+               
+               <p className="text-[var(--primary)]/70 text-base lg:text-lg leading-relaxed max-w-lg font-medium">
+                 Navigate your academic future with certainty. We provide end-to-end guidance for the most prestigious institutions in India.
+               </p>
 
-            {/* ✅ FIXED (NO CUT) */}
-            <h1 className="bg-gradient-to-r from-[#D4AF37] via-[#f1d27a] to-[#D4AF37] bg-clip-text text-transparent 
-                           text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[56px]
-                           lg:whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] pb-1">
-              We’ll Help You Get Into
-            </h1>
-
-            <h1 className="bg-gradient-to-r from-[#D4AF37] via-[#f1d27a] to-[#D4AF37] bg-clip-text text-transparent 
-                           text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              The Right College.
-            </h1>
-
-          </div>
-
-          {/* FEATURES */}
-          <ul className="flex flex-wrap text-sm sm:text-base gap-2 sm:gap-4 text-[rgba(255,255,255,0.9)] mt-2 font-medium">
-            {[
-              "Free Career Guidance",
-              "No Donation",
-              "Direct College Tie-Ups",
-              "Choose the Right Path",
-              "Start Your Bright Future",
-            ].map((item, idx) => (
-              <li key={idx} className="flex items-center gap-2 bg-black/20 px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/5">
-                <GoDotFill className="text-[#D4AF37]" />
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          {/* STATS */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6 mt-6 sm:mt-8 p-4 sm:p-6 rounded-2xl bg-[#000B18]/60 border border-white/10 backdrop-blur-md w-fit shadow-2xl">
-
-            {/* SHIELD */}
-            <div className="flex items-center gap-3">
-              <FaShieldAlt className="text-[#f1d27a] text-3xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]" />
-              <div>
-                <p className="text-[#f1d27a] font-bold text-xl">100%</p>
-                <p className="text-gray-200 text-xs sm:text-sm font-medium">Free Guidance</p>
-              </div>
+               <button className="px-10 py-5 bg-[var(--primary)] text-white font-bold tracking-[0.2em] uppercase hover:bg-[var(--tertiary)] hover:tracking-[0.3em] transition-all duration-500 shadow-xl text-sm lg:text-base">
+                 Consult For Free
+               </button>
             </div>
 
-            <div className="w-px h-8 sm:h-12 bg-white/20 hidden sm:block" />
-
-            {/* HANDSHAKE */}
-            <div className="flex items-center gap-3">
-              <FaHandshake className="text-[#f1d27a] text-3xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]" />
-              <div>
-                <p className="text-[#f1d27a] font-bold text-xl">Direct</p>
-                <p className="text-gray-200 text-xs sm:text-sm font-medium">College Partners</p>
-              </div>
+            {/* Right Features Grid */}
+            <div className="grid grid-cols-1 gap-5 lg:gap-8 animate-fadeUp">
+               {[
+                 { title: "100% Free Guidance", desc: "Expert counselling without any hidden consultation fees." },
+                 { title: "Direct College Tie-Ups", desc: "We are direct partners with over 50+ premium institutions." },
+                 { title: "Expert Admission Support", desc: "From application to enrollment, we handle the details." }
+               ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-6 p-6 sm:p-8 bg-[#FDFDFD] hover:bg-[var(--tertiary)]/5 transition-all duration-300 border border-gray-100 group">
+                     <div className="text-3xl lg:text-4xl font-serif text-[var(--tertiary)] opacity-30 group-hover:opacity-100 transition-opacity">0{i+1}</div>
+                     <div className="space-y-1">
+                        <div className="text-[var(--primary)] font-bold text-lg lg:text-xl uppercase tracking-tight">{item.title}</div>
+                        <p className="text-[var(--primary)]/60 text-sm leading-relaxed">{item.desc}</p>
+                     </div>
+                  </div>
+               ))}
             </div>
 
-            <div className="w-px h-8 sm:h-12 bg-white/20 hidden sm:block" />
-
-            {/* USERS */}
-            <div className="flex items-center gap-3">
-              <FaUserGraduate className="text-[#f1d27a] text-3xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]" />
-              <div>
-                <p className="text-[#f1d27a] font-bold text-xl">500+</p>
-                <p className="text-gray-200 text-xs sm:text-sm font-medium">Successful Admissions</p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
+         </div>
       </div>
     </div>
   );

@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 const StartJourney = () => {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
   return (
-    <div className="w-full py-20 bg-[#000B18] flex justify-center text-white overflow-hidden relative">
+    <div ref={sectionRef} className="w-full py-20 bg-[#000B18] flex justify-center text-white overflow-hidden relative">
       
       {/* Subtle Grain/Texture Overlay (Optional style match) */}
       <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
-      <div className="w-[90%] max-w-4xl flex flex-col items-center text-center relative z-10">
+      <div className={`w-[90%] max-w-4xl flex flex-col items-center text-center relative z-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         
         <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
           Start Your Journey.

@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .animate-scroll {
-  animation: scroll 25s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 @keyframes fadeUp {
@@ -131,5 +131,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-link:hover::after {
   width: 100%;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-blink {
+  animation: blink 1.5s ease-in-out infinite;
 }
 

@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Routes
 app.post('/api/students', async (req, res) => {
+    console.log('Received inquiry request:', req.body);
     try {
         const { name, email, phone, fatherName, motherName, school, stream } = req.body;
         

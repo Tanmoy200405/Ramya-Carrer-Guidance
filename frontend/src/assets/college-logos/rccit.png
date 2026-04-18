@@ -1,0 +1,2127 @@
+</html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<!-- Required meta tags -->
+
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Favicon Icon -->
+
+	<link rel="icon" type="image/x-icon" href="https://rcciit.edu.in/assets/images/Favicon_RCCIIT.jpg">
+
+      <title> Welcome | Rcciit </title>
+    <meta name="description" content="Rcc Institute of Information Technology" />
+    <meta name="keywords" content="rcc, rcc institute of information technology, engineering and technology, engineering, technology, cse, it, ece, eee, mca, civil, electrical,btech, mtech, oldest institution, 100% placement, campus placement, AICTE approved, UGC approved" />
+
+    <meta property='og:title' content="Welcome | Rcciit" />
+    <meta property='og:description' content="Rcc Institute of Information Technology" />
+        <meta property='og:image' content="https://rcciit.edu.in/uploads/logo_icon/1655378725_e22.png" />
+    
+	<!-- Bootstrap CSS -->
+
+	<link rel="stylesheet" href="https://rcciit.edu.in/assets/css/bootstrap.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://rcciit.edu.in/assets/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+	<link rel="stylesheet" href="https://rcciit.edu.in/assets/css/owl.carousel.min.css">
+
+	<link rel="stylesheet" href="https://rcciit.edu.in/assets/css/owl.theme.default.min.css">
+
+	<link rel="stylesheet" href="https://rcciit.edu.in/assets/css/demo.css">
+
+	<link rel="stylesheet" href="https://rcciit.edu.in/assets/css/webslidemenu.css">
+
+	<!-- <link rel="stylesheet" href="https://rcciit.edu.in/assets/plugins/fresco-master/fresco-master/dist/css/fresco.css"> -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+	<link rel="stylesheet" href="https://rcciit.edu.in/assets/plugins/Date-Time-Picker-Bootstrap-4/build/css/bootstrap-datetimepicker.min.css">
+
+	<link rel='stylesheet'href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css'>
+
+	<link rel="stylesheet" href="https://rcciit.edu.in/assets/css/style.css">
+
+	<style>
+
+		.error-div {
+
+			color: red;
+
+			height: 20px;
+
+		}
+
+	</style>
+
+</head>
+
+
+
+<body>
+
+	<header id="header">
+
+		<div class="container-fluid">
+
+			<div class="row align-items-center">
+
+				<!-- <div class="col-lg-3 col-md-2 col-5">
+
+					<div class="logo"><a href="index.html"><img src="https://rcciit.edu.in/assets/images/logo.png" alt="" /></a></div>
+
+				</div> -->
+
+				<div class="col-lg-12 col-md-12 col-12 d-flex justify-content-end">
+
+					<div class="bg">
+
+						<div class="logo clearfix"><a href="https://rcciit.edu.in/"><img
+
+									src="https://rcciit.edu.in/assets/images/logo.png" alt=""></a></div>
+
+						<div id="wstoggle">
+
+							<span></span>
+
+						</div>
+
+						<div class="search_box">
+
+							<p class="mb-0">
+
+								<i class="fa fa-search" aria-hidden="true" data-toggle="modal"
+
+									data-target="#exampleModal"></i>
+
+							</p>
+
+						</div>
+
+						<nav class="wsfmain clearfix">
+
+							<div class="wsfmenufull ani01 wsfanimatedcolors">
+
+								<div class="wsfwrap">
+
+									<div class="wsfwrapinner clearfix">
+
+										<!-- <a href="" class="wslogo"><img src="images/logo.png" alt=""></a> -->
+
+										<div id="desktop_menu" class="desktop_menu">
+
+											<ul id="list_items">
+
+<li><a href="https://rcciit.edu.in/">Home</a>                                                                                               
+
+
+
+												</li>
+
+ <li>Institute
+
+
+													<ul class="list_menu">
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/about/">About</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/admin-list/">Administration</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/chairman-desk/">From the Chairman's Desk</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/organisation-structure/">Organisation Structure</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/governing-body/">Governing Body</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/examination-cell">Examination Cell</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/principal-desk/">From The Principal's Desk</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/finance-cell">Finance Cell</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/rules-&-regulation">Rules & Regulations</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/committee-&-cells">Committees & Cells</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in//board-of-management">Board of Management</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/approvals-certificates">Approvals Certificates</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/academic-autonomy/">Academic Autonomy</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/deans-office/">Deans & FICs</a></li>
+
+
+
+													
+
+</ul>
+
+
+
+
+												</li>
+
+ <li>Admission
+
+
+													<ul class="list_menu">
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/admission-btech">B-Tech</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/admission-mtech/">M-Tech</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/admission-mca/ ">MCA</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/admission-bca/">BCA</a></li>
+
+
+
+													
+
+</ul>
+
+
+
+
+												</li>
+
+ <li>LATEST
+
+
+													<ul class="list_menu">
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/news/">News</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/event/">Events</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/tender/">Tender</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/notice/general">Notices</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/vacancies/">Vacancies</a></li>
+
+
+
+													
+
+</ul>
+
+
+
+
+												</li>
+
+ <li>TRAINING & PLACEMENT
+
+
+													<ul class="list_menu">
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/placements/">Placement</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/training/">Training</a></li>
+
+
+
+													
+
+</ul>
+
+
+
+
+												</li>
+
+ <li>DEPARTMENTS
+
+
+													<ul class="list_menu">
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/department-details/computer-science-&-engineering">Computer Science & Engineering</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/department-details/information-technology">Information Technology</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/department-details/computer-science-&-engineering-(ai-&-ml)">Computer Science & Engineering (AI & ML)</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/department-details/electronics-&-communication-engineering">Electronics & Communication Engineering</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/department-details/electrical-engineering">Electrical Engineering</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/department-details/computer-application">Computer Application</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/department-details/computer-science">Computer Science</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/department-details/applied-science">Applied Science</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/department-details/engineering-science-&-management">Engineering Science & Management</a></li>
+
+
+
+													
+
+</ul>
+
+
+
+
+												</li>
+
+ <li>LIBRARY
+
+
+													<ul class="list_menu">
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/central-library/">Central Library</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/ndli/">NDLI</a></li>
+
+
+
+													
+
+</ul>
+
+
+
+
+												</li>
+
+ <li>ALUMNI
+
+
+													<ul class="list_menu">
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/general-information/">General Information</a></li>
+
+
+
+													
+
+</ul>
+
+
+
+
+												</li>
+
+ <li>BEYOND CURRICULAR
+
+
+													<ul class="list_menu">
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/moocs-and-internshala/">MOOCS and Internshala</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/uploads/download_others/1738835249_Special_Classes.pdf">Special Classes</a></li>
+
+
+
+
+
+
+														
+
+<li><a href="https://rcciit.edu.in/achievements/">Student Achievements</a></li>
+
+
+
+													
+
+</ul>
+
+
+
+
+												</li>
+
+
+											</ul>
+
+										</div>
+
+
+
+					
+
+										<div id="mobile_menu" class="mobile_menu">
+
+											<div class="accordion">
+
+                                                                                                 
+
+
+
+
+
+
+
+
+												<div class="accordion-item">
+													<button>
+
+														<span><a href="https://rcciit.edu.in/">Home</a></span>
+
+
+													</button>
+
+
+
+												</div>
+
+
+
+
+												<div class="accordion-item">
+
+													<button id="accordion-button-4" aria-expanded="false">
+
+														<span class="accordion-title">Institute</span>
+
+														<span class="icon" aria-hidden="true"></span>
+
+													</button>
+
+
+
+
+													<div class="accordion-content">
+
+														<div class="panel-body">
+
+															<ul class="list_menu">
+
+
+<li><a href="https://rcciit.edu.in/about/">About</a></li>
+
+
+<li><a href="https://rcciit.edu.in/admin-list/">Administration</a></li>
+
+
+<li><a href="https://rcciit.edu.in/chairman-desk/">From the Chairman's Desk</a></li>
+
+
+<li><a href="https://rcciit.edu.in/organisation-structure/">Organisation Structure</a></li>
+
+
+<li><a href="https://rcciit.edu.in/governing-body/">Governing Body</a></li>
+
+
+<li><a href="https://rcciit.edu.in/examination-cell">Examination Cell</a></li>
+
+
+<li><a href="https://rcciit.edu.in/principal-desk/">From The Principal's Desk</a></li>
+
+
+<li><a href="https://rcciit.edu.in/finance-cell">Finance Cell</a></li>
+
+
+<li><a href="https://rcciit.edu.in/rules-&-regulation">Rules & Regulations</a></li>
+
+
+<li><a href="https://rcciit.edu.in/committee-&-cells">Committees & Cells</a></li>
+
+
+<li><a href="https://rcciit.edu.in//board-of-management">Board of Management</a></li>
+
+
+<li><a href="https://rcciit.edu.in/approvals-certificates">Approvals Certificates</a></li>
+
+
+<li><a href="https://rcciit.edu.in/academic-autonomy/">Academic Autonomy</a></li>
+
+
+<li><a href="https://rcciit.edu.in/deans-office/">Deans & FICs</a></li>
+
+
+																															</ul>
+
+														</div>
+
+													</div>
+
+
+												</div>
+
+
+
+
+												<div class="accordion-item">
+
+													<button id="accordion-button-40" aria-expanded="false">
+
+														<span class="accordion-title">Admission</span>
+
+														<span class="icon" aria-hidden="true"></span>
+
+													</button>
+
+
+
+
+													<div class="accordion-content">
+
+														<div class="panel-body">
+
+															<ul class="list_menu">
+
+
+<li><a href="https://rcciit.edu.in/admission-btech">B-Tech</a></li>
+
+
+<li><a href="https://rcciit.edu.in/admission-mtech/">M-Tech</a></li>
+
+
+<li><a href="https://rcciit.edu.in/admission-mca/ ">MCA</a></li>
+
+
+<li><a href="https://rcciit.edu.in/admission-bca/">BCA</a></li>
+
+
+																															</ul>
+
+														</div>
+
+													</div>
+
+
+												</div>
+
+
+
+
+												<div class="accordion-item">
+
+													<button id="accordion-button-56" aria-expanded="false">
+
+														<span class="accordion-title">LATEST</span>
+
+														<span class="icon" aria-hidden="true"></span>
+
+													</button>
+
+
+
+
+													<div class="accordion-content">
+
+														<div class="panel-body">
+
+															<ul class="list_menu">
+
+
+<li><a href="https://rcciit.edu.in/news/">News</a></li>
+
+
+<li><a href="https://rcciit.edu.in/event/">Events</a></li>
+
+
+<li><a href="https://rcciit.edu.in/tender/">Tender</a></li>
+
+
+<li><a href="https://rcciit.edu.in/notice/general">Notices</a></li>
+
+
+<li><a href="https://rcciit.edu.in/vacancies/">Vacancies</a></li>
+
+
+																															</ul>
+
+														</div>
+
+													</div>
+
+
+												</div>
+
+
+
+
+												<div class="accordion-item">
+
+													<button id="accordion-button-44" aria-expanded="false">
+
+														<span class="accordion-title">TRAINING & PLACEMENT</span>
+
+														<span class="icon" aria-hidden="true"></span>
+
+													</button>
+
+
+
+
+													<div class="accordion-content">
+
+														<div class="panel-body">
+
+															<ul class="list_menu">
+
+
+<li><a href="https://rcciit.edu.in/placements/">Placement</a></li>
+
+
+<li><a href="https://rcciit.edu.in/training/">Training</a></li>
+
+
+																															</ul>
+
+														</div>
+
+													</div>
+
+
+												</div>
+
+
+
+
+												<div class="accordion-item">
+
+													<button id="accordion-button-26" aria-expanded="false">
+
+														<span class="accordion-title">DEPARTMENTS</span>
+
+														<span class="icon" aria-hidden="true"></span>
+
+													</button>
+
+
+
+
+													<div class="accordion-content">
+
+														<div class="panel-body">
+
+															<ul class="list_menu">
+
+
+<li><a href="https://rcciit.edu.in/department-details/computer-science-&-engineering">Computer Science & Engineering</a></li>
+
+
+<li><a href="https://rcciit.edu.in/department-details/information-technology">Information Technology</a></li>
+
+
+<li><a href="https://rcciit.edu.in/department-details/computer-science-&-engineering-(ai-&-ml)">Computer Science & Engineering (AI & ML)</a></li>
+
+
+<li><a href="https://rcciit.edu.in/department-details/electronics-&-communication-engineering">Electronics & Communication Engineering</a></li>
+
+
+<li><a href="https://rcciit.edu.in/department-details/electrical-engineering">Electrical Engineering</a></li>
+
+
+<li><a href="https://rcciit.edu.in/department-details/computer-application">Computer Application</a></li>
+
+
+<li><a href="https://rcciit.edu.in/department-details/computer-science">Computer Science</a></li>
+
+
+<li><a href="https://rcciit.edu.in/department-details/applied-science">Applied Science</a></li>
+
+
+<li><a href="https://rcciit.edu.in/department-details/engineering-science-&-management">Engineering Science & Management</a></li>
+
+
+																															</ul>
+
+														</div>
+
+													</div>
+
+
+												</div>
+
+
+
+
+												<div class="accordion-item">
+
+													<button id="accordion-button-9" aria-expanded="false">
+
+														<span class="accordion-title">LIBRARY</span>
+
+														<span class="icon" aria-hidden="true"></span>
+
+													</button>
+
+
+
+
+													<div class="accordion-content">
+
+														<div class="panel-body">
+
+															<ul class="list_menu">
+
+
+<li><a href="https://rcciit.edu.in/central-library/">Central Library</a></li>
+
+
+<li><a href="https://rcciit.edu.in/ndli/">NDLI</a></li>
+
+
+																															</ul>
+
+														</div>
+
+													</div>
+
+
+												</div>
+
+
+
+
+												<div class="accordion-item">
+
+													<button id="accordion-button-22" aria-expanded="false">
+
+														<span class="accordion-title">ALUMNI</span>
+
+														<span class="icon" aria-hidden="true"></span>
+
+													</button>
+
+
+
+
+													<div class="accordion-content">
+
+														<div class="panel-body">
+
+															<ul class="list_menu">
+
+
+<li><a href="https://rcciit.edu.in/general-information/">General Information</a></li>
+
+
+																															</ul>
+
+														</div>
+
+													</div>
+
+
+												</div>
+
+
+
+
+												<div class="accordion-item">
+
+													<button id="accordion-button-48" aria-expanded="false">
+
+														<span class="accordion-title">BEYOND CURRICULAR</span>
+
+														<span class="icon" aria-hidden="true"></span>
+
+													</button>
+
+
+
+
+													<div class="accordion-content">
+
+														<div class="panel-body">
+
+															<ul class="list_menu">
+
+
+<li><a href="https://rcciit.edu.in/moocs-and-internshala/">MOOCS and Internshala</a></li>
+
+
+<li><a href="https://rcciit.edu.in/uploads/download_others/1738835249_Special_Classes.pdf">Special Classes</a></li>
+
+
+<li><a href="https://rcciit.edu.in/achievements/">Student Achievements</a></li>
+
+
+																															</ul>
+
+														</div>
+
+													</div>
+
+
+												</div>
+
+
+
+
+
+
+											</div>
+
+										</div>
+
+										<script>
+
+											const items = document.querySelectorAll('.accordion button');
+
+
+
+											function toggleAccordion() {
+
+											const itemToggle = this.getAttribute('aria-expanded');
+
+
+
+											for (i = 0; i < items.length; i++) {
+
+												items[i].setAttribute('aria-expanded', 'false');
+
+											}
+
+
+
+											if (itemToggle == 'false') {
+
+												this.setAttribute('aria-expanded', 'true');
+
+											}
+
+											}
+
+
+
+											items.forEach((item) => item.addEventListener('click', toggleAccordion));
+
+										</script>
+
+										<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+										<script
+
+											src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+									</div>
+
+									<!-- <div class="wsbottompart clearfix">
+
+								2019 Company. All Rights Reserved. <span>|</span> <a href="#" title="">Privacy Policy</a> <span>|</span>
+
+								<a href="#" title="">Terms Of Use</a>
+
+							  </div> -->
+
+								</div>
+
+							</div>
+
+						</nav>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</header>
+
+
+	<marquee onmouseover="this.stop();" onmouseout="this.start();">
+	<!--<span><a href="https://rcciit.edu.in">No admission on 25th December for B.Tech Lateral and MCA</a></span>-->
+	<span>For the first time in WB exclusive campus interview at RCCIIT by Sundram Fasteners Ltd (TVS) -  30 selected from 2025 POB EE/ECE</span>
+     <!--<span><a href="https://rcciit.edu.in">No admission on 25th December for B.Tech Lateral and MCA</a> -->
+	 <span>Policy of Zero Tolerance for any Malpractice in Admission</span>
+     <!--<a href="https://rcciit.edu.in" class="more_link ml-2">know more</a>-->
+     </span>
+</marquee>
+<section class="banner">
+	<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+	  <div class="carousel-inner">
+					<div class="carousel-item active" id="slide1">
+			<img src="https://rcciit.edu.in/uploads/home_banner/1723097323_banner01.jpg" class="d-block w-100 bannerbg" alt="...">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-md-7">
+						<div class="banner_cont">
+							<h1 class="mb-lg-4 mb-md-4">Admission open for academic session 26-27</h1>
+							<p>An institute with values by a Society of the Department of Higher Education Government.&nbsp;of West Bengal</p>
+							<a href="https://rcciit.edu.in/q1.htm" class="more_link mt-lg-4 mt-md-3 mt-3">Apply Now</a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-5">
+						<div class="banner_cont_img">
+							<img src="https://rcciit.edu.in/uploads/home_banner/1723097323_banner_contbg.png" class="img-fluid" alt="...">
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+						<div class="carousel-item " id="slide2">
+			<img src="https://rcciit.edu.in/uploads/home_banner/1723111407_banner02.jpg" class="d-block w-100 bannerbg" alt="...">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-lg-6 col-md-7">
+						<div class="banner_cont">
+							<h1 class="mb-lg-4 mb-md-4">You can dream big build bigger.</h1>
+							<p>Cybersecurity innovates to protect digital assets in the changing technological world.</p>
+							<a href="https://rcciit.edu.in/admission-btech" class="more_link mt-lg-4 mt-md-3 mt-3">Know More</a>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-5">
+						<div class="banner_cont_img">
+							<img src="https://rcciit.edu.in/uploads/home_banner/1723111407_banner_contbg2.png" class="img-fluid" alt="...">
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+				  </div>
+	  <div class="container-fluid">
+	  	<ol class="carousel-indicators">
+		    <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleFade" data-slide-to="1"></li>
+		</ol>
+	  </div>
+	</div>
+</section>
+
+<section class="about_rcciit">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-md-12">
+				<h3 class="title">About rcciit</h3>
+			</div>
+			<div class="col-md-5 mt-lg-5 mt-md-4 mt-4">
+				<div class="about_rcciit_bg">
+					<img src="https://rcciit.edu.in/uploads/home_about/1755170374_aboutbg.jpg" class="img-fluid aboutbg" alt="...">
+				</div>
+			</div>
+			<div class="col-md-7 mt-lg-5 mt-md-4">
+				<div class="sdd">
+					<div class="about_rcciit_cont">
+						<p>RCC Institute of Information Technology (RCCIIT) was set up in 1999 by the erstwhile Regional Computer Centre (RCC), Calcutta (in JU) as a unique joint venture of NIC, Ministry of Communication &amp; IT, Govt. of India and Dept. of Higher Education, Govt. of West Bengal. In 2003 the lead role of management of RCCIIT was transferred to the State Govt. from Govt. of India.</p>
+						<a href="about/" class="more_link mt-lg-4 mt-md-2 mt-2">know more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="others_subject">
+	<div class="container-fluid">
+		<div class="row no-gutters">
+			<div class="col-md-4">
+				<div class="others_subject_cont notice">
+					<h3 class="title mb-lg-5 mb-md-4">General Notice</h3>
+					<div class="notice_slide owl-carousel owl-theme">
+														<div class="item">
+									<span class="date">2nd March, 2026</span>
+									<!--<h4>Students are requested to fill up the google form (only using institute email ids) after submission and payment of Regular & Backlog Exam Form </h4>-->
+									Students are requested to fill up the google form (only using institute email ids) after submission and payment of Regular & Backlog Exam Form 									<a href="https://rcciit.edu.in/uploads/notice_department/1772450960_Exam_backlog_and_regular__exam_fee_March2026.pdf" target="_blank" class="read_more mt-4">Read More <i class="fa fa-play" aria-hidden="true"></i></a>								</div>
+																<div class="item">
+									<span class="date">20th February, 2026</span>
+									<!--<h4>Form fill-up for Regular & Backlog Students for Odd Semester Examinations 2025-26</h4>-->
+									Form fill-up for Regular & Backlog Students for Odd Semester Examinations 2025-26									<a href="https://rcciit.edu.in/uploads/notice_department/1771588698_Exam_Form_Fill_up_NOTICE_20_02_2026.pdf" target="_blank" class="read_more mt-4">Read More <i class="fa fa-play" aria-hidden="true"></i></a>								</div>
+																<div class="item">
+									<span class="date">10th February, 2026</span>
+									<!--<h4>Odd Semester Theory Examination Notice_2025-2026</h4>-->
+									Odd Semester Theory Examination Notice_2025-2026									<a href="https://rcciit.edu.in/uploads/notice_department/1770724944_NOTICE_ODD_SEMESTER_THEORY_EXAMINATION_ROUTINE_FOR_AUTONOMOUS_COURSES_2025-2026-2.pdf" target="_blank" class="read_more mt-4">Read More <i class="fa fa-play" aria-hidden="true"></i></a>								</div>
+													</div>
+					<a href="https://rcciit.edu.in/notice/general" class="more_link mt-lg-5 mt-md-5 mt-4">All notices</a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="others_subject_cont news">
+					<h3 class="title mb-lg-5 mb-md-4">News</h3>
+					<div class="news_slide owl-carousel owl-theme">
+												<div class="item">
+								<span class="date">31st May, 2025</span>
+								<!--<h4>UG Information Technology</h4>-->
+								<p>CSE, IT, ECE Programs has been accredited by NBA till -2028 (Up to 30.06.2028)</p>
+															</div>
+														<div class="item">
+								<span class="date">7th October, 2024</span>
+								<!--<h4>UG Information Technology</h4>-->
+								<p>Tie-Up with Intel</p>
+								<a href="https://rcciit.edu.in/uploads/news/1729751459_C241008.pdf" target="_blank" class="read_more mt-4">Read More <i class="fa fa-play" aria-hidden="true"></i></a> 							</div>
+														<div class="item">
+								<span class="date">1st October, 2024</span>
+								<!--<h4>UG Information Technology</h4>-->
+								<p>UG Electrical Engg Program has been accredited by NBA from AY 2024-2025 to 2026-2027 (Up to 30.06.2027)</p>
+															</div>
+														<div class="item">
+								<span class="date">12th September, 2023</span>
+								<!--<h4>UG Information Technology</h4>-->
+								<p>UG Electrical Engg Program has been accredited by NBA from AY 2021-2022 to 2023-2024 (Up to 30.06.2024)</p>
+															</div>
+														<div class="item">
+								<span class="date">12th September, 2022</span>
+								<!--<h4>UG Information Technology</h4>-->
+								<p>UG Information Technology Program has been accredited by NBA from AY 2022-2023 to 2024-2025 (Up to 30.06.2025)</p>
+															</div>
+														<div class="item">
+								<span class="date">12th September, 2021</span>
+								<!--<h4>UG Information Technology</h4>-->
+								<p>UG Comp. Sc. & Engg Program has been accredited by NBA from AY 2022-2023 to 2024-2025 (Up to 30.06.2025)</p>
+															</div>
+												</div>
+					<a href="https://rcciit.edu.in/news" class="more_link mt-lg-5 mt-md-5 mt-4">All news</a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="others_subject_cont event">
+					<h3 class="title mb-lg-5 mb-md-4">upcoming events</h3>
+											No upcoming event found!
+										</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="latest_event">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h3 class="title mb-lg-5 mb-md-5 mb-4">latest Events</h3>
+			</div>
+								<div class="col-md-4 mt-lg-0 mt-md-0 mt-4">
+						<div class="event_contbg">
+							<img src="https://rcciit.edu.in/uploads/event/1767352093_vaani.jpg" class="img-fluid event_img w-100" alt="...">
+							<div class="event_cont">
+								<h5>AICTE-VAANI Event</h5>
+								<span class="date">7th January, 2026</span>
+								<p>AICTE-VAANI Jan 7-9, 2026 (The Quest of ...</p>
+								<a href="https://rcciit.edu.in/event-details/aicte-vaani-event" class="read_more mt-4">Read More <i class="fa fa-play" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</div>
+										<div class="col-md-4 mt-lg-0 mt-md-0 mt-4">
+						<div class="event_contbg">
+							<img src="https://rcciit.edu.in/uploads/event/1761580875_1742194490_RCCIIT_Event_DEfault.jpg" class="img-fluid event_img w-100" alt="...">
+							<div class="event_cont">
+								<h5>FDP On  Machine Learning Deep Learning and Generative Models</h5>
+								<span class="date">10th November, 2025</span>
+								<p>AICTE Training & Learning (ATAL)  Academ...</p>
+								<a href="https://rcciit.edu.in/event-details/fdp-on-machine-learning-deep-learning-and-generative-models" class="read_more mt-4">Read More <i class="fa fa-play" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</div>
+										<div class="col-md-4 mt-lg-0 mt-md-0 mt-4">
+						<div class="event_contbg">
+							<img src="https://rcciit.edu.in/uploads/event/1726655648_Upcoming_Test.jpg" class="img-fluid event_img w-100" alt="...">
+							<div class="event_cont">
+								<h5>Hackathon 2024</h5>
+								<span class="date">1st January, 2025</span>
+								<p>Event to take place this December...</p>
+								<a href="https://rcciit.edu.in/event-details/hackathon-2024" class="read_more mt-4">Read More <i class="fa fa-play" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</div>
+									<div class="col-md-12 text-center">
+					<a href="https://rcciit.edu.in/event" class="more_link mt-5">View All</a>
+				</div>
+						</div>
+	</div>
+</section>
+
+<section class="why_rcciit">
+	<div class="container-fluid">
+		<div class="row">
+			<!-- <div class="col-md-12 text-center">
+				<h3 class="title mb-5 text-white">Why RCCIIT</h3>
+			</div> -->
+			<div class="col-md-12">
+				<div class="whyrcciit_slide owl-carousel owl-theme">
+				    <div class="item">
+				    	<div class="why_slide_cont">
+				    		<h5>IQAC</h5>
+				    		<p>IQAC aims to achieve the Institute's mission through quality benchmarks, periodic reviews, stakeholder feedback, and excellence initiatives.</p>
+				    		<a href="https://iqac.rcciit.org.in/" target="_blank" class="read_more mt-4">Know More <i class="fa fa-play" aria-hidden="true"></i></a>
+				    	</div>
+				    </div>
+				    <div class="item">
+						<div class="why_slide_cont">
+				    		<h5>NSS</h5>
+				    		<p>The National Service Scheme (NSS) is a community service programme with the objective of building social consciousness in students.</p>
+				    		<a href="https://nss.rcciit.org.in/" target="_blank" class="read_more mt-4">Know More <i class="fa fa-play" aria-hidden="true"></i></a>
+				    	</div>
+				    </div>
+				    <div class="item">
+						<div class="why_slide_cont">
+				    		<h5>IIC</h5>
+				    		<p>Incubate innovative ideas, nurture professionals, support entrepreneurship, protect IP, and foster a culture of innovation.</p>
+				    		<a href="https://r.rccinstitute.org/institute/iic.aspx" target="_blank" class="read_more mt-4">Know More <i class="fa fa-play" aria-hidden="true"></i></a>
+				    	</div>
+				    </div>
+				    <div class="item">
+						<div class="why_slide_cont">
+				    		<h5>Clubs & Student Chapters</h5>
+				    		<p>Lorem ipsum dolor sit amet consectetur. Elementum nisl duis tortor sed.</p>
+				    		<a href="https://r.rccinstitute.org/beyondCurricula/clubSC.aspx" target="_blank" class="read_more mt-4">Know More <i class="fa fa-play" aria-hidden="true"></i></a>
+				    	</div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="open_admission" style="background: url(https://rcciit.edu.in/uploads/home_admission/1726052936_admission_bg.jpg);">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-7 pr-lg-5">
+				<div class="admission_cont">
+					<h1 class="mb-4">Admission open academic session 2026-27</h1>
+					<p class="mb-0"><p>Admission to B.Tech, BCA, M.Tech, MCA for 2026-2027</p>
+</p>
+											<a href="https://rcciit.edu.in/department" class="more_link mt-lg-5 mt-md-4 mt-4 mr-4" target="_blank">
+							View Department						</a>
+												<a href="https://www.rcciit.edu.in/q1.htm" class="more_link mt-lg-5 mt-md-4 mt-4" target="_blank">
+							 Admission						</a>
+										</div>
+			</div>
+			<div class="col-md-5">
+				<div class="admission_bg">
+					<img src="https://rcciit.edu.in/uploads/home_admission/1726233551_subject.png" class="img-fluid" alt="...">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="achievements">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h3 class="title mb-5">Student's Achievements</h3>
+			</div>
+			<div class="col-md-12">
+									<div class="achievements_slide owl-carousel owl-theme">
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730698273_Anubhab_Mukherjee-BTech_CSE.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Pratik mondal</a></h5>
+								<p class="mb-2">Computer Science & Engineering</p>
+								<span>Placed at Tavisca (J. P. Morgan Services India Pvt. Ltd.) @ 13LPA</span>
+							</div>
+						</div>
+					</div>
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730698951_Mayank_Kumar_Singh-BTech_CSE.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Mayank Kumar Singh</a></h5>
+								<p class="mb-2">Computer Science & Engineering</p>
+								<span>Placed at Tavisca (J. P. Morgan Services India Pvt. Ltd.) @ 13LPA</span>
+							</div>
+						</div>
+					</div>
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730699184_Soumyadeep_Pradhan-BTech_CSE.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Soumyadeep Pradhan</a></h5>
+								<p class="mb-2">Computer Science & Engineering</p>
+								<span>Placed at Tavisca (J. P. Morgan Services India Pvt. Ltd.) @ 13LPA</span>
+							</div>
+						</div>
+					</div>
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730699673_Abhishek_Kumar_Rai-BTech_CSE.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Abhishek Kumar Rai</a></h5>
+								<p class="mb-2">Computer Science & Engineering</p>
+								<span>Placed at Tavisca (J. P. Morgan Services India Pvt. Ltd.) @ 13LPA</span>
+							</div>
+						</div>
+					</div>
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730701564_Manisha_Mandal-BTech_CSE.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Manisha Mandal</a></h5>
+								<p class="mb-2">Computer Science & Engineering</p>
+								<span>Placed at Tavisca (J. P. Morgan Services India Pvt. Ltd.) @ 13LPA</span>
+							</div>
+						</div>
+					</div>
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730701872_Ankit_Pandey-BTech_CSE.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Ankit Pandey</a></h5>
+								<p class="mb-2">Computer Science & Engineering</p>
+								<span>Placed at Tavisca (J. P. Morgan Services India Pvt. Ltd.) @ 13LPA</span>
+							</div>
+						</div>
+					</div>
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730702251_Dipesh_Shaw-BTech_CSE.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Dipesh Shaw</a></h5>
+								<p class="mb-2">Computer Science & Engineering</p>
+								<span>Placed at Tavisca (J. P. Morgan Services India Pvt. Ltd.) @ 13LPA</span>
+							</div>
+						</div>
+					</div>
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730703898_Oindrila_Chakraborty-BMC-BTech_CSE.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Oindrila Chakraborty</a></h5>
+								<p class="mb-2">Computer Science & Engineering</p>
+								<span>Placed at BMC @ 12.50LPA</span>
+							</div>
+						</div>
+					</div>
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730704286_Ritam_Biswas-BTech_ESE.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Ritam Biswas</a></h5>
+								<p class="mb-2">Electronics & Communication Engineering</p>
+								<span>Placed at BMC @ 12.50LPA</span>
+							</div>
+						</div>
+					</div>
+										<div class="item">
+						<div class="achievements_cont">
+							<img src="https://rcciit.edu.in/uploads/home_student_achievement/1730803465_Susmita_Kar-BTech_IT.jpg" class="img-fluid w-100" alt="...">
+							<div class="sa_cont">
+								<h5><a href="#">Susmita Kar</a></h5>
+								<p class="mb-2">Information Technology</p>
+								<span>Placed at BMC @ 12.50LPA</span>
+							</div>
+						</div>
+					</div>
+									</div>
+				<div class="col-md-12 text-center">
+					<a href="https://rcciit.edu.in/department-wise-placement/" class="more_link mt-5">Placements</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="gallery">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h3 class="title mb-5">Gallery</h3>
+			</div>
+		</div>
+		<div class="row no-gutters">
+			<div class="col-md-4">
+				<div class="gallery_bg1 snip1572">
+					<a href="https://rcciit.edu.in/uploads/gallery_event/1736315124_AEIE_RCCIIT_BG.webp" class="fancybox" rel="ligthbox">
+						<img src="https://rcciit.edu.in/uploads/gallery_event/1736315124_AEIE_RCCIIT_BG.webp" class="img-fluid w-100">
+                    </a>
+                    <!-- <span class="bg_color"></span> -->
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="row no-gutters">
+					<div class="col-md-4 col-3">
+						<div class="gallery_bg2 snip1572">
+						<a href="https://rcciit.edu.in/uploads/gallery_event/1726646479_1.jpg" class="fancybox" rel="ligthbox">
+							<img src="https://rcciit.edu.in/uploads/gallery_event/1726646479_1.jpg" class="img-fluid w-100">
+						</a>
+						</div>
+					</div>
+					<div class="col-md-3 col-3">
+						<div class="gallery_bg3 snip1572">
+						<a href="https://rcciit.edu.in/uploads/gallery_event/1726646479_2.jpg" class="fancybox" rel="ligthbox">
+							<img src="https://rcciit.edu.in/uploads/gallery_event/1726646479_2.jpg" class="img-fluid w-100">
+						</a>
+						</div>
+					</div>
+					<div class="col-md-5 col-6">
+						<div class="gallery_bg4 snip1572">
+							<a href="https://rcciit.edu.in/uploads/gallery_event/1726646479_3.jpg" class="fancybox" rel="ligthbox">
+								<img src="https://rcciit.edu.in/uploads/gallery_event/1726646479_3.jpg" class="img-fluid w-100">
+		                    </a>
+						</div>
+					</div>
+					<div class="col-md-3 col-3">
+						<div class="gallery_bg5 snip1572">
+							<a href="https://rcciit.edu.in/uploads/gallery_event/1726646479_4.jpg" class="fancybox" rel="ligthbox">
+								<img src="https://rcciit.edu.in/uploads/gallery_event/1726646479_4.jpg" class="img-fluid w-100">
+		                    </a>
+						</div>
+					</div>
+					<div class="col-md-5 col-6">
+						<div class="gallery_bg6 snip1572">
+							<a href="https://rcciit.edu.in/uploads/gallery_event/1726646479_5.jpg" class="fancybox" rel="ligthbox">
+								<img src="https://rcciit.edu.in/uploads/gallery_event/1726646479_5.jpg" class="img-fluid w-100">
+		                    </a>
+						</div>
+					</div>
+					<div class="col-md-4 col-3">
+						<div class="gallery_bg7 snip1572">
+							<a href="https://rcciit.edu.in/uploads/gallery_event/1724607762_1715733036_facilities_sliderbg5.jpg" class="fancybox" rel="ligthbox">
+								<img src="https://rcciit.edu.in/uploads/gallery_event/1724607762_1715733036_facilities_sliderbg5.jpg" class="img-fluid w-100">
+		                    </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--<div class="col-md-12 text-center">
+				<a href="#" class="more_link mt-5">View All</a>
+			</div>-->
+		</div>
+	</div>
+</section>
+<!--<section class="faq">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-7 col-md-12 pr-lg-5">
+				<div class="faq_bg">
+					<img src="https://rcciit.edu.in/assets/images/faq_bg.jpg" class="img-fluid" alt="">
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-12 mt-lg-0 mt-md-5 mt-5">
+				<h3 class="title mb-lg-5 mb-4">frequently asked questions</h3>
+					<div class="faq_cont">
+						<div id="accordion">
+						  <div class="card">
+						    <div class="card-header">
+						      <a class="card-link accordion-title" data-toggle="collapse" href="#collapseOne">
+						        Lorem ipsum dolar sit amet consectetur
+						      </a>
+						    </div>
+						    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+						      <div class="card-body">
+						        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="card">
+						    <div class="card-header">
+						      <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseTwo">
+						        Lorem ipsum dolar sit amet consectetur
+						      </a>
+						    </div>
+						    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+						      <div class="card-body">
+						        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="card">
+						    <div class="card-header">
+						      <a class="collapsed card-link accordion-title" data-toggle="collapse" href="#collapseThree">
+						        Lorem ipsum dolar sit amet consectetur
+						      </a>
+						    </div>
+						    <div id="collapseThree" class="collapse" data-parent="#accordion">
+						      <div class="card-body">
+						        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						      </div>
+						    </div>
+						  </div>
+
+						</div>
+					</div>
+					<a href="#" class="more_link mt-4">View All</a>
+			</div>
+		</div>
+	</div>
+</section>-->
+
+<section class="map">
+	<!-- <a href="https://maps.app.goo.gl/LsEoZpvuTpRiQkTy5"><img src="https://rcciit.edu.in/assets/images/mapbg.png" class="img-fluid w-100"></a> -->
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.546293749878!2d88.39396792602722!3d22.558662533479495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027686b848fb8d%3A0xed09795e4836e886!2sRCC%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2sin!4v1726297758251!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	<div class="container-fluid">
+		<div class="row no-gutters">
+			<div class="col-lg-6 col-md-12">
+				<div class="map_cont">
+					<p class="mb-0"><a href="https://maps.app.goo.gl/LsEoZpvuTpRiQkTy5" target="_blank"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i> Canal S Rd, Beleghata, Kolkata, West Bengal 700015</a></p>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-6 text-lg-right">
+				<div class="map_cont">
+					<p class="mb-0"><a href="javascript:void(0);" onclick="getDirections()" class="read_more">Get Directions <i class="fa fa-play" aria-hidden="true"></i></a></p>
+				</div>
+			</div>
+			<!--<div class="col-lg-2 col-md-4 text-lg-right">
+				<div class="map_cont">
+					<p class="mb-0"><a href="https://www.google.com/maps/dir/?api=1&destination=Canal+S+Rd+Beleghata+Kolkata+700015,India" target="_blank" class="read_more mt-2">Send To Phone <i class="fa fa-play" aria-hidden="true"></i></a></p>
+				</div>
+			</div>-->
+			<div class="col-lg-2 col-md-6 text-lg-right">
+				<div class="map_cont">
+					<div class="smallPost">
+                        <button class="btn p-0 share"><i class="fa fa-share-alt" aria-hidden="true"></i></button>
+                        <span class="shareCont">
+                            <!--<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://maps.app.goo.gl/KkzMdHLvHjAyf7Gq8"><i class="fa fa-facebook" aria-hidden="true"></i></a>-->
+                            <a target="_blank" href="https://wa.me/?text=Check+this+place:+https://maps.app.goo.gl/KkzMdHLvHjAyf7Gq8" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                            <!--<a target="_blank" href="https://twitter.com/intent/tweet?url=https://maps.app.goo.gl/KkzMdHLvHjAyf7Gq8&text=Check+this+place"><i class="fa fa-twitter" aria-hidden="true"></i></a>-->
+                        </span>
+                    </div>
+					<!-- <p class="mb-0"><a href="#" class="read_more"><button class="btn p-0 share"><i class="fa fa-share-alt" aria-hidden="true"></i></button></a></p> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-12">
+                <div class="footer_cont">
+                    <img src="https://rcciit.edu.in/assets/images/footer_logo.png" class="img-fluid mb-lg-5 mb-4 footer_logo">
+                    <h5 class="mb-lg-3 mb-md-3 mb-2">About Us</h5>
+                    <p class="mb-0">RCC Institute of Information Technology (RCCIIT) was set up in 1999 by the erstwhile Regional Computer Centre (RCC), Calcutta (in JU) as a unique joint venture of NIC, Ministry of Communication & IT, Govt. of India and Dept. of Higher Education, Govt. of West Bengal. In 2003 the lead role of management of RCCIIT was transferred to the State Govt. from Govt. of India. </p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6 mt-lg-0 mt-4">
+                <div class="footer_cont">
+                    <h5 class="mb-lg-3 mb-md-3 mb-2">Quick Links</h5>
+                    <ul class="quick_link mb-0 pl-0">
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="https://admission.rcciit.org.in/">Admission & Online Fees Payment</a></li>
+                        <li><a href="https://rcciit.edu.in/academic-autonomy/">Academic Autonomy</a></li>
+                        <li><a href="https://rcciit.edu.in/nirf/">NIRF</a></li>
+                        <li><a href="https://rcciit.edu.in/approvals-certificates">Approvals & Certificates</a></li>
+                        <li><a href="https://rcciit.edu.in/grievance/">Online Grievance </a></li>
+                        <li><a href="https://www.aicte-india.org/feedback/students.php">AICTE Student Feedback </a></li>
+                        <li><a href="https://www.aicte-india.org/feedback/faculty.php">AICTE Faculty Feedback </a></li>
+                        <li><a href="#">ICC</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6 mt-lg-0 mt-4">
+                <div class="footer_cont">
+                    <h5 class="mb-lg-3 mb-md-3 mb-2">Important Links</h5>
+                    <ul class="quick_link mb-0 pl-0">
+                        <li><a href="https://rcciit.edu.in/tender/">Tenders</a></li>
+                        <li><a href="https://rcciit.edu.in/download/rules-&-regulations">Downloads</a></li>
+                        <li><a href="https://rcciit.edu.in/scholarship">Scholarship</a></li>
+                        <li><a href="https://rcciit.edu.in/anti-ragging">Anti-Ragging</a></li>
+                        <li><a href="https://iqac.rcciit.org.in/">IQAC</a></li>
+                        <li><a href="#">Archives</a></li>
+                        <li><a href="https://rcciit.edu.in/naac">NAAC</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-4 mt-lg-0 mt-4">
+                <div class="footer_cont">
+                    <h5 class="mb-lg-3 mb-md-3 mb-2">Other Links</h5>
+                    <ul class="quick_link mb-0 pl-0">
+                        <li><a href="https://rcciit.edu.in/vacancy">Vacancy</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="https://rcciit.edu.in/archive/event">Archived Events</a></li>
+                        <li><a href="https://rcciit.edu.in/archive/news">Archived News</a></li>
+                        <li><a href="https://rcciit.edu.in/archive/tender">Archived Tenders</a></li>
+                        <li><a href="https://rcciit.edu.in/archive/notice">Archived Notices</a></li>
+                        <li><a href="https://rcciit.edu.in/archive/vacancy">Archived Vacancies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-12 mt-lg-0 mt-4">
+                <div class="footer_cont other_contact">
+                    <h5 class="mb-lg-3 mb-md-3 mb-2">Contact Us</h5>
+                    <p class="mb-lg-3 mb-md-3 mb-2"><span><i class="fa fa-map-marker" aria-hidden="true"></i></span> <a href="https://maps.app.goo.gl/LsEoZpvuTpRiQkTy5">Canal S Rd, Beleghata, Kolkata, West Bengal 700015</a></p>
+                    <p class="mb-lg-3 mb-md-3 mb-2"><span><i class="fa fa-phone" aria-hidden="true"></i></span> <a href="tel:+91 62908 21297">+91 62908 21297</a></p>
+                    <p class="mb-0"><span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+  <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/>
+</svg></span> <a href="https://www.rcciit.edu.in/" target="_blank">www.rcciit.edu.in</a></p>
+                </div>
+                <h5 class="mb-3 mt-4">Follow Us</h5>
+                <ul class="social_link mb-0 pl-0">
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="footer_bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="mb-0">© 2024 RCCIIT, All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" data-backdrop="static" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <!-- <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> -->
+      <div class="modal-body">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-11 col-11">
+                    <div class="col-auto p-0">
+                      <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username" onkeydown="search(this)">
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-1 col-1">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://rcciit.edu.in/assets/js/jquery.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://rcciit.edu.in/assets/js/bootstrap.min.js"></script>
+<script src="https://rcciit.edu.in/assets/js/webslidemenu.js"></script>
+<script src="https://rcciit.edu.in/assets/js/owl.carousel.min.js"></script>
+<!-- <script src="https://rcciit.edu.in/assets/plugins/fresco-master/fresco-master/dist/js/fresco.js"></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/eonasdan-bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js'></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+<script type="text/javascript">
+$("#datepicker1").datetimepicker({
+    useCurrent: false,
+    format: "YYYY-MM-DD",
+    showTodayButton: true,
+    icons: {
+        next: "fa fa-chevron-right",
+        previous: "fa fa-chevron-left",
+        today: 'todayText',
+    }
+});
+
+$("#datepicker2").datetimepicker({
+    useCurrent: false,
+    format: "YYYY-MM-DD",
+    showTodayButton: true,
+    icons: {
+        next: "fa fa-chevron-right",
+        previous: "fa fa-chevron-left",
+        today: 'todayText',
+    }
+});
+    
+$(document).ready(function() {
+    $('#srh-btn').on("click",function (e) { 
+        $("#start-date-err-msg").text("");
+        $("#end-date-err-msg").text("");
+        var start_date = $("#start-date").val();
+        var end_date = $("#end-date").val();
+        var start_date_format = new Date(start_date);
+        var end_date_format = new Date(end_date);
+        
+        if (start_date == "") 
+            $("#start-date-err-msg").text("Please choose start date!");
+        else if (end_date == "") 
+            $("#end-date-err-msg").text("Please choose end date!");
+        else if (start_date_format > end_date_format) 
+            $("#end-date-err-msg").text("End date must me grater than start date!");
+        else 
+            $("form#srh-frm").submit();
+    });
+
+    var currPage = 1;
+    $("a#load-more").click(function() {
+        loadMore(++currPage);
+    });
+});
+
+function loadMore(page_no) {
+    $("a#load-more").text('Loading...');
+    var slug = $("#slug-input").val();
+    var start_date = $("#start-date").val();
+    var end_date = $("#end-date").val();
+    var url = $("a#load-more").data("url");
+    $.get(
+        url, 
+        {
+            slug: slug,
+            page_no: page_no,
+            start_date: start_date,
+            end_date: end_date,
+        }, 
+        function(response) {
+            $("#list_cont").append(response);
+            $("a#load-more").text('Load More');
+            var next_page = $("#next-page").val();
+            if (next_page == "no_next_page") {
+                $("a#load-more").hide();
+            }
+        }
+    );
+}
+
+$(window).on("scroll", function() {
+    if ($(window).scrollTop() > 50) {
+        $("#header").addClass("active");
+    } else {
+        //remove the background property so it comes transparent again (defined in your css)
+        $("#header").removeClass("active");
+    }
+});
+
+$('.notice_slide').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    margin: 10,
+    dots: true,
+    nav: false,
+    // navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
+
+$('.news_slide').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    margin: 10,
+    dots: true,
+    nav: false,
+    // navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 1
+        }
+    }
+})
+
+$('.whyrcciit_slide').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    margin: 0,
+    dots: false,
+    nav: true,
+    navText: ['<img src="https://rcciit.edu.in/assets/images/left_arrow.png" class="img-fluid" alt="...">', '<img src="https://rcciit.edu.in/assets/images/right_arrow.png" class="img-fluid" alt="...">'],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        }
+    }
+})
+
+$('.achievements_slide').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    margin: 40,
+    dots: false,
+    nav: true,
+    navText: ['<img src="https://rcciit.edu.in/assets/images/left_icon.png" class="img-fluid" alt="...">', '<img src="https://rcciit.edu.in/assets/images/right_icon.png" class="img-fluid" alt="...">'],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2,
+            margin: 20,
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+$('.mncs_slide').owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    margin: 40,
+    dots: false,
+    nav: true,
+    navText: ['<img src="https://rcciit.edu.in/assets/images/left_icon.png" class="img-fluid" alt="...">', '<img src="https://rcciit.edu.in/assets/images/right_icon.png" class="img-fluid" alt="...">'],
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2,
+            margin: 20,
+        },
+        1000: {
+            items: 6
+        }
+    }
+})
+
+</script>
+
+<script>
+    /* Demo purposes only */
+    $(".hover").mouseleave(
+      function () {
+        $(this).removeClass("hover");
+      }
+    );
+</script>
+
+<!-- <script>
+    if ($('.list').length) {
+        var hidWidth;
+    var scrollBarWidths = 40;
+
+    var widthOfList = function(){
+    var itemsWidth = 0;
+    $('.list li').each(function(){
+        var itemWidth = $(this).outerWidth();
+        itemsWidth+=itemWidth;
+    });
+    return itemsWidth;
+    };
+
+    var widthOfHidden = function(){
+    return (($('.wrapper').outerWidth())-widthOfList()-getLeftPosi())-scrollBarWidths;
+    };
+
+    var getLeftPosi = function(){
+    return $('.list').position().left;
+    };
+
+    var reAdjust = function(){
+    if (($('.wrapper').outerWidth()) < widthOfList()) {
+        $('.scroller-right').show();
+    }
+    else {
+        $('.scroller-right').hide();
+    }
+    
+    if (getLeftPosi()<0) {
+        $('.scroller-left').show();
+    }
+    else {
+        $('.item').animate({left:"-="+getLeftPosi()+"px"},'slow');
+        $('.scroller-left').hide();
+    }
+    }
+
+    reAdjust();
+
+    $(window).on('resize',function(e){  
+        reAdjust();
+    });
+
+    $('.scroller-right').click(function() {
+    
+        $('.scroller-left').fadeIn('slow');
+        $('.scroller-right').fadeOut('slow');
+        
+        $('.list').animate({left:"+="+widthOfHidden()+"px"},'slow',function(){
+
+        });
+    });
+
+    $('.scroller-left').click(function() {
+    
+        $('.scroller-right').fadeIn('slow');
+        $('.scroller-left').fadeOut('slow');
+    
+        $('.list').animate({left:"-="+getLeftPosi()+"px"},'slow',function(){
+        
+        });
+    });    
+}
+</script> -->
+
+<script>
+    $(document).ready(function(){
+  $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+    
+    $(".zoom").hover(function(){
+        
+        $(this).addClass('transition');
+    }, function(){
+        
+        $(this).removeClass('transition');
+    });
+});
+   
+
+function search(ele) {
+    if(event.key === 'Enter') {
+        //alert(ele.value);
+var val = ele.value;
+window.location.href='https://rcciit.edu.in/search/'+val;        
+    }
+}
+ 
+</script>
+
+<script>
+    $('.share').click(function(event) {
+        $(this).parent().find('.shareCont').toggleClass('show');
+    });
+
+    $('.submissions_drawing').mouseleave(function(event) {
+        $(this).find('.shareCont').removeClass('show');
+    });
+</script>
+<script>
+function getDirections() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      let lat = position.coords.latitude;
+      let lng = position.coords.longitude;
+
+      // Your destination
+      let destination = "Canal S Rd Beleghata Kolkata 700015, India";
+
+      // Build Google Maps URL with real coordinates
+      let mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${encodeURIComponent(destination)}&travelmode=driving`;
+
+      window.open(mapsUrl, "_blank");
+    }, function() {
+      alert("Unable to fetch your location.");
+    });
+  } else {
+    alert("Geolocation is not supported by your browser.");
+  }
+}
+</script>
+</body>
+
+</html>

@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { testimonialsData } from "../Data/SuccessData";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 
 const Testimonials = () => {
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
   return (
-    <div className="w-full py-24 bg-[#f9fafb] flex justify-center relative overflow-hidden">
+    <div ref={sectionRef} className="w-full py-24 bg-[#f9fafb] flex justify-center relative overflow-hidden">
       
       {/* 🔹 DOT GRID BACKGROUND */}
       <div className="absolute inset-0 z-0 opacity-[0.1]" 
@@ -17,7 +33,7 @@ const Testimonials = () => {
       <div className="w-[90%] max-w-6xl relative z-10">
 
         {/* 🔹 HEADING */}
-        <div className="text-center mb-16 animate-fadeUp">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl font-bold text-gray-900 tracking-tight font-serif">
             Success Stories
           </h1>
@@ -33,9 +49,10 @@ const Testimonials = () => {
           {testimonialsData.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl p-8 flex flex-col gap-6 shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 
-                         transition-all duration-500 hover:shadow-xl hover:-translate-y-2 animate-fadeUp h-full"
-              style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
+              className={`bg-white rounded-3xl p-8 flex flex-col gap-6 shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 
+                         transition-all duration-700 hover:shadow-xl hover:-translate-y-2 h-full
+                         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
 
               <div className="flex justify-between items-start">

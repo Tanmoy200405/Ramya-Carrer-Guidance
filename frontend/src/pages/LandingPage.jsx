@@ -50,7 +50,6 @@ const LandingPage = () => {
         <Courses />
         <FounderMessage />
         <Testimonials />
-        <ContactForm />
         <StartJourney />
         <Footer />
       </div>
@@ -59,4 +58,4 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default LandingPage

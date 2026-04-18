@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import gsap from "gsap";
 
-const ContactForm = () => {
+const EntryGate = ({ onUnlock }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,20 +15,16 @@ const ContactForm = () => {
 
   const [status, setStatus] = useState({ type: "", message: "" });
   const [loading, setLoading] = useState(false);
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const gateRef = useRef(null);
+  const formRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    // Initial animation
+    gsap.fromTo(
+      formRef.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.5 }
     );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
-    };
   }, []);
 
   const handleChange = (e) => {
@@ -40,21 +37,29 @@ const ContactForm = () => {
     setStatus({ type: "", message: "" });
 
     try {
-      const response = await axios.post("http://localhost:5000/api/students", formData);
+      // Connect to port 5001 as previously fixed
+      const response = await axios.post("http://127.0.0.1:5001/api/students", formData);
       setStatus({ type: "success", message: response.data.message });
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        fatherName: "",
-        motherName: "",
-        school: "",
-        stream: "",
+      
+      // Save to localStorage
+      localStorage.setItem("survey_completed", "true");
+
+      // Exit animation
+      gsap.to(gateRef.current, {
+        opacity: 0,
+        scale: 1.1,
+        filter: "blur(20px)",
+        duration: 1.2,
+        ease: "power3.inOut",
+        onComplete: onUnlock,
       });
+
     } catch (error) {
+      console.error("Submission error:", error);
+      const errorMsg = error.response?.data?.message || error.message || "Connection failed. Please check if the server is running.";
       setStatus({
         type: "error",
-        message: error.response?.data?.message || "Something went wrong. Please try again.",
+        message: errorMsg,
       });
     } finally {
       setLoading(false);
@@ -62,9 +67,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full py-24 bg-[#F5F5F0] flex justify-center relative overflow-hidden">
-      
-      {/* 🔹 DOT GRID BACKGROUND */}
+    <div 
+      ref={gateRef} 
+      className="fixed inset-0 z-[9999] bg-[var(--neutral)] flex items-center justify-center overflow-y-auto px-4 py-10"
+    >
+      {/* 🔹 DOT GRID BACKGROUND (Matching Brand Aesthetic) */}
       <div className="absolute inset-0 z-0 opacity-[0.1]" 
            style={{ 
              backgroundImage: 'radial-gradient(#002147 1px, transparent 1px)', 
@@ -72,24 +79,20 @@ const ContactForm = () => {
            }}>
       </div>
 
-      <div className="w-[90%] max-w-4xl bg-white rounded-[3rem] shadow-2xl p-8 md:p-16 relative z-10 border border-gray-100">
-        
-        {/* HEADING */}
-        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div 
+        ref={formRef}
+        className="w-full max-w-4xl bg-white rounded-[3rem] shadow-2xl p-8 md:p-16 relative z-10 border border-gray-100"
+      >
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-serif text-[var(--primary)] font-bold mb-4">
-            Start Your <span className="text-[var(--tertiary)] italic">Application</span>
+            Begin Your <span className="text-[var(--tertiary)] italic">Excellence</span>
           </h2>
-          <p className="text-gray-500 font-serif italic max-w-lg mx-auto leading-relaxed">
-             Take the first step towards your dream career. Fill out the details below and our experts will reach out to you.
-          </p>
-          <p className="text-gray-600 font-medium mt-4">
-            For inquiries, contact us at: <span className="text-[var(--tertiary)] font-bold">+91 70441 87556</span>
+          <p className="text-gray-500 font-serif italic max-w-lg mx-auto leading-relaxed text-sm md:text-base">
+            Please share your academic profile to unlock the full sanctuary of career guidance and personalized advisory.
           </p>
         </div>
 
-        {/* FORM */}
         <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          
           {/* NAME */}
           <div className="flex flex-col gap-2">
             <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Full Name</label>
@@ -120,6 +123,16 @@ const ContactForm = () => {
             />
           </div>
 
+          {/* SCHOOL */}
+          <div className="flex flex-col gap-2">
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Current School</label>
+            <input 
+              type="text" name="school" value={formData.school} onChange={handleChange} required
+              placeholder="Your last attended school"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+            />
+          </div>
+
           {/* FATHER'S NAME */}
           <div className="flex flex-col gap-2">
             <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Father's Name</label>
@@ -140,17 +153,7 @@ const ContactForm = () => {
             />
           </div>
 
-          {/* SCHOOL */}
-          <div className="flex flex-col gap-2">
-            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">School Name</label>
-            <input 
-              type="text" name="school" value={formData.school} onChange={handleChange} required
-              placeholder="Your last attended school"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
-            />
-          </div>
-
-          {/* STREAM (Select Dropdown) */}
+          {/* STREAM */}
           <div className="flex flex-col gap-2 md:col-span-2">
             <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Current Stream / Interest</label>
             <select 
@@ -169,9 +172,9 @@ const ContactForm = () => {
           <div className="md:col-span-2 mt-4">
             <button 
               type="submit" disabled={loading}
-              className="w-full py-5 bg-[var(--primary)] text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 disabled:bg-gray-400 flex justify-center items-center gap-2"
+              className="w-full py-5 bg-[var(--primary)] text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 disabled:bg-gray-400 flex justify-center items-center gap-2 uppercase tracking-widest"
             >
-              {loading ? "Submitting..." : "SUBMIT APPLICATION"}
+              {loading ? "AUTHENTICATING..." : "ENTER PORTAL"}
             </button>
           </div>
 
@@ -181,12 +184,11 @@ const ContactForm = () => {
               {status.message}
             </div>
           )}
-
         </form>
-
       </div>
     </div>
   );
 };
 
-export default ContactForm;
+export default EntryGate;
+

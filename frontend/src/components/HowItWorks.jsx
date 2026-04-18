@@ -1,99 +1,96 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { howItWorksData } from "../Data/HowItWorksData";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HowItWorks = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const sectionRef = useRef(null);
+  const containerRef = useRef(null);
+  const cardsRef = useRef([]);
 
-  useGSAP(() => {
-    // Pin the container and scrub through the steps
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "center center", // Pin when the center of the section hits the center of the viewport
-      end: "+=1500", // Keep it pinned for 1500px of scrolling (adjust to make it scroll slower/faster)
-      pin: true,
-      onUpdate: (self) => {
-        // Map progress (0 to 1) to the number of steps
-        const totalSteps = howItWorksData.length;
-        // ensure index never exceeds array bounds
-        let index = Math.floor(self.progress * totalSteps);
-        if (index === totalSteps) index = totalSteps - 1;
-        
-        setActiveIndex(index);
+  useEffect(() => {
+    const cards = cardsRef.current;
+    
+    gsap.fromTo(
+      cards,
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 80%",
+        },
       }
-    });
-
-    return () => {
-        ScrollTrigger.getAll().forEach(t => t.kill());
-    };
-  }, { scope: sectionRef });
+    );
+  }, []);
 
   return (
-    <div ref={sectionRef} className="w-full min-h-screen flex py-10 md:py-0 md:h-screen bg-[var(--neutral)] items-center justify-center">
-      <div className="bg-white rounded-2xl md:rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.06)] px-4 md:px-6 lg:px-12 py-6 md:py-12 w-[95%] max-w-4xl border-t-4 border-[var(--primary)] flex flex-col">
+    <section 
+      ref={containerRef} 
+      className="w-full py-24 bg-[var(--neutral)] overflow-hidden"
+    >
+      <div className="w-[90%] max-w-7xl mx-auto">
         
-        {/* HEADING */}
-        <h1 className="text-center text-2xl md:text-4xl font-bold text-[var(--primary)] mb-6 md:mb-10 font-serif shrink-0">
-          How It Works
-        </h1>
-        
-        {/* ACCORDION CONTAINER - SCROLLS INTERNALLY ON MOBILE */}
-        <div className="flex flex-col gap-3 md:gap-4 lg:gap-6 max-h-[65vh] md:max-h-none overflow-y-auto md:overflow-visible pr-1 pb-2">
+        {/* HEADER */}
+        <div className="text-center mb-16 md:mb-24">
+          <h1 className="text-4xl md:text-6xl font-serif text-[var(--primary)] font-bold mb-6">
+            The <span className="text-[var(--tertiary)] italic">Path</span> to Excellence
+          </h1>
+          <p className="text-gray-500 font-serif italic text-lg max-w-2xl mx-auto leading-relaxed">
+            Our curated four-step approach ensures your academic journey is mapped with precision and concierge-level care.
+          </p>
+        </div>
+
+        {/* BENTO GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {howItWorksData.map((step, index) => {
-            const isActive = index === activeIndex;
             const Icon = step.icon;
-
             return (
-              <div 
-                key={index} 
-                // We keep click functionality for quick jumps
-                onClick={() => setActiveIndex(index)}
-                className={`flex items-start lg:items-center gap-3 md:gap-4 lg:gap-6 p-3 md:p-5 lg:p-6 rounded-xl md:rounded-2xl border transition-all duration-700 cursor-pointer 
-                  ${isActive 
-                    ? 'bg-[var(--primary)] text-white shadow-lg border-transparent scale-[1.02] lg:scale-105' 
-                    : 'bg-[#f4f8f6] border-gray-200 text-gray-600 hover:bg-gray-100 hover:scale-[1.01]'}`}
+              <div
+                key={step.id}
+                ref={(el) => (cardsRef.current[index] = el)}
+                className="group relative bg-white rounded-3xl p-8 md:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500 border border-gray-100 flex flex-col items-start min-h-[320px] overflow-hidden"
               >
-                {/* ICON BLOCK */}
-                <div className={`p-3 md:p-4 rounded-xl text-2xl md:text-3xl transition-all duration-700 shadow-sm shrink-0
-                  ${isActive 
-                    ? 'bg-white text-[var(--primary)] shadow-md' 
-                    : 'bg-gray-200 text-gray-400'}`}
-                >
-                  <Icon />
+                {/* Background Number */}
+                <div className="absolute top-[-20px] right-[-20px] text-9xl font-serif font-black text-[var(--primary)] opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-500 pointer-events-none select-none">
+                  0{index + 1}
                 </div>
 
-                {/* TEXT CONTENT */}
-                <div className="flex flex-col overflow-hidden w-full pt-1 lg:pt-0">
-                  <h2 className={`font-bold text-lg md:text-xl transition-all duration-700 font-serif
-                    ${isActive ? 'text-[var(--tertiary)]' : ''}`}
-                  >
-                    {step.title}
-                  </h2>
-                  
-                  {/* EXPANDABLE BODY */}
-                  <div className={`transition-all duration-700 ease-in-out origin-top 
-                    ${isActive ? 'max-h-[200px] opacity-100 mt-2 lg:mt-3 scale-y-100' : 'max-h-0 opacity-0 scale-y-0'}`}
-                  >
-                    <p className="font-semibold text-sm md:text-base text-gray-100 leading-tight">
-                      {step.heading}
-                    </p>
-                    <p className="text-xs md:text-sm mt-1.5 md:mt-2 text-gray-300 leading-relaxed max-w-2xl">
-                      {step.desc}
-                    </p>
-                  </div>
+                {/* ICON */}
+                <div className="w-16 h-16 rounded-2xl bg-[#f4f8f6] flex items-center justify-center text-[var(--primary)] mb-8 group-hover:bg-[var(--primary)] group-hover:text-white transition-all duration-500 shadow-sm">
+                  <Icon className="text-2xl" />
                 </div>
+
+                {/* TEXT */}
+                <h3 className="text-2xl font-serif font-bold text-[var(--primary)] mb-4">
+                  {step.heading}
+                </h3>
+                <p className="text-gray-500 font-medium leading-relaxed mb-6">
+                  {step.desc}
+                </p>
+
+                {/* STEP INDICATOR */}
+                <div className="mt-auto flex items-center gap-2">
+                  <div className="h-1 w-8 bg-[var(--tertiary)] rounded-full"></div>
+                  <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-[var(--tertiary)]">
+                    STEP 0{index + 1}
+                  </span>
+                </div>
+
+                {/* SHINE EFFECT ON HOVER */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
               </div>
             );
           })}
         </div>
-
       </div>
-    </div>
+    </section>
   );
 };
 
