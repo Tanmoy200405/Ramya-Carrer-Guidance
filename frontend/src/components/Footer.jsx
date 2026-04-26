@@ -5,21 +5,21 @@ import { HeadData } from "../Data/HeadData";
 const Footer = () => {
   return (
     <footer className="bg-[var(--footer-bg)] text-[var(--primary)] overflow-hidden relative border-t border-gray-200">
-      <div className="w-[90%] max-w-7xl mx-auto py-4 relative z-10">
+      <div className="w-[90%] max-w-7xl mx-auto py-2 relative z-10">
         {/* TOP SECTION (LIGHT) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-16">
           {/* 🔹 BRANDING */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2 md:gap-6">
             <img
               src={logo}
               alt="Ramya Career Guidance"
-              className="h-24 w-auto md:h-40 object-contain"
+              className="h-16 w-auto md:h-24 object-contain"
             />
           </div>
 
           {/* 🔹 OUR EXCELLENCE */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-3">
-            <h3 className="text-xs font-bold tracking-[0.25em] text-[var(--primary)] uppercase border-b border-gray-200 pb-2 w-fit">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1">
+            <h3 className="text-[10px] font-bold tracking-[0.25em] text-[var(--primary)] uppercase border-b border-gray-100 pb-1 w-fit">
               Our Excellence
             </h3>
             <ul className="flex flex-col gap-3 text-sm font-medium">
