@@ -29,19 +29,26 @@ const CollegePartners = () => {
   return (
     <section ref={sectionRef} className="w-full py-8 md:py-12 bg-white relative overflow-hidden border-t border-gray-100">
       {/* 🔹 HEADING */}
-      <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl md:text-5xl font-serif text-[var(--primary)] font-bold mb-4">
-          Our <span className="text-[var(--tertiary)] italic">Partner</span> Colleges
+      <div className="text-center mb-16 px-4">
+        <div className="inline-block px-4 py-1 bg-[var(--tertiary)]/10 rounded-full mb-4">
+           <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--tertiary)]">Global Network</span>
+        </div>
+        
+        <h2 className="text-4xl md:text-6xl font-serif text-[var(--primary)] font-bold mb-6">
+          Our <span className="relative inline-block">
+            <span className="relative z-10 text-[var(--tertiary)] italic">Partner</span>
+            <span className="absolute bottom-2 left-0 w-full h-3 bg-[var(--tertiary)]/10 -z-0"></span>
+          </span> Colleges
         </h2>
         
-        <div className="flex items-center justify-center gap-4 mb-6">
-          <div className="h-[1px] w-12 bg-gray-200"></div>
-          <div className="w-2 h-2 rounded-full bg-[var(--tertiary)] opacity-60"></div>
-          <div className="h-[1px] w-12 bg-gray-200"></div>
+        <div className="flex items-center justify-center gap-6 mb-8">
+          <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-gray-300"></div>
+          <div className="w-2.5 h-2.5 rotate-45 border-2 border-[var(--tertiary)]"></div>
+          <div className="h-[1px] w-16 bg-gradient-to-l from-transparent to-gray-300"></div>
         </div>
 
-        <p className="text-gray-500 font-serif italic text-base md:text-xl max-w-2xl mx-auto leading-relaxed">
-          “Directly partnered with elite institutions across India to ensure your seamless transition into world-class education.”
+        <p className="text-[var(--primary)]/80 font-serif italic text-lg md:text-2xl max-w-3xl mx-auto leading-relaxed font-medium">
+          “Bridging the gap between <span className="text-[var(--secondary)]">ambition</span> and <span className="text-[var(--tertiary)]">opportunity</span> through our exclusive network of elite institutions.”
         </p>
       </div>
 
