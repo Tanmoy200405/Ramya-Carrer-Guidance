@@ -20,8 +20,16 @@ const Nav = ({ showHead, open, setOpen }) => {
       <nav className="flex items-center justify-between h-[70px] md:h-[110px] px-6 md:px-16 lg:px-24">
 
         {/* LOGO */}
-        <div className={`flex items-center transition-opacity duration-300 ${open ? "opacity-0 invisible" : "opacity-100"}`}>
-          <img src={logo} className="h-24 md:h-40 w-auto object-contain" />
+        <div className={`flex items-center gap-3 transition-opacity duration-300 ${open ? "opacity-0 invisible" : "opacity-100"}`}>
+          <img src={logo} className="h-20 md:h-28 w-auto object-contain" />
+          <div className="flex flex-col justify-center border-l border-gray-200 pl-3 animate-tagline">
+            <span className="text-[10px] md:text-[11px] font-bold text-[var(--primary)] uppercase tracking-[0.2em] leading-tight">
+              Founder
+            </span>
+            <span className="text-[12px] md:text-[14px] font-serif italic text-[var(--tertiary)] font-bold leading-tight">
+              Jaydeep Majumdar
+            </span>
+          </div>
         </div>
 
         {/* LINKS */}

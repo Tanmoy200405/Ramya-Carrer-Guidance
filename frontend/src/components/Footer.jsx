@@ -13,12 +13,20 @@ const Footer = () => {
           
           {/* 🔹 BRANDING */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-6">
-            <div className="mb-2">
+            <div className="flex items-center gap-4 mb-2">
               <img
                 src={logo}
                 alt="Ramya Career Guidance"
-                className="h-32 w-auto md:h-56 object-contain"
+                className="h-20 w-auto md:h-32 object-contain"
               />
+              <div className="flex flex-col justify-center border-l border-gray-200 pl-4">
+                <span className="text-[10px] font-bold text-[var(--primary)] uppercase tracking-[0.2em]">
+                  Founder
+                </span>
+                <span className="text-[14px] font-serif italic text-[var(--tertiary)] font-bold">
+                  Jaydeep Majumdar
+                </span>
+              </div>
             </div>
             <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed max-w-xs sm:max-w-sm mt-1 font-light italic px-4 md:px-0">
               "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
