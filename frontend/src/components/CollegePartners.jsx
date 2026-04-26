@@ -29,12 +29,19 @@ const CollegePartners = () => {
   return (
     <section ref={sectionRef} className="w-full py-8 md:py-12 bg-white relative overflow-hidden border-t border-gray-100">
       {/* 🔹 HEADING */}
-      <div className="text-center mb-10">
-        <h1 className="text-2xl md:text-3xl font-bold text-[var(--primary)] text-center">
-          Our Partner Colleges
-        </h1>
-        <p className="text-gray-500 mt-2 text-sm md:text-base text-center font-serif italic">
-          We have tie-ups with top colleges across India.
+      <div className="text-center mb-12 px-4">
+        <h2 className="text-3xl md:text-5xl font-serif text-[var(--primary)] font-bold mb-4">
+          Our <span className="text-[var(--tertiary)] italic">Partner</span> Colleges
+        </h2>
+        
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <div className="h-[1px] w-12 bg-gray-200"></div>
+          <div className="w-2 h-2 rounded-full bg-[var(--tertiary)] opacity-60"></div>
+          <div className="h-[1px] w-12 bg-gray-200"></div>
+        </div>
+
+        <p className="text-gray-500 font-serif italic text-base md:text-xl max-w-2xl mx-auto leading-relaxed">
+          “Directly partnered with elite institutions across India to ensure your seamless transition into world-class education.”
         </p>
       </div>
 
