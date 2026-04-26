@@ -17,7 +17,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
     credentials: true
 }));
-app.options('(.*)', cors()); // Enable pre-flight for all routes
+app.options(/.*/, cors()); // Enable pre-flight for all routes
 app.use(express.json());
 
 // Log all requests
