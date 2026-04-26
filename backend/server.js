@@ -52,6 +52,24 @@ app.post('/api/students', async (req, res) => {
 
         await newStudent.save();
         console.log('✅ Student inquiry saved to Atlas (ramya_db):', newStudent.name);
+
+        // 🟢 Sync to Google Sheets (Optional/Background)
+        const webhookUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
+        if (webhookUrl && webhookUrl !== 'your_google_script_url_here') {
+            try {
+                fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(req.body)
+                }).then(response => {
+                    if (response.ok) console.log('📊 Successfully synced to Google Sheets');
+                    else console.error('⚠️ Google Sheets sync failed with status:', response.status);
+                }).catch(err => console.error('⚠️ Google Sheets sync error:', err.message));
+            } catch (err) {
+                console.error('⚠️ Google Sheets sync caught error:', err.message);
+            }
+        }
+
         res.status(201).json({ message: 'Success! Your inquiry has been submitted.' });
     } catch (error) {
         console.error('❌ Error saving student to MongoDB:', error.message);
