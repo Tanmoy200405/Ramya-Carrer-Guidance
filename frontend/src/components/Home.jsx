@@ -24,8 +24,8 @@ const Home = () => {
       </div>
       
       {/* 📜 Content Card Section */}
-      <div className="container mx-auto px-6 sm:px-10 lg:px-20 relative z-10 -mt-24 sm:-mt-32 pb-24">
-         <div className="bg-white p-8 sm:p-12 lg:p-24 shadow-[0_40px_100px_rgba(0,0,0,0.08)] rounded-sm border-t-[6px] border-[var(--tertiary)] grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-20 relative z-10 -mt-24 sm:-mt-32 pb-16">
+         <div className="bg-white p-8 sm:p-12 lg:p-16 shadow-[0_40px_100px_rgba(0,0,0,0.08)] rounded-sm border-t-[6px] border-[var(--tertiary)] grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             
             {/* Left Content */}
             <div className="space-y-8 sm:space-y-10">

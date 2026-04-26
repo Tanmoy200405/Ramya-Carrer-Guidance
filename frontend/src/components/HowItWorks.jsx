@@ -31,15 +31,11 @@ const HowItWorks = () => {
   }, []);
 
   return (
-    <section 
-      id="how-it-works"
-      ref={containerRef} 
-      className="w-full py-24 bg-[var(--neutral)] overflow-hidden"
-    >
+    <section id="how-it-works" ref={containerRef} className="w-full py-16 md:py-20 bg-[#F5F5F0] relative overflow-hidden flex justify-center">
       <div className="w-[90%] max-w-7xl mx-auto">
         
         {/* HEADER */}
-        <div className="text-center mb-16 md:mb-24">
+        <div className="text-center mb-10 md:mb-16">
           <h1 className="text-4xl md:text-6xl font-serif text-[var(--primary)] font-bold mb-6">
             The <span className="text-[var(--tertiary)] italic">Path</span> to Excellence
           </h1>

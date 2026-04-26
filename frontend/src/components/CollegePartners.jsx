@@ -27,7 +27,7 @@ const CollegePartners = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full py-16 bg-white overflow-hidden">
+    <section ref={sectionRef} className="w-full py-12 md:py-16 bg-white relative overflow-hidden border-t border-gray-100">
       {/* 🔹 HEADING */}
       <div className="text-center mb-10">
         <h1 className="text-2xl md:text-3xl font-bold text-[var(--primary)] text-center">
@@ -75,7 +75,7 @@ const CollegePartners = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

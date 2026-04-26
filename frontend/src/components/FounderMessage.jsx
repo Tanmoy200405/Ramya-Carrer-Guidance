@@ -38,7 +38,7 @@ const FounderMessage = () => {
   }, { scope: containerRef });
 
   return (
-    <div ref={containerRef} className="w-full py-20 bg-white flex justify-center overflow-hidden">
+    <section ref={containerRef} className="w-full py-16 md:py-20 bg-[#f9fafb] relative overflow-hidden flex justify-center">
       <div className="w-[90%] max-w-6xl flex items-center lg:items-start gap-12 lg:gap-20 flex-col md:flex-row">
         
         {/* 🔥 IMAGE SIDE */}
@@ -85,7 +85,7 @@ const FounderMessage = () => {
         </div>
 
       </div>
-    </div>
+    </section>
   );
 };
 

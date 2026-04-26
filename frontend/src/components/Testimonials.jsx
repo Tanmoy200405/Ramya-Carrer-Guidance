@@ -20,7 +20,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full py-24 bg-[#f9fafb] flex justify-center relative overflow-hidden">
+    <div ref={sectionRef} className="w-full py-16 md:py-20 bg-[#f9fafb] flex justify-center relative overflow-hidden">
       
       {/* 🔹 DOT GRID BACKGROUND */}
       <div className="absolute inset-0 z-0 opacity-[0.1]" 
@@ -33,7 +33,7 @@ const Testimonials = () => {
       <div className="w-[90%] max-w-6xl relative z-10">
 
         {/* 🔹 HEADING */}
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-10 md:mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-4xl font-bold text-gray-900 tracking-tight font-serif">
             Success Stories
           </h1>

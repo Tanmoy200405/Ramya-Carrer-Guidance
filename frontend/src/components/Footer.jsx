@@ -8,8 +8,8 @@ const Footer = () => {
       {/* Background Glow - Made more subtle for light mode */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--tertiary)] opacity-[0.05] blur-[120px] -mr-48 -mt-48 rounded-full"></div>
       
-      <div className="w-[90%] max-w-7xl mx-auto py-20 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+      <div className="w-[90%] max-w-7xl mx-auto py-12 md:py-16 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16 mb-12 md:mb-16">
           
           {/* 🔹 BRANDING */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6">
@@ -17,10 +17,10 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="Ramya Career Guidance"
-                className="h-28 w-auto md:h-56 object-contain"
+                className="h-20 w-auto md:h-40 object-contain"
               />
             </div>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed max-w-xs sm:max-w-sm mt-1 font-light italic px-4 md:px-0">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-sm md:max-w-md mt-1 font-light italic px-4 md:px-0">
               "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
             </p>
           </div>
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
 
         {/* 🔹 BOTTOM BAR */}
-        <div className="mt-24 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] gap-6">
+        <div className="mt-12 md:mt-16 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] gap-6">
           <div className="flex items-center gap-4">
             <span className="text-[var(--tertiary)] italic">Built with Excellence</span>
             <span className="w-1 h-1 bg-gray-200 rounded-full"></span>

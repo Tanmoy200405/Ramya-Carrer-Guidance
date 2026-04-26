@@ -17,11 +17,11 @@ const Nav = ({ showHead, open, setOpen }) => {
     >
 
       {/* 🔹 DESKTOP NAV (UNCHANGED) */}
-      <nav className="flex items-center justify-between h-[110px] md:h-[130px] px-6 md:px-16 lg:px-24">
+      <nav className="flex items-center justify-between h-[80px] md:h-[100px] px-6 md:px-16 lg:px-24">
 
             {/* LOGO */}
             <div className={`flex items-center transition-opacity duration-300 ${open ? "opacity-0 invisible" : "opacity-100"}`}>
-              <img src={logo} className="h-24 md:h-40 w-auto object-contain" />
+              <img src={logo} className="h-16 md:h-28 w-auto object-contain" />
             </div>
 
             {/* LINKS */}
@@ -88,7 +88,7 @@ const Nav = ({ showHead, open, setOpen }) => {
 
                 {/* LOGO */}
                 <div className="flex px-6 mb-8 items-center">
-                  <img src={logo} className="h-32 w-auto object-contain" />
+                  <img src={logo} className="h-24 w-auto object-contain" />
                 </div>
 
             {/* MENU */}
