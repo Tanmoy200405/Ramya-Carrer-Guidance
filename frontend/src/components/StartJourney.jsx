@@ -1,8 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
+import { HeadData } from "../Data/HeadData";
 
 const StartJourney = () => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+
+  const phoneNumber = HeadData[0].floating_whatsapp.replace(/\s+/g, '');
+  const message = "Hi, I would like to book an initial assessment slot for college guidance.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -35,9 +40,14 @@ const StartJourney = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <button className="px-8 py-4 bg-[var(--tertiary)] text-black font-bold rounded-lg hover:bg-yellow-500 transition-all duration-300">
+          <a 
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-[var(--tertiary)] text-black font-bold rounded-lg hover:bg-yellow-500 transition-all duration-300 uppercase tracking-wider"
+          >
             BOOK INITIAL ASSESSMENT
-          </button>
+          </a>
         </div>
       </div>
     </div>

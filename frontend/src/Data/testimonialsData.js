@@ -40,7 +40,7 @@ export const testimonialsData = [
     },
     {
         id: 5,
-        name: "Vikram Mehta",
+        name: "Agnish Paul",
         college: "Engineering Student",
         review: "Excellent mentorship! They helped me understand the career roadmap very clearly and choose the best engineering path.",
         photo: photo5,
