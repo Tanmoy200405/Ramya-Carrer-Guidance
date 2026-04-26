@@ -8,8 +8,8 @@ const Footer = () => {
       {/* Background Glow - Made more subtle for light mode */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--tertiary)] opacity-[0.05] blur-[120px] -mr-48 -mt-48 rounded-full"></div>
       
-      <div className="w-[90%] max-w-7xl mx-auto py-8 md:py-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 mb-8 md:mb-12">
+      <div className="w-[90%] max-w-7xl mx-auto py-4 md:py-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-16 mb-4 md:mb-12">
           
           {/* 🔹 BRANDING */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-6">
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
 
         {/* 🔹 BOTTOM BAR */}
-        <div className="mt-10 md:mt-16 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] gap-6">
+        <div className="mt-6 md:mt-16 pt-4 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] gap-6">
           <div className="flex items-center gap-4">
             <span className="text-[var(--tertiary)] italic">Built with Excellence</span>
             <span className="w-1 h-1 bg-gray-200 rounded-full"></span>
