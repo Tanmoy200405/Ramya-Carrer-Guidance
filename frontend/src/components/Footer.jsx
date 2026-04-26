@@ -5,15 +5,15 @@ import { HeadData } from "../Data/HeadData";
 const Footer = () => {
   return (
     <footer className="bg-[var(--footer-bg)] text-[var(--primary)] overflow-hidden relative border-t border-gray-200">
-      <div className="w-[90%] max-w-7xl mx-auto py-8 relative z-10">
+      <div className="w-[90%] max-w-7xl mx-auto py-6 relative z-10">
         {/* TOP SECTION (LIGHT) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16">
           {/* 🔹 BRANDING */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2 md:gap-6">
             <img
               src={logo}
               alt="Ramya Career Guidance"
-              className="h-32 w-auto md:h-48 object-contain"
+              className="h-24 w-auto md:h-40 object-contain"
             />
           </div>
 
