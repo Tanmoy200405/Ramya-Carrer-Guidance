@@ -19,7 +19,7 @@ export const testimonialsData = [
         name: "Moubani Issu",
         college: "Bhawanipur Global Campus ",
         review: "I liked it very much. Their guidance helped me in moving forward in the future and assisted me regarding college.",
-        photo: photo2, 
+        photo: photo2,
         rating: 5
     },
     {
@@ -41,7 +41,7 @@ export const testimonialsData = [
     {
         id: 5,
         name: "Agnish Paul",
-        college: "Engineering Student",
+        college: "APC Ray Polytechnic",
         review: "Excellent mentorship! They helped me understand the career roadmap very clearly and choose the best engineering path.",
         photo: photo5,
         rating: 5
