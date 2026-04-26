@@ -11,7 +11,11 @@ import {
   FaPalette, 
   FaMicroscope,
   FaSeedling,
-  FaBullhorn
+  FaBullhorn,
+  FaUniversity,
+  FaBalanceScale,
+  FaTools,
+  FaStethoscope
 } from "react-icons/fa";
 
 // Import existing images
@@ -23,98 +27,163 @@ import paraImg from "../assets/course_paramedical.png";
 export const coursesData = [
   {
     id: "01",
-    category: "MANAGEMENT",
-    title: "BBA & MBA",
-    desc: "Strategic leadership and business management pathways.",
+    category: "MANAGEMENT & BUSINESS",
+    title: "BBA, MBA & More",
+    items: [
+      "Bachelor of Business Administration (BBA)",
+      "Master of Business Administration (MBA)",
+      "Hospital Management",
+      "Hotel Management",
+      "Event Management",
+      "Finance & Marketing Management"
+    ],
+    desc: "Leadership, strategic management, and specialized business programs like MBA, BBA, and Hospital/Hotel management.",
     icon: FaBriefcase,
     image: busImg
   },
   {
     id: "02",
-    category: "TECHNOLOGY",
-    title: "BCA & B.Tech",
-    desc: "Software engineering, data science, and core tech domains.",
+    category: "ENGINEERING & TECHNOLOGY",
+    title: "B.Tech & B.E.",
+    items: [
+      "Computer Science Engineering",
+      "Information Technology",
+      "AI & Machine Learning",
+      "Electronics & Communication",
+      "Mechanical & Civil Engineering"
+    ],
+    desc: "Future-ready engineering branches including CSE, AI/ML, Data Science, and core streams like Mechanical and Civil.",
     icon: FaLaptopCode,
     image: techImg
   },
   {
     id: "03",
-    category: "NURSING",
-    title: "B.Sc & GNM",
-    desc: "Compassionate healthcare careers in premier nursing colleges.",
-    icon: FaHeart,
+    category: "MEDICAL & HEALTHCARE",
+    title: "B.Pharm & Nursing",
+    items: [
+      "B.Pharm & D.Pharm",
+      "BSc Nursing & GNM",
+      "Physiotherapy",
+      "Medical Laboratory Technology"
+    ],
+    desc: "Comprehensive healthcare education from pharmacy to nursing and diagnostic technologies.",
+    icon: FaStethoscope,
     image: nurImg
   },
   {
     id: "04",
-    category: "PARAMEDICAL",
-    title: "Diploma & Degree",
-    desc: "Allied health sciences and diagnostic technologies.",
-    icon: FaMedkit,
-    image: paraImg
+    category: "COMPUTER APPLICATIONS",
+    title: "BCA & MCA",
+    items: [
+      "Bachelor of Computer Applications (BCA)",
+      "Master of Computer Applications (MCA)",
+      "Software & Web Development",
+      "Cloud Computing",
+      "Blockchain Technology"
+    ],
+    desc: "Specialized computer science programs focusing on application development, web tech, and emerging digital innovations.",
+    icon: FaLaptopCode,
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=400&h=400"
   },
   {
     id: "05",
-    category: "LEGAL",
-    title: "LLB & B.A. LLB",
-    desc: "Advocacy, corporate law, and legal consultancy.",
-    icon: FaGavel,
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=400&h=400"
-  },
-  {
-    id: "06",
-    category: "PHARMACY",
-    title: "B.Pharm & D.Pharm",
-    desc: "Pharmaceutical research, industry, and clinical practice.",
-    icon: FaFlask,
-    image: "https://images.unsplash.com/photo-1587854692152-cbe660dbbb88?auto=format&fit=crop&q=80&w=400&h=400"
-  },
-  {
-    id: "07",
-    category: "ARCHITECTURE",
-    title: "B.Arch",
-    desc: "Urban planning, structural design, and spatial aesthetics.",
-    icon: FaBuilding,
-    image: "https://images.unsplash.com/photo-1487958449913-d927990664e4?auto=format&fit=crop&q=80&w=400&h=400"
-  },
-  {
-    id: "08",
-    category: "HOSPITALITY",
-    title: "Hotel Management",
-    desc: "Global hospitality, catering, and tourism management.",
-    icon: FaUtensils,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=400&h=400"
-  },
-  {
-    id: "09",
-    category: "DESIGN",
-    title: "B.Des & BFA",
-    desc: "Fashion, graphic, industrial design and fine arts.",
+    category: "DESIGN & MEDIA",
+    title: "Design, Film & Media",
+    items: [
+      "Fashion & Interior Design",
+      "Animation & VFX",
+      "Graphic & UI/UX Design",
+      "Journalism & Mass Communication",
+      "Film Making & Game Design"
+    ],
+    desc: "Creative career paths in fashion, visual communication, digital arts, and mass media journalism.",
     icon: FaPalette,
     image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400&h=400"
   },
   {
-    id: "10",
-    category: "MEDICAL",
-    title: "MBBS & BDS",
-    desc: "Excellence in medicine and dental surgical sciences.",
-    icon: FaMicroscope,
-    image: "https://images.unsplash.com/photo-1576091160550-217359f49f4c?auto=format&fit=crop&q=80&w=400&h=400"
+    id: "06",
+    category: "LAW",
+    title: "LLB & Corporate Law",
+    items: [
+      "LLB (3 Year)",
+      "BA LLB & BBA LLB (5 Year)",
+      "Corporate Law",
+      "Criminal Law",
+      "International Law"
+    ],
+    desc: "Professional legal education covering litigation, corporate advocacy, and international justice systems.",
+    icon: FaBalanceScale,
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=400&h=400"
   },
   {
-    id: "11",
-    category: "AGRICULTURE",
-    title: "B.Sc Agriculture",
-    desc: "Sustainable farming, agritech, and soil sciences.",
-    icon: FaSeedling,
-    image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=400&h=400"
+    id: "07",
+    category: "HOSPITALITY & AVIATION",
+    title: "Hotel & Travel Mgmt",
+    items: [
+      "Hotel & Hospitality Management",
+      "Aviation Management",
+      "Cabin Crew Training",
+      "Travel & Tourism Management"
+    ],
+    desc: "Elite training for the hospitality industry, luxury travel, and professional aviation services.",
+    icon: FaUtensils,
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=400&h=400"
+  },
+  {
+    id: "08",
+    category: "SCIENCE",
+    title: "BSc & Biotechnology",
+    items: [
+      "BSc (Physics, Chemistry, Maths)",
+      "Biotechnology & Microbiology",
+      "Environmental Science",
+      "Food Technology"
+    ],
+    desc: "Rigorous scientific research and applied science programs in biotechnology and traditional science streams.",
+    icon: FaFlask,
+    image: "https://images.unsplash.com/photo-1532187643603-ba119ca4109e?auto=format&fit=crop&q=80&w=400&h=400"
+  },
+  {
+    id: "09",
+    category: "COMMERCE",
+    title: "B.Com & Finance",
+    items: [
+      "B.Com & M.Com",
+      "Accounting & Finance",
+      "Banking & Insurance",
+      "Taxation"
+    ],
+    desc: "Expertise in trade, commerce, financial accounting, and the banking sector.",
+    icon: FaBuilding,
+    image: "https://images.unsplash.com/photo-1454165833767-0270a6c021f1?auto=format&fit=crop&q=80&w=400&h=400"
+  },
+  {
+    id: "10",
+    category: "ARTS & HUMANITIES",
+    title: "BA & Psychology",
+    items: [
+      "BA (English, History, Pol. Sc.)",
+      "Psychology & Sociology",
+      "Economics",
+      "Philosophy"
+    ],
+    desc: "Exploring human culture, social behavior, and economic systems through diverse humanities programs.",
+    icon: FaUniversity,
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=400&h=400"
   },
   {
     id: "12",
-    category: "MEDIA",
-    title: "Mass Communication",
-    desc: "Journalism, digital media, and public relations.",
-    icon: FaBullhorn,
-    image: "https://images.unsplash.com/photo-1495020689067-958852a7735e?auto=format&fit=crop&q=80&w=400&h=400"
+    category: "SKILL-BASED",
+    title: "Digital & Vocational",
+    items: [
+      "Digital Marketing",
+      "Data Analytics",
+      "Cyber Forensics",
+      "Entrepreneurship",
+      "Culinary Arts"
+    ],
+    desc: "Modern vocational skills including digital marketing, data analytics, and professional entrepreneurship.",
+    icon: FaTools,
+    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=400&h=400"
   }
 ];

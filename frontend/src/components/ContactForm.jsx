@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import { HeadData } from "../Data/HeadData";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +63,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div ref={sectionRef} className="w-full py-24 bg-[#F5F5F0] flex justify-center relative overflow-hidden">
+    <div id="contact" ref={sectionRef} className="w-full py-24 bg-[#F5F5F0] flex justify-center relative overflow-hidden">
       
       {/* 🔹 DOT GRID BACKGROUND */}
       <div className="absolute inset-0 z-0 opacity-[0.1]" 
@@ -83,7 +84,7 @@ const ContactForm = () => {
              Take the first step towards your dream career. Fill out the details below and our experts will reach out to you.
           </p>
           <p className="text-gray-600 font-medium mt-4">
-            For inquiries, contact us at: <span className="text-[var(--tertiary)] font-bold">+91 70441 87556</span>
+            For inquiries, contact us at: <span className="text-[var(--tertiary)] font-bold">{HeadData[0].call_whatsapp}</span>
           </p>
         </div>
 

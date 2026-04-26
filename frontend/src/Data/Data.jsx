@@ -1,24 +1,17 @@
 export const NavData = [
     {
         "name": "Home",
-        "link": "/",
+        "link": "#home",
         "active": true
     },
     {
-        "name": "About",
-        "link": "/about",
+        "name": "Courses",
+        "link": "#courses",
         "active": false
     },
     {
-        "name": "Services",
-        "link": "/services",
+        "name": "How It Works",
+        "link": "#how-it-works",
         "active": false
-    },
-
-    {
-        "name": "Contact",
-        "link": "/contact",
-        "active": false
-    
     }
 ]

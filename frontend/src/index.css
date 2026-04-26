@@ -12,11 +12,20 @@
   --secondary: #A50021;
   --tertiary: #D4AF37;
   --neutral: #F5F5F0;
+  --footer-bg: #FFFFFF;
 
   --text-main: #111827;
   --text-muted: #4B5563;
   --white: #FFFFFF;
   --bg-light-gray: #F9FAFB;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section, div[id] {
+  scroll-margin-top: 130px;
 }
 
 body {
@@ -65,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .animate-scroll {
-  animation: scroll 40s linear infinite;
+  animation: scroll 80s linear infinite;
 }
 
 @keyframes fadeUp {

@@ -16,28 +16,29 @@ app.use(express.json());
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('✅ MongoDB Connected'))
-  .catch(err => console.error('❌ MongoDB Connection Error:', err));
+    .then(() => console.log('✅ MongoDB Connected'))
+    .catch(err => console.error('❌ MongoDB Connection Error:', err));
 
 // Routes
 app.post('/api/students', async (req, res) => {
     console.log('Received inquiry request:', req.body);
     try {
-        const { name, email, phone, fatherName, motherName, school, stream } = req.body;
-        
-        // Basic validation
-        if (!name || !email || !phone || !fatherName || !motherName || !school || !stream) {
-            return res.status(400).json({ message: 'All fields are required' });
+        const { name, email, phone, fatherName, motherName, school, currentStream, interestStream } = req.body;
+
+        // Basic validation (All except motherName are required)
+        if (!name || !email || !phone || !fatherName || !school || !currentStream || !interestStream) {
+            return res.status(400).json({ message: 'All fields marked with * are required' });
         }
 
         const newStudent = new Student({
-            name, email, phone, fatherName, motherName, school, stream
+            name, email, phone, fatherName, motherName, school, currentStream, interestStream
         });
 
         await newStudent.save();
+        console.log('✅ Student inquiry saved to Atlas (ramya_db):', newStudent.name);
         res.status(201).json({ message: 'Success! Your inquiry has been submitted.' });
     } catch (error) {
-        console.error('Error saving student:', error);
+        console.error('❌ Error saving student to MongoDB:', error.message);
         res.status(500).json({ message: 'Internal Server Error' });
     }
 });

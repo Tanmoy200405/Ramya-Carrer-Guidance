@@ -1,12 +1,17 @@
 import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { coursesData } from "../data/CourseData";
+import { coursesData } from "../Data/CourseData";
+import { HeadData } from "../Data/HeadData";
 
 const Courses = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const sliderRef = useRef(null);
   const [cardsToShow, setCardsToShow] = useState(4);
+  const isAnimating = useRef(false);
+
+  // We append clones of the first few items to the end for a seamless loop
+  const displayData = [...coursesData, ...coursesData.slice(0, 4)];
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,23 +27,42 @@ const Courses = () => {
   // 🔹 AUTOPLAY LOGIC
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => {
-        const resetAt = coursesData.length - cardsToShow;
-        return prev >= resetAt ? 0 : prev + 1;
-      });
-    }, 3000); // 3 seconds interval
+      nextSlide();
+    }, 4000); // Slightly slower for readability
 
     return () => clearInterval(interval);
-  }, [cardsToShow]);
+  }, [cardsToShow, currentIndex]);
 
   const nextSlide = () => {
-    if (currentIndex < coursesData.length - cardsToShow) {
-      setCurrentIndex(prev => prev + 1);
+    if (isAnimating.current) return;
+    
+    const nextIndex = currentIndex + 1;
+    setCurrentIndex(nextIndex);
+
+    // If we moved to the first clone, wait for animation then jump back to real first
+    if (nextIndex === coursesData.length) {
+      isAnimating.current = true;
+      setTimeout(() => {
+        gsap.set(sliderRef.current, { x: 0 });
+        setCurrentIndex(0);
+        isAnimating.current = false;
+      }, 800); // Matches GSAP duration
     }
   };
 
   const prevSlide = () => {
-    if (currentIndex > 0) {
+    if (isAnimating.current) return;
+
+    if (currentIndex === 0) {
+      // Jump to clones at the end first, then slide to real 11
+      const cards = sliderRef.current.children;
+      const parentStyle = window.getComputedStyle(sliderRef.current);
+      const gap = parseFloat(parentStyle.columnGap) || 0;
+      const cardWidth = cards[0].offsetWidth + gap;
+
+      gsap.set(sliderRef.current, { x: -(coursesData.length * cardWidth) });
+      setCurrentIndex(coursesData.length - 1);
+    } else {
       setCurrentIndex(prev => prev - 1);
     }
   };
@@ -65,12 +89,12 @@ const Courses = () => {
   }, [currentIndex]);
 
   return (
-    <section className="w-full py-24 bg-white relative overflow-hidden flex flex-col items-center">
+    <section id="courses" className="w-full py-24 bg-white relative overflow-hidden flex flex-col items-center">
       
       {/* 🔹 DOT GRID OVERLAY */}
       <div className="absolute inset-0 z-0 opacity-[0.05] mix-blend-multiply" 
            style={{ 
-             backgroundImage: 'radial-gradient(#002147 1px, transparent 1px)', 
+             backgroundImage: `radial-gradient(var(--primary) 1px, transparent 1px)`, 
              backgroundSize: '25px 25px' 
            }}>
       </div>
@@ -95,8 +119,7 @@ const Courses = () => {
           {/* Left Arrow */}
           <button 
             onClick={prevSlide}
-            disabled={currentIndex === 0}
-            className={`absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-14 sm:h-14 rounded-full border-2 border-[var(--primary)] flex items-center justify-center transition-all ${currentIndex === 0 ? 'opacity-0 pointer-events-none' : 'bg-white hover:bg-[var(--primary)] hover:text-white shadow-lg text-[var(--primary)]'}`}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-14 sm:h-14 rounded-full border-2 border-[var(--primary)] bg-white hover:bg-[var(--primary)] hover:text-white shadow-lg text-[var(--primary)] flex items-center justify-center transition-all`}
             aria-label="Previous Slide"
           >
             <FaArrowLeft className="text-sm sm:text-xl" />
@@ -105,8 +128,7 @@ const Courses = () => {
           {/* Right Arrow */}
           <button 
             onClick={nextSlide}
-            disabled={currentIndex >= coursesData.length - cardsToShow}
-            className={`absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-14 sm:h-14 rounded-full border-2 border-[var(--primary)] flex items-center justify-center transition-all ${currentIndex >= coursesData.length - cardsToShow ? 'opacity-0 pointer-events-none' : 'bg-white hover:bg-[var(--primary)] hover:text-white shadow-lg text-[var(--primary)]'}`}
+            className={`absolute right-0 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-14 sm:h-14 rounded-full border-2 border-[var(--primary)] bg-white hover:bg-[var(--primary)] hover:text-white shadow-lg text-[var(--primary)] flex items-center justify-center transition-all`}
             aria-label="Next Slide"
           >
             <FaArrowRight className="text-sm sm:text-xl" />
@@ -114,11 +136,11 @@ const Courses = () => {
 
           <div className="overflow-hidden">
             <div ref={sliderRef} className="flex gap-6 py-4">
-              {coursesData.map((course, index) => (
+              {displayData.map((course, index) => (
                 <CourseCard 
                   key={index} 
                   course={course} 
-                  isActive={index === currentIndex}
+                  isActive={(index % coursesData.length) === (currentIndex % coursesData.length)}
                 />
               ))}
             </div>
@@ -130,50 +152,80 @@ const Courses = () => {
 };
 
 const CourseCard = ({ course, isActive }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const whatsappUrl = `https://wa.me/${HeadData[0].floating_whatsapp.replace(/\s+/g, '')}?text=${encodeURIComponent(`Hi, I'm interested in learning more about ${course.category} / ${course.title} courses.`)}`;
+
   return (
     <div
       className={`flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] border border-gray-100 rounded-[3rem] p-8 md:p-10 flex flex-col items-center text-center shadow-[0_15px_50px_rgba(0,0,0,0.04)]
-                 transition-all duration-700 group cursor-pointer h-full min-h-[500px]
-                 ${isActive ? 'bg-[var(--tertiary)] shadow-2xl scale-[1.02]' : 'bg-white hover:bg-[var(--tertiary)] hover:shadow-2xl'}`}
+                 transition-all duration-700 group h-full min-h-[550px]
+                 ${isActive ? 'bg-[var(--tertiary)] shadow-2xl scale-[1.02]' : 'bg-white'}`}
     >
       {/* 🔹 CIRCLE IMAGE OVERLAY */}
-      <div className="relative mb-10 mt-4">
+      <div className="relative mb-8 mt-4">
           <div className={`absolute inset-x-[-10px] inset-y-[-10px] rounded-full border-2 border-[var(--tertiary)] transition-all duration-500
-                          ${isActive ? 'scale-110 opacity-40' : 'opacity-20 group-hover:scale-110 group-hover:opacity-40'}`}></div>
+                          ${isActive ? 'scale-110 opacity-40' : 'opacity-20'}`}></div>
           
-          <div className="w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 border-white shadow-xl relative z-10 bg-white">
+          <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-xl relative z-10 bg-white">
             <img 
               src={course.image} 
               alt={course.title} 
               className={`w-full h-full object-cover transition-all duration-700 
-                          ${isActive ? 'grayscale-0 scale-110' : 'grayscale group-hover:grayscale-0 group-hover:scale-110'}`}
+                          ${isActive ? 'grayscale-0 scale-110' : 'grayscale'}`}
               onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=400&h=400'; }}
             />
           </div>
       </div>
 
-      <p className={`text-xs font-bold tracking-[0.25em] mb-4 uppercase transition-colors duration-300
-                    ${isActive ? 'text-white' : 'text-[var(--tertiary)] group-hover:text-white'}`}>
+      <p className={`text-[10px] font-bold tracking-[0.25em] mb-3 uppercase transition-colors duration-300
+                    ${isActive ? 'text-white' : 'text-[var(--tertiary)]'}`}>
           {course.id} / {course.category}
       </p>
 
-      <h3 className={`text-2xl font-bold font-serif mb-4 transition-colors duration-300
-                     ${isActive ? 'text-white' : 'text-[var(--primary)] group-hover:text-white'}`}>
+      <h3 className={`text-xl md:text-2xl font-bold font-serif mb-4 transition-colors duration-300 leading-tight
+                     ${isActive ? 'text-white' : 'text-[var(--primary)]'}`}>
         {course.title}
       </h3>
 
-      <p className={`text-sm leading-relaxed mb-10 flex-grow transition-colors duration-300 font-light px-2
-                    ${isActive ? 'text-white/90' : 'text-gray-500 group-hover:text-white/90'}`}>
+      {/* 🔹 ITEMS LIST */}
+      <div className="flex flex-wrap justify-center gap-1.5 mb-6">
+        {(isExpanded ? course.items : course.items.slice(0, 4)).map((item, i) => (
+          <span key={i} className={`text-[9px] px-2 py-0.5 rounded-full border border-current opacity-70 transition-colors
+                                   ${isActive ? 'text-white border-white/30' : 'text-gray-400 border-gray-200'}`}>
+            {item}
+          </span>
+        ))}
+        {course.items && course.items.length > 4 && (
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsExpanded(!isExpanded);
+            }}
+            className={`text-[9px] px-2 py-0.5 opacity-90 font-bold transition-all border-b border-transparent hover:border-current
+                       ${isActive ? 'text-white' : 'text-[var(--tertiary)]'}`}
+          >
+            {isExpanded ? "SHOW LESS" : `+${course.items.length - 4} MORE`}
+          </button>
+        )}
+      </div>
+
+      <p className={`text-sm leading-relaxed mb-8 flex-grow transition-colors duration-300 font-light px-2
+                    ${isActive ? 'text-white/90' : 'text-gray-500'}`}>
         {course.desc}
       </p>
 
       <div className="mt-auto w-full flex justify-center">
-        <button className={`text-xs sm:text-sm font-bold tracking-[0.15em] uppercase transition-colors flex items-center gap-3
-                          ${isActive ? 'text-white' : 'text-[var(--primary)] group-hover:text-white'}`}>
+        <a 
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`text-xs sm:text-sm font-bold tracking-[0.15em] uppercase transition-colors flex items-center gap-3
+                          ${isActive ? 'text-white' : 'text-[var(--primary)]'}`}
+        >
            LEARN MORE
            <span className={`h-[1px] transition-all duration-500
-                          ${isActive ? 'bg-white w-12' : 'bg-[var(--primary)] w-8 group-hover:bg-white group-hover:w-12'}`}></span>
-        </button>
+                          ${isActive ? 'bg-white w-12' : 'bg-[var(--primary)] w-8'}`}></span>
+        </a>
       </div>
     </div>
   );

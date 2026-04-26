@@ -1,8 +1,10 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 
+import { HeadData } from "../Data/HeadData";
+
 const WhatsAppFloat = ({ showPopup }) => {
-  const phoneNumber = "70441 87556";
+  const phoneNumber = HeadData[0].floating_whatsapp.replace(/\s+/g, '');
   const message = "Hi, I need guidance regarding college admissions.";
 
   const handleClick = () => {

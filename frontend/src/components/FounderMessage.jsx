@@ -60,14 +60,14 @@ const FounderMessage = () => {
             Message from our Founder
           </h2>
           
-          <div className="relative px-6 md:px-0 mt-4">
-            <span ref={quote1Ref} className="absolute -top-8 left-0 md:-left-4 text-6xl lg:text-8xl text-[var(--tertiary)] opacity-30 leading-none">"</span>
+          <div className="relative px-6 md:px-4 mt-4 pb-4">
+            <span ref={quote1Ref} className="absolute -top-10 -left-2 md:-left-8 text-6xl lg:text-8xl text-[var(--tertiary)] opacity-30 leading-none">“</span>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed font-semibold italic z-10 relative">
               Choosing the right career path can be confusing. Our mission is to
               guide every student towards the best opportunities with clarity and
               confidence.
             </p>
-            <span ref={quote2Ref} className="absolute -bottom-8 right-4 md:right-10 text-6xl lg:text-8xl text-[var(--tertiary)] opacity-30 leading-none rotate-180">"</span>
+            <span ref={quote2Ref} className="absolute -bottom-10 -right-2 md:-right-4 text-6xl lg:text-8xl text-[var(--tertiary)] opacity-30 leading-none">”</span>
           </div>
 
           <div className="mt-12 flex flex-col md:flex-row items-center gap-4 justify-center md:justify-start">

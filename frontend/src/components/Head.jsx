@@ -9,7 +9,11 @@ import {
   FaLinkedin,
 } from "react-icons/fa";
 
+import { HeadData } from "../Data/HeadData";
+
 const Head = ({ show }) => {
+  const whatsappUrl = `https://wa.me/${HeadData[0].floating_whatsapp.replace(/\s+/g, '')}?text=${encodeURIComponent("Hi, I need guidance regarding college admissions.")}`;
+
   return (
     <div
       className={`w-full fixed top-0 left-0 z-50 transition-all duration-300
@@ -22,19 +26,16 @@ const Head = ({ show }) => {
         {/* LEFT */}
         <div className="flex items-center gap-4 md:gap-6">
 
-          <div className="flex items-center gap-2">
-            <FaPhoneAlt className="text-[var(--tertiary)]" />
-            <span>+9170441 87556</span>
-          </div>
-
-          <div className="hidden sm:flex items-center gap-2">
-            <FaEnvelope className="text-[var(--tertiary)]" />
-            <span>info@ramyacareerguidance.com</span>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <FaPhoneAlt className="text-[var(--tertiary)]" />
+              <span>{HeadData[0].call_whatsapp}</span>
+            </div>
           </div>
 
           <div className="hidden md:flex items-center gap-2">
-            <FaMapMarkerAlt className="text-[var(--tertiary)]" />
-            <span>Serving Students Across India</span>
+            <FaEnvelope className="text-[var(--tertiary)]" />
+            <span>{HeadData[0].email}</span>
           </div>
 
         </div>
@@ -42,7 +43,9 @@ const Head = ({ show }) => {
         {/* RIGHT */}
         <div className="flex items-center gap-4 text-lg">
           <FaInstagram className="cursor-pointer hover:text-[var(--tertiary)]" />
-          <FaWhatsapp className="cursor-pointer hover:text-[var(--tertiary)]" />
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+            <FaWhatsapp className="cursor-pointer hover:text-[var(--tertiary)]" />
+          </a>
           <FaYoutube className="cursor-pointer hover:text-[var(--tertiary)]" />
           <FaLinkedin className="cursor-pointer hover:text-[var(--tertiary)]" />
         </div>

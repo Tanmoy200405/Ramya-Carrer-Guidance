@@ -10,7 +10,8 @@ const EntryGate = ({ onUnlock }) => {
     fatherName: "",
     motherName: "",
     school: "",
-    stream: "",
+    currentStream: "",
+    interestStream: "",
   });
 
   const [status, setStatus] = useState({ type: "", message: "" });
@@ -37,6 +38,7 @@ const EntryGate = ({ onUnlock }) => {
     setStatus({ type: "", message: "" });
 
     try {
+      console.log("Submitting formData:", formData);
       // Connect to port 5001 as previously fixed
       const response = await axios.post("http://127.0.0.1:5001/api/students", formData);
       setStatus({ type: "success", message: response.data.message });
@@ -95,7 +97,7 @@ const EntryGate = ({ onUnlock }) => {
         <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* NAME */}
           <div className="flex flex-col gap-2">
-            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Full Name</label>
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Full Name <span className="text-red-500">*</span></label>
             <input 
               type="text" name="name" value={formData.name} onChange={handleChange} required
               placeholder="e.g. Rahul Sharma"
@@ -105,7 +107,7 @@ const EntryGate = ({ onUnlock }) => {
 
           {/* EMAIL */}
           <div className="flex flex-col gap-2">
-            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Email Address</label>
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Email Address <span className="text-red-500">*</span></label>
             <input 
               type="email" name="email" value={formData.email} onChange={handleChange} required
               placeholder="e.g. rahul@example.com"
@@ -115,7 +117,7 @@ const EntryGate = ({ onUnlock }) => {
 
           {/* PHONE */}
           <div className="flex flex-col gap-2">
-            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Phone Number</label>
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Phone Number <span className="text-red-500">*</span></label>
             <input 
               type="tel" name="phone" value={formData.phone} onChange={handleChange} required
               placeholder="e.g. +91 98765 43210"
@@ -125,7 +127,7 @@ const EntryGate = ({ onUnlock }) => {
 
           {/* SCHOOL */}
           <div className="flex flex-col gap-2">
-            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Current School</label>
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Current School <span className="text-red-500">*</span></label>
             <input 
               type="text" name="school" value={formData.school} onChange={handleChange} required
               placeholder="Your last attended school"
@@ -135,7 +137,7 @@ const EntryGate = ({ onUnlock }) => {
 
           {/* FATHER'S NAME */}
           <div className="flex flex-col gap-2">
-            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Father's Name</label>
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Father's Name <span className="text-red-500">*</span></label>
             <input 
               type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} required
               placeholder="Enter Father's Name"
@@ -147,25 +149,34 @@ const EntryGate = ({ onUnlock }) => {
           <div className="flex flex-col gap-2">
             <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Mother's Name</label>
             <input 
-              type="text" name="motherName" value={formData.motherName} onChange={handleChange} required
+              type="text" name="motherName" value={formData.motherName} onChange={handleChange}
               placeholder="Enter Mother's Name"
               className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
           {/* STREAM */}
-          <div className="flex flex-col gap-2 md:col-span-2">
-            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Current Stream / Interest</label>
+          <div className="flex flex-col gap-2">
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Current Stream (10+2) <span className="text-red-500">*</span></label>
             <select 
-              name="stream" value={formData.stream} onChange={handleChange} required
+              name="currentStream" value={formData.currentStream} onChange={handleChange} required
               className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif appearance-none"
             >
-              <option value="">Select Stream</option>
+              <option value="">Select Current Stream</option>
               <option value="Science">Science</option>
               <option value="Commerce">Commerce</option>
               <option value="Arts">Arts</option>
               <option value="Other">Other</option>
             </select>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Interest Stream <span className="text-red-500">*</span></label>
+            <input 
+              type="text" name="interestStream" value={formData.interestStream} onChange={handleChange} required
+              placeholder="e.g. Engineering, Management, etc."
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+            />
           </div>
 
           {/* SUBMIT BUTTON */}

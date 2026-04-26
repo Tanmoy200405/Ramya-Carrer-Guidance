@@ -1,133 +1,210 @@
-export const collegeData = [
-  // West Bengal Colleges
-  {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/8/87/EIILM_Kolkata_Logo.svg",
-    collegeName: "EIILM Kolkata",
-  },
-  {
-    collegeLogo: "https://unitedworld.in/wp-content/uploads/2021/04/UWSB-Kolkata.png",
-    collegeName: "Unitedworld School of Business (UW)",
-  },
-  {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/2/23/Adamas_University_logo.png",
-    collegeName: "Adamas University",
-  },
-  {
-    collegeLogo: "https://brainwareuniversity.ac.in/wp-content/uploads/2023/06/logo.png",
-    collegeName: "Brainware University",
-  },
-  {
-    collegeLogo: "https://sitmkolkata.com/wp-content/uploads/2021/08/sitm-logo.png",
-    collegeName: "SITM Kolkata",
-  },
-  {
-    collegeLogo: "https://ecmt.in/wp-content/uploads/2022/06/logo.png",
-    collegeName: "Eminent College (ECMT)",
-  },
-  {
-    collegeLogo: "https://www.bibs.co.in/wp-content/themes/bibs/images/logo.png",
-    collegeName: "BIBS Kolkata",
-  },
-  {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/5/5e/The_Neotia_University_logo.png",
-    collegeName: "The Neotia University (TNU)",
-  },
-  {
-    collegeLogo: "https://futureengineering.in/wp-content/uploads/2020/08/FIEM-Logo.png",
-    collegeName: "Future Institute",
-  },
-  {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/5/5c/IEM_Kolkata_logo.png",
-    collegeName: "IEM Kolkata",
-  },
-  {
-    collegeLogo: "https://tmsl.org.in/wp-content/uploads/2021/06/TMSL-Logo.png",
-    collegeName: "Techno Main Salt Lake",
-  },
-  {
-    collegeLogo: "https://tint.edu.in/wp-content/uploads/2021/08/TINT-Logo.png",
-    collegeName: "TINT Newtown",
-  },
-  {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/f/f2/Sister_Nivedita_University_logo.png",
-    collegeName: "Sister Nivedita University (SNU)",
-  },
-  {
-    collegeLogo: "https://jisgroup.org/wp-content/uploads/2022/07/jis-logo.png",
-    collegeName: "JIS Group",
-  },
-  {
-    collegeLogo: "https://mrgroupkol.com/wp-content/uploads/2021/08/MR-Group-Logo.png",
-    collegeName: "MR Group",
-  },
-  {
-    collegeLogo: "https://krishnacollege.org/wp-content/uploads/2021/08/logo.png",
-    collegeName: "Krishna Group",
-  },
-  {
-    collegeLogo: "https://bppimt.ac.in/wp-content/uploads/2022/05/logo.png",
-    collegeName: "B.P Poddar Institute",
-  },
-  {
-    collegeLogo: "https://seacomskillsuniversity.org/wp-content/uploads/2021/08/SSU-Logo.png",
-    collegeName: "Seacom Skills University",
-  },
-  {
-    collegeLogo: "https://iias.org.in/wp-content/uploads/2021/08/IIAS-Logo.png",
-    collegeName: "IIAS School of Management",
-  },
-  {
-    collegeLogo: "https://nifglobal.co.in/wp-content/uploads/2021/08/nif-logo.png",
-    collegeName: "NIF Global",
-  },
-  {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/3/3f/RCC_Institute_of_Information_Technology_logo.png",
-    collegeName: "RCCIT Beleghata",
-  },
-  {
-    collegeLogo: "https://ilead.net.in/wp-content/uploads/2021/08/ilead-logo.png",
-    collegeName: "I-Lead",
-  },
-  {
-    collegeLogo: "https://georgecollege.org/wp-content/uploads/2022/08/logo.png",
-    collegeName: "George Group",
-  },
-  {
-    collegeLogo: "https://bgcgroup.in/wp-content/uploads/2022/07/logo.png",
-    collegeName: "Bengal Group of Colleges (BGC)",
-  },
+import eiilmLogo from "../assets/college-logos/eiilm-kolkata.svg";
+import tnuLogo from "../assets/college-logos/TNU.png";
+import iemLogo from "../assets/college-logos/IEM_Logo2019.webp";
+import snuLogo from "../assets/college-logos/snu.png";
+import jisLogo from "../assets/college-logos/jis.png";
+import rccitLogo from "../assets/college-logos/rccit.png";
+import georgeLogo from "../assets/college-logos/GeorgeCollege.jpg";
+import adamasLogo from "../assets/college-logos/adamas.png";
+import bppoddarLogo from "../assets/college-logos/BP-PODDAR-INSTITUTE-OF-MANAGEMENT-TECHNOLOGY-SVG-Logo-mini.svg";
+import ecmtLogo from "../assets/college-logos/ECMT.jpg";
+import futureLogo from "../assets/college-logos/future.png";
+import tintLogo from "../assets/college-logos/tint.png";
+import krishnaLogo from "../assets/college-logos/krishna.png";
+import bengalLogo from "../assets/college-logos/bengalinstite.jpg";
+import uwsbLogo from "../assets/college-logos/uwsb.png";
+import brainwareLogo from "../assets/college-logos/brainware.png";
+import svistLogo from "../assets/college-logos/svist.png";
+import bibsLogo from "../assets/college-logos/bibs.png";
+import technoLogo from "../assets/college-logos/techno.png";
+import seacomLogo from "../assets/college-logos/seacom.png";
+import iiasLogo from "../assets/college-logos/iias.png";
+import nifLogo from "../assets/college-logos/nif.png";
+import ileadLogo from "../assets/college-logos/ilead.png";
 
-  // Premium Universities
+export const collegeData = [
   {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/e/ef/KIIT_University_logo.svg",
-    collegeName: "KIIT University",
+    name: "Eastern Institute for Integrated Learning in Management",
+    shortName: "EIILM Kolkata",
+    location: "Kolkata, West Bengal",
+    type: "Private Institute",
+    logo: eiilmLogo,
+    officialSite: "https://eiilm.co.in"
   },
   {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/0/0c/SRM_Institute_of_Science_and_Technology_Logo.svg",
-    collegeName: "SRM University",
+    name: "Unitedworld School of Business",
+    shortName: "UWSB Kolkata",
+    location: "Kolkata, West Bengal",
+    type: "Private Business School",
+    logo: uwsbLogo,
+    officialSite: "https://unitedworld.in"
   },
   {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/3/3a/Vellore_Institute_of_Technology_logo.svg",
-    collegeName: "VIT Vellore",
+    name: "Adamas University",
+    shortName: "Adamas",
+    location: "Barasat, West Bengal",
+    type: "Private University",
+    logo: adamasLogo,
+    officialSite: "https://adamasuniversity.ac.in"
   },
   {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/d/d3/BITS_Pilani_Logo.svg",
-    collegeName: "BITS Pilani",
+    name: "Brainware University",
+    shortName: "Brainware",
+    location: "Barasat, West Bengal",
+    type: "Private University",
+    logo: brainwareLogo,
+    officialSite: "https://brainwareuniversity.ac.in"
   },
   {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/8/87/Siksha_%27O%27_Anusandhan_logo.png",
-    collegeName: "SOA University",
+    name: "Swami Vivekananda Institute of Science and Technology",
+    shortName: "SVIST",
+    location: "Kolkata, West Bengal",
+    type: "Engineering College",
+    logo: svistLogo,
+    officialSite: "https://svist.org"
   },
   {
-    collegeLogo: "https://cgu-odisha.ac.in/wp-content/uploads/2021/08/CGU-Logo.png",
-    collegeName: "CV Raman University",
+    name: "Eminent College of Management and Technology",
+    shortName: "Eminent",
+    location: "Kolkata, West Bengal",
+    type: "Engineering College",
+    logo: ecmtLogo,
+    officialSite: "https://eminent.edu.in"
   },
   {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/3/3e/Manipal_Academy_of_Higher_Education_Logo.svg",
-    collegeName: "Manipal University",
+    name: "Bengal Institute of Business Studies",
+    shortName: "BIBS",
+    location: "Kolkata, West Bengal",
+    type: "Business School",
+    logo: bibsLogo,
+    officialSite: "https://bibs.co.in"
   },
   {
-    collegeLogo: "https://upload.wikimedia.org/wikipedia/en/4/4b/M._S._Ramaiah_University_of_Applied_Sciences_Logo.png",
-    collegeName: "MS Ramaiah University",
+    name: "The Neotia University",
+    shortName: "TNU",
+    location: "South 24 Parganas, West Bengal",
+    type: "Private University",
+    logo: tnuLogo,
+    officialSite: "https://tnu.in"
   },
+  {
+    name: "Future Institute of Engineering and Management",
+    shortName: "FIEM",
+    location: "Kolkata, West Bengal",
+    type: "Engineering College",
+    logo: futureLogo,
+    officialSite: "https://fiem.edu.in"
+  },
+  {
+    name: "Institute of Engineering and Management",
+    shortName: "IEM",
+    location: "Kolkata, West Bengal",
+    type: "Engineering College",
+    logo: iemLogo,
+    officialSite: "https://iem.edu.in"
+  },
+  {
+    name: "Techno India Institute of Technology",
+    shortName: "Techno Main",
+    location: "Salt Lake, Kolkata",
+    type: "Engineering College",
+    logo: technoLogo,
+    officialSite: "https://technoindiauniversity.ac.in"
+  },
+  {
+    name: "Techno International New Town",
+    shortName: "TINT",
+    location: "New Town, Kolkata",
+    type: "Engineering College",
+    logo: tintLogo,
+    officialSite: "https://tint.edu.in"
+  },
+  {
+    name: "Sister Nivedita University",
+    shortName: "SNU",
+    location: "Kolkata, West Bengal",
+    type: "Private University",
+    logo: snuLogo,
+    officialSite: "https://snuniv.ac.in"
+  },
+  {
+    name: "JIS Group Educational Initiatives",
+    shortName: "JIS Group",
+    location: "Kolkata, West Bengal",
+    type: "Education Group",
+    logo: jisLogo,
+    officialSite: "https://jisgroup.org"
+  },
+  {
+    name: "B. P. Poddar Institute of Management and Technology",
+    shortName: "BPPIMT",
+    location: "Kolkata, West Bengal",
+    type: "Engineering College",
+    logo: bppoddarLogo,
+    officialSite: "https://bppimt.ac.in"
+  },
+  {
+    name: "Seacom Skills University",
+    shortName: "Seacom",
+    location: "Birbhum, West Bengal",
+    type: "Private University",
+    logo: seacomLogo,
+    officialSite: "https://seacomskillsuniversity.org"
+  },
+  {
+    name: "International Institute of Advanced Studies",
+    shortName: "IIAS",
+    location: "Kolkata, West Bengal",
+    type: "Private Institute",
+    logo: iiasLogo,
+    officialSite: "https://iias.ac.in"
+  },
+  {
+    name: "NIF Global Kolkata",
+    shortName: "NIF Global",
+    location: "Kolkata, West Bengal",
+    type: "Design Institute",
+    logo: nifLogo,
+    officialSite: "https://nifglobalkolkata.com"
+  },
+  {
+    name: "RCC Institute of Information Technology",
+    shortName: "RCCIIT",
+    location: "Kolkata, West Bengal",
+    type: "Engineering College",
+    logo: rccitLogo,
+    officialSite: "https://rcciit.org"
+  },
+  {
+    name: "Bengal Group of Colleges",
+    shortName: "BGC",
+    location: "Bolpur, West Bengal",
+    type: "Private College Group",
+    logo: bengalLogo,
+    officialSite: "https://bgc.org.in"
+  },
+  {
+    name: "George Group of Colleges",
+    shortName: "George",
+    location: "Kolkata, West Bengal",
+    type: "Private College Group",
+    logo: georgeLogo,
+    officialSite: "https://georgecollege.org"
+  },
+  {
+    name: "Institute of Leadership Entrepreneurship and Development",
+    shortName: "iLEAD",
+    location: "Kolkata, West Bengal",
+    type: "Media & Management Institute",
+    logo: ileadLogo,
+    officialSite: "https://ilead.net.in"
+  },
+  {
+    name: "Krishna Group of Colleges",
+    shortName: "Krishna Group",
+    location: "Bijnor, Uttar Pradesh",
+    type: "Educational Group",
+    logo: krishnaLogo,
+    officialSite: "https://krishnacollegebijnor.in/"
+  }
 ];

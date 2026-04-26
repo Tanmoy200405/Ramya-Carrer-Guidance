@@ -38,9 +38,6 @@ const StartJourney = () => {
           <button className="px-8 py-4 bg-[var(--tertiary)] text-black font-bold rounded-lg hover:bg-yellow-500 transition-all duration-300">
             BOOK INITIAL ASSESSMENT
           </button>
-          <button className="px-8 py-4 border border-white/30 text-white font-bold rounded-lg hover:bg-white/10 transition-all duration-300 uppercase tracking-widest text-sm">
-            Download Brochure
-          </button>
         </div>
       </div>
     </div>

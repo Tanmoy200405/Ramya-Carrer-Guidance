@@ -3,7 +3,7 @@ import { FaGraduationCap } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full bg-white flex flex-col items-center relative overflow-hidden">
+    <div id="home" className="min-h-screen w-full bg-white flex flex-col items-center relative overflow-hidden">
       {/* 🏛️ Heritage Header Image Section */}
       <div className="w-full h-[55vh] lg:h-[65vh] relative overflow-hidden">
          <img 

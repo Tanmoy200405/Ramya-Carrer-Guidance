@@ -32,6 +32,7 @@ const HowItWorks = () => {
 
   return (
     <section 
+      id="how-it-works"
       ref={containerRef} 
       className="w-full py-24 bg-[var(--neutral)] overflow-hidden"
     >
