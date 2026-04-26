@@ -8,25 +8,25 @@ const Footer = () => {
       {/* Background Glow - Made more subtle for light mode */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--tertiary)] opacity-[0.05] blur-[120px] -mr-48 -mt-48 rounded-full"></div>
       
-      <div className="w-[90%] max-w-7xl mx-auto py-12 md:py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16 mb-12 md:mb-16">
+      <div className="w-[90%] max-w-7xl mx-auto py-10 md:py-20 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16 mb-10 md:mb-20">
           
           {/* 🔹 BRANDING */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-6">
             <div className="mb-2">
               <img
                 src={logo}
                 alt="Ramya Career Guidance"
-                className="h-20 w-auto md:h-40 object-contain"
+                className="h-24 w-auto md:h-56 object-contain"
               />
             </div>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-sm md:max-w-md mt-1 font-light italic px-4 md:px-0">
+            <p className="text-[11px] sm:text-sm md:text-base text-gray-600 leading-relaxed max-w-xs sm:max-w-sm mt-1 font-light italic px-4 md:px-0">
               "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
             </p>
           </div>
 
           {/* 🔹 OUR EXCELLENCE */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6">
             <h3 className="text-xs font-bold tracking-[0.25em] text-[var(--primary)] uppercase border-b border-gray-200 pb-2 w-fit">
               Our Excellence
             </h3>
@@ -57,8 +57,8 @@ const Footer = () => {
           </div>
 
           {/* 🔹 GET IN TOUCH */}
-          <div className="flex flex-col items-start lg:items-end lg:text-right gap-6">
-            <h3 className="text-xs font-bold tracking-[0.25em] text-[var(--primary)] uppercase border-b border-gray-200 pb-2 w-fit lg:ml-auto">
+          <div className="flex flex-col items-center md:items-end md:text-right gap-6">
+            <h3 className="text-xs font-bold tracking-[0.25em] text-[var(--primary)] uppercase border-b border-gray-200 pb-2 w-fit md:ml-auto">
               Get In Touch
             </h3>
             <div className="flex flex-col gap-4 text-sm md:text-base">
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
 
         {/* 🔹 BOTTOM BAR */}
-        <div className="mt-12 md:mt-16 pt-6 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] gap-6">
+        <div className="mt-12 md:mt-24 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] gap-6">
           <div className="flex items-center gap-4">
             <span className="text-[var(--tertiary)] italic">Built with Excellence</span>
             <span className="w-1 h-1 bg-gray-200 rounded-full"></span>
