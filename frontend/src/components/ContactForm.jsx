@@ -43,13 +43,17 @@ const ContactForm = () => {
 
     try {
       let API_URL = import.meta.env.VITE_API_URL;
-      if (!API_URL) {
-        throw new Error("API URL is not defined. Please check your environment variables.");
-      }
-      // Remove trailing slash if present to avoid double slashes
-      API_URL = API_URL.replace(/\/$/, "");
+      // Clean URL if it exists
+      if (API_URL) API_URL = API_URL.replace(/\/$/, "");
       
       console.log("Submitting to:", `${API_URL}/api/students`);
+      
+      if (!API_URL) {
+        setStatus({ type: "error", message: "API URL is missing. Please check Render Environment variables." });
+        setLoading(false);
+        return;
+      }
+      
       const response = await axios.post(`${API_URL}/api/students`, formData);
       setStatus({ type: "success", message: response.data.message });
       setFormData({
