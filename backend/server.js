@@ -19,6 +19,11 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('✅ MongoDB Connected'))
     .catch(err => console.error('❌ MongoDB Connection Error:', err));
 
+// Health Check
+app.get('/', (req, res) => {
+    res.send('🚀 Career Guidance API is running...');
+});
+
 // Routes
 app.post('/api/students', async (req, res) => {
     console.log('Received inquiry request:', req.body);

@@ -10,7 +10,8 @@ const ContactForm = () => {
     fatherName: "",
     motherName: "",
     school: "",
-    stream: "",
+    currentStream: "",
+    interestStream: "",
   });
 
   const [status, setStatus] = useState({ type: "", message: "" });
@@ -51,7 +52,8 @@ const ContactForm = () => {
         fatherName: "",
         motherName: "",
         school: "",
-        stream: "",
+        currentStream: "",
+        interestStream: "",
       });
     } catch (error) {
       setStatus({
@@ -136,7 +138,7 @@ const ContactForm = () => {
           <div className="flex flex-col gap-2">
             <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Mother's Name</label>
             <input 
-              type="text" name="motherName" value={formData.motherName} onChange={handleChange} required
+              type="text" name="motherName" value={formData.motherName} onChange={handleChange}
               placeholder="Enter Mother's Name"
               className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
@@ -152,17 +154,34 @@ const ContactForm = () => {
             />
           </div>
 
-          {/* STREAM (Select Dropdown) */}
-          <div className="flex flex-col gap-2 md:col-span-2">
-            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Current Stream / Interest</label>
+          {/* CURRENT STREAM (Select Dropdown) */}
+          <div className="flex flex-col gap-2">
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Current Stream</label>
             <select 
-              name="stream" value={formData.stream} onChange={handleChange} required
+              name="currentStream" value={formData.currentStream} onChange={handleChange} required
               className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif appearance-none"
             >
               <option value="">Select Stream</option>
               <option value="Science">Science</option>
               <option value="Commerce">Commerce</option>
               <option value="Arts">Arts</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          {/* INTEREST STREAM (Select Dropdown) */}
+          <div className="flex flex-col gap-2">
+            <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Interested Stream</label>
+            <select 
+              name="interestStream" value={formData.interestStream} onChange={handleChange} required
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif appearance-none"
+            >
+              <option value="">Select Interest</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Management">Management</option>
+              <option value="Medical">Medical</option>
+              <option value="Law">Law</option>
+              <option value="Design">Design</option>
               <option value="Other">Other</option>
             </select>
           </div>
