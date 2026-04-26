@@ -5,21 +5,21 @@ import { HeadData } from "../Data/HeadData";
 const Footer = () => {
   return (
     <footer className="bg-[var(--footer-bg)] text-[var(--primary)] overflow-hidden relative border-t border-gray-200">
-      <div className="w-[90%] max-w-7xl mx-auto py-2 relative z-10">
+      <div className="w-[90%] max-w-7xl mx-auto py-8 relative z-10">
         {/* TOP SECTION (LIGHT) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16">
           {/* 🔹 BRANDING */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2 md:gap-6">
             <img
               src={logo}
               alt="Ramya Career Guidance"
-              className="h-16 w-auto md:h-24 object-contain"
+              className="h-32 w-auto md:h-48 object-contain"
             />
           </div>
 
           {/* 🔹 OUR EXCELLENCE */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1">
-            <h3 className="text-[10px] font-bold tracking-[0.25em] text-[var(--primary)] uppercase border-b border-gray-100 pb-1 w-fit">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+            <h3 className="text-xs font-bold tracking-[0.25em] text-[var(--primary)] uppercase border-b border-gray-200 pb-2 w-fit">
               Our Excellence
             </h3>
             <ul className="flex flex-col gap-3 text-sm font-medium">
@@ -47,12 +47,12 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM SECTION (DARK) */}
-      <div className="bg-[var(--primary)] text-white py-6 relative overflow-hidden">
+      <div className="bg-[var(--primary)] text-white py-10 relative overflow-hidden">
         {/* Background Glow */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--tertiary)] opacity-[0.1] blur-[120px] -mr-48 -mt-48 rounded-full"></div>
 
         <div className="w-[90%] max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-10">
             {/* 🔹 FOOTER STATEMENT (Now above Get In Touch) */}
             <div className="pb-4">
               <p className="text-lg md:text-xl text-white/70 font-serif italic tracking-tight text-center max-w-5xl mx-auto leading-relaxed px-4">
@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
 
             {/* 🔹 GET IN TOUCH (Now below Footer Statement) */}
-            <div className="flex flex-col items-center md:items-start gap-4 border-t border-white/5 pt-6">
+            <div className="flex flex-col items-center md:items-start gap-6 border-t border-white/5 pt-10">
               <h3 className="text-xs font-bold tracking-[0.25em] text-white uppercase border-b border-white/20 pb-1 w-fit">
                 Get In Touch
               </h3>
