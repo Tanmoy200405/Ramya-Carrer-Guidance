@@ -7,10 +7,10 @@ const Footer = () => {
     <footer className="bg-[var(--footer-bg)] text-[var(--primary)] overflow-hidden relative border-t border-gray-200">
       {/* Background Glow - Made more subtle for light mode */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--tertiary)] opacity-[0.05] blur-[120px] -mr-48 -mt-48 rounded-full"></div>
-      
+
       <div className="w-[90%] max-w-7xl mx-auto py-4 md:py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-16 mb-4 md:mb-12">
-          
+
           {/* 🔹 BRANDING */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-4 md:gap-6">
             <div className="mb-2">
@@ -20,7 +20,7 @@ const Footer = () => {
                 className="h-32 w-auto md:h-56 object-contain"
               />
             </div>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-sm md:max-w-md mt-2 font-light italic px-4 md:px-0">
+            <p className="text-2xl sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-sm md:max-w-md mt-4 font-light italic px-4 md:px-0">
               "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
             </p>
           </div>
@@ -68,7 +68,7 @@ const Footer = () => {
                   {HeadData[0].call_whatsapp}
                 </p>
               </div>
-              
+
               <div className="flex flex-col">
                 <span className="text-[10px] uppercase tracking-widest text-gray-500 font-bold mb-1">Official Inquiry</span>
                 <p className="text-[var(--tertiary)] font-medium underline underline-offset-4 decoration-gray-300 hover:decoration-[var(--tertiary)] transition-all cursor-pointer">
