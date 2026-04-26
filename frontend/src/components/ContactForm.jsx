@@ -61,11 +61,17 @@ const ContactForm = () => {
       });
     } catch (error) {
       const API_URL = import.meta.env.VITE_API_URL;
+      const errorMessage = error.response?.data?.message || `Network Error: Could not reach ${API_URL}. Please check your connection.`;
+      
       setStatus({
         type: "error",
-        message: `Network Error: Could not reach ${API_URL}. Please check your connection.`,
+        message: errorMessage,
       });
-      console.error("Axios Error:", error);
+      console.error("Axios Error Details:", {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status
+      });
     } finally {
       setLoading(false);
     }
