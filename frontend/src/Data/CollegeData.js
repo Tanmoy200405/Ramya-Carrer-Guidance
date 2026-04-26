@@ -12,32 +12,28 @@ import futureLogo from "../assets/college-logos/future.png";
 import tintLogo from "../assets/college-logos/tint.png";
 import krishnaLogo from "../assets/college-logos/krishna.png";
 import bengalLogo from "../assets/college-logos/bengalinstite.jpg";
-import uwsbLogo from "../assets/college-logos/uwsb.png";
+import uwsbLogo from "../assets/college-logos/IQ-City-United-World-School-of-Business-Kolkata-logo.jpg";
 import brainwareLogo from "../assets/college-logos/brainware.png";
 import svistLogo from "../assets/college-logos/svist.png";
-import bibsLogo from "../assets/college-logos/bibs.png";
+import bibsLogo from "../assets/college-logos/Bengal-Institute-of-Business-Studies logo.webp";
 import technoLogo from "../assets/college-logos/techno.png";
-import seacomLogo from "../assets/college-logos/seacom.png";
-import iiasLogo from "../assets/college-logos/iias.png";
-import nifLogo from "../assets/college-logos/nif.png";
+import seacomLogo from "../assets/college-logos/seacom skill university logo.jpg";
+import iiasLogo from "../assets/college-logos/international institute of advance studies logo.png";
+import nifLogo from "../assets/college-logos/nig global kolkata logo.svg";
 import ileadLogo from "../assets/college-logos/ilead.png";
+import bhawanipurLogo from "../assets/college-logos/bwanipur education society logo.jpeg";
+
+
 
 export const collegeData = [
+  // 1. Top Priority
   {
-    name: "Eastern Institute for Integrated Learning in Management",
-    shortName: "EIILM Kolkata",
+    name: "The Bhawanipur Education Society College",
+    shortName: "Bhawanipur College",
     location: "Kolkata, West Bengal",
-    type: "Private Institute",
-    logo: eiilmLogo,
-    officialSite: "https://eiilm.co.in"
-  },
-  {
-    name: "Unitedworld School of Business",
-    shortName: "UWSB Kolkata",
-    location: "Kolkata, West Bengal",
-    type: "Private Business School",
-    logo: uwsbLogo,
-    officialSite: "https://unitedworld.in"
+    type: "Private College",
+    logo: bhawanipurLogo,
+    officialSite: "https://www.thebges.edu.in"
   },
   {
     name: "Adamas University",
@@ -48,12 +44,46 @@ export const collegeData = [
     officialSite: "https://adamasuniversity.ac.in"
   },
   {
+    name: "Institute of Leadership Entrepreneurship and Development",
+    shortName: "iLEAD",
+    location: "Kolkata, West Bengal",
+    type: "Media & Management Institute",
+    logo: ileadLogo,
+    officialSite: "https://ilead.net.in"
+  },
+  {
+    name: "George Group of Colleges",
+    shortName: "George",
+    location: "Kolkata, West Bengal",
+    type: "Private College Group",
+    logo: georgeLogo,
+    officialSite: "https://georgecollege.org"
+  },
+  {
+    name: "Eastern Institute for Integrated Learning in Management",
+    shortName: "EIILM Kolkata",
+    location: "Kolkata, West Bengal",
+    type: "Private Institute",
+    logo: eiilmLogo,
+    officialSite: "https://eiilm.co.in"
+  },
+  
+  // --- KOLKATA COLLEGES ---
+  {
     name: "Brainware University",
     shortName: "Brainware",
     location: "Barasat, West Bengal",
     type: "Private University",
     logo: brainwareLogo,
     officialSite: "https://brainwareuniversity.ac.in"
+  },
+  {
+    name: "Unitedworld School of Business",
+    shortName: "UWSB Kolkata",
+    location: "Kolkata, West Bengal",
+    type: "Private Business School",
+    logo: uwsbLogo,
+    officialSite: "https://unitedworld.in"
   },
   {
     name: "Swami Vivekananda Institute of Science and Technology",
@@ -144,14 +174,6 @@ export const collegeData = [
     officialSite: "https://bppimt.ac.in"
   },
   {
-    name: "Seacom Skills University",
-    shortName: "Seacom",
-    location: "Birbhum, West Bengal",
-    type: "Private University",
-    logo: seacomLogo,
-    officialSite: "https://seacomskillsuniversity.org"
-  },
-  {
     name: "International Institute of Advanced Studies",
     shortName: "IIAS",
     location: "Kolkata, West Bengal",
@@ -175,6 +197,16 @@ export const collegeData = [
     logo: rccitLogo,
     officialSite: "https://rcciit.org"
   },
+
+  // --- WEST BENGAL (OUTSIDE KOLKATA) ---
+  {
+    name: "Seacom Skills University",
+    shortName: "Seacom",
+    location: "Birbhum, West Bengal",
+    type: "Private University",
+    logo: seacomLogo,
+    officialSite: "https://seacomskillsuniversity.org"
+  },
   {
     name: "Bengal Group of Colleges",
     shortName: "BGC",
@@ -183,22 +215,8 @@ export const collegeData = [
     logo: bengalLogo,
     officialSite: "https://bgc.org.in"
   },
-  {
-    name: "George Group of Colleges",
-    shortName: "George",
-    location: "Kolkata, West Bengal",
-    type: "Private College Group",
-    logo: georgeLogo,
-    officialSite: "https://georgecollege.org"
-  },
-  {
-    name: "Institute of Leadership Entrepreneurship and Development",
-    shortName: "iLEAD",
-    location: "Kolkata, West Bengal",
-    type: "Media & Management Institute",
-    logo: ileadLogo,
-    officialSite: "https://ilead.net.in"
-  },
+
+  // --- OTHER STATES / BANGALORE ---
   {
     name: "Krishna Group of Colleges",
     shortName: "Krishna Group",

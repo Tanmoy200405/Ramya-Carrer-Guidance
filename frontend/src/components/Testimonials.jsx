@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { testimonialsData } from "../Data/SuccessData";
+import { testimonialsData } from "../Data/testimonialsData";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 
 const Testimonials = () => {
@@ -71,21 +71,21 @@ const Testimonials = () => {
 
               {/* MESSAGE */}
               <p className="text-lg text-gray-700 leading-relaxed font-medium italic flex-grow font-serif">
-                “{item.message}”
+                “{item.review}”
               </p>
 
               {/* PROFILE */}
               <div className="flex items-center gap-4 mt-auto pt-6 border-t border-gray-50">
                 <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-white shadow-sm shrink-0">
                     <img
-                      src={item.image}
+                      src={item.photo}
                       alt={item.name}
                       className="h-full w-full object-cover"
                     />
                 </div>
                 <div>
                   <h2 className="font-bold text-gray-900 font-serif">{item.name}</h2>
-                  <p className="text-[10px] text-[var(--tertiary)] font-bold tracking-[0.2em] uppercase">{item.course}</p>
+                  <p className="text-[10px] text-[var(--tertiary)] font-bold tracking-[0.2em] uppercase">{item.college}</p>
                 </div>
               </div>
 

@@ -96,10 +96,10 @@ const ContactForm = () => {
            }}>
       </div>
 
-      <div className="w-[90%] max-w-4xl bg-white rounded-[3rem] shadow-2xl p-8 md:p-16 relative z-10 border border-gray-100">
+      <div className="w-[92%] max-w-4xl bg-white rounded-[1.5rem] md:rounded-[3rem] shadow-2xl p-6 md:p-16 relative z-10 border border-gray-100">
         
         {/* HEADING */}
-        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`text-center mb-8 md:mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-5xl font-serif text-[var(--primary)] font-bold mb-4">
             Start Your <span className="text-[var(--tertiary)] italic">Application</span>
           </h2>
@@ -112,7 +112,7 @@ const ContactForm = () => {
         </div>
 
         {/* FORM */}
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           
           {/* NAME */}
           <div className="flex flex-col gap-2">
@@ -120,7 +120,7 @@ const ContactForm = () => {
             <input 
               type="text" name="name" value={formData.name} onChange={handleChange} required
               placeholder="e.g. Rahul Sharma"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -130,7 +130,7 @@ const ContactForm = () => {
             <input 
               type="email" name="email" value={formData.email} onChange={handleChange} required
               placeholder="e.g. rahul@example.com"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -140,7 +140,7 @@ const ContactForm = () => {
             <input 
               type="tel" name="phone" value={formData.phone} onChange={handleChange} required
               placeholder="e.g. +91 98765 43210"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -150,7 +150,7 @@ const ContactForm = () => {
             <input 
               type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} required
               placeholder="Enter Father's Name"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -160,7 +160,7 @@ const ContactForm = () => {
             <input 
               type="text" name="motherName" value={formData.motherName} onChange={handleChange}
               placeholder="Enter Mother's Name"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -170,7 +170,7 @@ const ContactForm = () => {
             <input 
               type="text" name="school" value={formData.school} onChange={handleChange} required
               placeholder="Your last attended school"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 

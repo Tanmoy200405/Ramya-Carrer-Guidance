@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { collegeData } from "../Data/CollegeData";
 
 const CollegePartners = () => {
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.1 } // Start when 10% of the section is visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="w-full py-16 bg-white overflow-hidden">
+    <div ref={sectionRef} className="w-full py-16 bg-white overflow-hidden">
       {/* 🔹 HEADING */}
       <div className="text-center mb-10">
         <h1 className="text-2xl md:text-3xl font-bold text-[var(--primary)] text-center">
@@ -17,7 +41,7 @@ const CollegePartners = () => {
       {/* 🔹 SLIDER */}
       <div className="relative w-full flex overflow-hidden">
         {/* We double the list inside a flex container that animates completely */}
-        <div className="flex w-max gap-6 animate-scroll hover:[animation-play-state:paused]">
+        <div className={`flex w-max gap-6 hover:[animation-play-state:paused] ${isInView ? 'animate-scroll' : ''}`}>
           {[...collegeData, ...collegeData, ...collegeData, ...collegeData].map((college, index) => (
             <a
               href={college.officialSite}
@@ -30,7 +54,7 @@ const CollegePartners = () => {
                 <img
                   src={college.logo}
                   alt={college.name}
-                  className="h-full w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500 scale-100"
+                  className="h-full w-full object-contain transition-all duration-500 scale-100"
                 />
               </div>
               <div className="flex flex-col overflow-hidden">

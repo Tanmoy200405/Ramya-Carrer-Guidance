@@ -79,7 +79,7 @@ const EntryGate = ({ onUnlock }) => {
   return (
     <div 
       ref={gateRef} 
-      className="fixed inset-0 z-[9999] bg-[var(--neutral)] flex items-center justify-center overflow-y-auto px-4 py-10"
+      className="fixed inset-0 z-[9999] bg-[var(--neutral)] flex items-start md:items-center justify-center overflow-y-auto px-4 py-8 md:py-12"
     >
       {/* 🔹 DOT GRID BACKGROUND (Matching Brand Aesthetic) */}
       <div className="absolute inset-0 z-0 opacity-[0.1]" 
@@ -91,9 +91,9 @@ const EntryGate = ({ onUnlock }) => {
 
       <div 
         ref={formRef}
-        className="w-full max-w-4xl bg-white rounded-[3rem] shadow-2xl p-8 md:p-16 relative z-10 border border-gray-100"
+        className="w-full max-w-4xl bg-white rounded-[1.5rem] md:rounded-[3rem] shadow-2xl p-6 md:p-16 relative z-10 border border-gray-100 my-4 md:my-auto"
       >
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-5xl font-serif text-[var(--primary)] font-bold mb-4">
             Begin Your <span className="text-[var(--tertiary)] italic">Excellence</span>
           </h2>
@@ -102,14 +102,14 @@ const EntryGate = ({ onUnlock }) => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* NAME */}
           <div className="flex flex-col gap-2">
             <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Full Name <span className="text-red-500">*</span></label>
             <input 
               type="text" name="name" value={formData.name} onChange={handleChange} required
               placeholder="e.g. Rahul Sharma"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -119,7 +119,7 @@ const EntryGate = ({ onUnlock }) => {
             <input 
               type="email" name="email" value={formData.email} onChange={handleChange} required
               placeholder="e.g. rahul@example.com"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -129,7 +129,7 @@ const EntryGate = ({ onUnlock }) => {
             <input 
               type="tel" name="phone" value={formData.phone} onChange={handleChange} required
               placeholder="e.g. +91 98765 43210"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -139,7 +139,7 @@ const EntryGate = ({ onUnlock }) => {
             <input 
               type="text" name="school" value={formData.school} onChange={handleChange} required
               placeholder="Your last attended school"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -149,7 +149,7 @@ const EntryGate = ({ onUnlock }) => {
             <input 
               type="text" name="fatherName" value={formData.fatherName} onChange={handleChange} required
               placeholder="Enter Father's Name"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -159,7 +159,7 @@ const EntryGate = ({ onUnlock }) => {
             <input 
               type="text" name="motherName" value={formData.motherName} onChange={handleChange}
               placeholder="Enter Mother's Name"
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 
@@ -183,7 +183,7 @@ const EntryGate = ({ onUnlock }) => {
             <input 
               type="text" name="interestStream" value={formData.interestStream} onChange={handleChange} required
               placeholder="e.g. Engineering, Management, etc."
-              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+              className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 md:py-4 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
             />
           </div>
 

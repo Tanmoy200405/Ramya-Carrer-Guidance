@@ -12,15 +12,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
           
           {/* 🔹 BRANDING */}
-          <div className="flex flex-col items-start gap-6">
-            <div className="mb-4">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-6">
+            <div className="mb-2">
               <img
                 src={logo}
                 alt="Ramya Career Guidance"
-                className="h-32 w-auto md:h-56 object-contain"
+                className="h-28 w-auto md:h-56 object-contain"
               />
             </div>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-sm mt-1 font-light italic">
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed max-w-xs sm:max-w-sm mt-1 font-light italic px-4 md:px-0">
               "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
             </p>
           </div>
