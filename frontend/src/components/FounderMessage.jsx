@@ -23,13 +23,13 @@ const FounderMessage = () => {
     });
 
     // 🔹 Top Quote (Left to Center)
-    tl.fromTo(quote1Ref.current, 
+    tl.fromTo(quote1Ref.current,
       { x: -150, opacity: 0, scale: 0.5, rotate: -45 },
       { x: 0, opacity: 0.3, scale: 1, rotate: 0, ease: "power2.out" }
     );
 
     // 🔹 Bottom Quote (Right to Center)
-    tl.fromTo(quote2Ref.current, 
+    tl.fromTo(quote2Ref.current,
       { x: 150, opacity: 0, scale: 0.5, rotate: 45 },
       { x: 0, opacity: 0.3, scale: 1, rotate: 0, ease: "power2.out" },
       0 // Start at same time as top quote
@@ -40,18 +40,29 @@ const FounderMessage = () => {
   return (
     <section ref={containerRef} className="w-full py-12 md:py-16 bg-[#f9fafb] relative overflow-hidden flex justify-center">
       <div className="w-[90%] max-w-6xl flex items-center lg:items-start gap-12 lg:gap-20 flex-col md:flex-row">
-        
+
         {/* 🔥 IMAGE SIDE */}
         <div className="flex-1 flex justify-center md:justify-end w-full px-4 sm:px-0">
-           <div className="relative max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] w-full founder-image-box">
-              <div className="absolute inset-0 bg-[var(--primary)] rounded-3xl transform translate-x-4 translate-y-4 shadow-xl"></div>
-              {/* Image */}
-              <img 
-                src={founderImg} 
-                alt="Our Founder" 
-                className="relative z-10 w-full h-auto rounded-3xl shadow-xl transition-all duration-300 object-cover border-4 border-white"
-              />
-           </div>
+          <div className="relative max-w-[320px] sm:max-w-[380px] lg:max-w-[420px] w-full founder-image-box">
+            <div className="absolute inset-0 bg-[var(--primary)] rounded-3xl transform translate-x-4 translate-y-4 shadow-xl"></div>
+            {/* Image */}
+            <img
+              src={founderImg}
+              alt="Our Founder"
+              className="relative z-10 w-full h-auto rounded-3xl shadow-xl transition-all duration-300 object-cover border-4 border-white"
+            />
+
+            {/* 🔹 Animated Name Badge - Now Below the Image */}
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 z-20 bg-white py-3 px-8 rounded-xl shadow-2xl border-b-4 border-[var(--tertiary)] flex items-center gap-3 animate-tagline whitespace-nowrap">
+              <span className="text-[14px] md:text-[16px] font-serif italic text-[var(--tertiary)] font-bold">
+                Jaydeep Majumdar
+              </span>
+              <div className="w-1.5 h-1.5 bg-[var(--primary)] rounded-full"></div>
+              <span className="text-[10px] md:text-[11px] font-bold text-[var(--primary)] uppercase tracking-[0.2em]">
+                Founder
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* 🔥 TEXT SIDE */}
@@ -59,7 +70,7 @@ const FounderMessage = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-[var(--primary)] mb-8">
             Message from our Founder
           </h2>
-          
+
           <div className="relative px-6 md:px-4 mt-4 pb-4">
             <span ref={quote1Ref} className="absolute -top-10 -left-2 md:-left-8 text-6xl lg:text-8xl text-[var(--tertiary)] opacity-30 leading-none">“</span>
             <p className="text-lg lg:text-xl text-gray-700 leading-relaxed font-semibold italic z-10 relative">
@@ -71,16 +82,16 @@ const FounderMessage = () => {
           </div>
 
           <div className="mt-12 flex flex-col md:flex-row items-center gap-4 justify-center md:justify-start">
-             <div className="w-16 h-1 bg-[var(--tertiary)] rounded-full"></div>
-             <p className="text-lg font-bold text-gray-800 uppercase tracking-widest">
-               The Founder
-             </p>
+            <div className="w-16 h-1 bg-[var(--tertiary)] rounded-full"></div>
+            <p className="text-lg font-bold text-gray-800 uppercase tracking-widest">
+              The Founder
+            </p>
           </div>
 
           <div className="mt-10 flex justify-center md:justify-start">
-             <button className="bg-[var(--primary)] text-white px-8 py-3.5 rounded-xl font-bold tracking-wide shadow-lg hover:bg-[var(--secondary)] focus:bg-[var(--secondary)] active:bg-[var(--secondary)] active:scale-95 transition-all duration-200">
-               Get Free Guidance
-             </button>
+            <button className="bg-[var(--primary)] text-white px-8 py-3.5 rounded-xl font-bold tracking-wide shadow-lg hover:bg-[var(--secondary)] focus:bg-[var(--secondary)] active:bg-[var(--secondary)] active:scale-95 transition-all duration-200">
+              Get Free Guidance
+            </button>
           </div>
         </div>
 
