@@ -47,43 +47,43 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM SECTION (DARK) */}
-      <div className="bg-[var(--primary)] text-white py-8 md:py-10 relative overflow-hidden">
+      <div className="bg-[var(--primary)] text-white py-6 relative overflow-hidden">
         {/* Background Glow */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--tertiary)] opacity-[0.1] blur-[120px] -mr-48 -mt-48 rounded-full"></div>
 
         <div className="w-[90%] max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col gap-8">
-            {/* 🔹 GET IN TOUCH (Now prominently in Dark Section) */}
-            <div className="flex flex-col items-center md:items-start gap-6">
-              <h3 className="text-xs font-bold tracking-[0.25em] text-white uppercase border-b border-white/20 pb-2 w-fit">
+          <div className="flex flex-col gap-6">
+            {/* 🔹 FOOTER STATEMENT (Now above Get In Touch) */}
+            <div className="pb-4">
+              <p className="text-lg md:text-xl text-white/70 font-serif italic tracking-tight text-center max-w-5xl mx-auto leading-relaxed px-4">
+                "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
+              </p>
+            </div>
+
+            {/* 🔹 GET IN TOUCH (Now below Footer Statement) */}
+            <div className="flex flex-col items-center md:items-start gap-4 border-t border-white/5 pt-6">
+              <h3 className="text-xs font-bold tracking-[0.25em] text-white uppercase border-b border-white/20 pb-1 w-fit">
                 Get In Touch
               </h3>
-              <div className="flex flex-col md:flex-row gap-8 md:gap-16 text-center md:text-left">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-12 text-center md:text-left">
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-widest text-white/50 font-bold mb-1">Direct Lines</span>
-                  <p className="text-white font-bold text-lg md:text-3xl tracking-tight">
+                  <span className="text-[10px] uppercase tracking-widest text-white/50 font-bold">Direct Lines</span>
+                  <p className="text-white font-bold text-base md:text-xl tracking-tight">
                     {HeadData[0].call_whatsapp}
                   </p>
                 </div>
 
                 <div className="flex flex-col">
-                  <span className="text-[10px] uppercase tracking-widest text-white/50 font-bold mb-1">Official Inquiry</span>
-                  <p className="text-[var(--tertiary)] font-bold text-lg md:text-xl underline underline-offset-8 decoration-white/20 hover:decoration-[var(--tertiary)] transition-all cursor-pointer">
+                  <span className="text-[10px] uppercase tracking-widest text-white/50 font-bold">Official Inquiry</span>
+                  <p className="text-[var(--tertiary)] font-bold text-sm md:text-base underline underline-offset-4 decoration-white/20 hover:decoration-[var(--tertiary)] transition-all cursor-pointer">
                     {HeadData[0].email}
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* 🔹 FOOTER STATEMENT */}
-            <div className="border-t border-white/5 pt-8 pb-2">
-              <p className="text-xl md:text-3xl text-white/70 font-serif italic tracking-tight text-center max-w-6xl mx-auto leading-relaxed px-4">
-                "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
-              </p>
-            </div>
-
             {/* 🔹 BOTTOM BAR */}
-            <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[10px] text-white/40 font-bold uppercase tracking-[0.2em] gap-6">
+            <div className="pt-4 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-[10px] text-white/40 font-bold uppercase tracking-[0.2em] gap-4">
               <div className="flex items-center gap-4">
                 <span>© 2026 Ramya Career Guidance</span>
               </div>
