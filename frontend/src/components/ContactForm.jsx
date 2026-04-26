@@ -42,7 +42,11 @@ const ContactForm = () => {
     setStatus({ type: "", message: "" });
 
     try {
-      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const API_URL = import.meta.env.VITE_API_URL;
+      if (!API_URL) {
+        throw new Error("API URL is not defined. Please check your environment variables.");
+      }
+      console.log("Submitting to:", `${API_URL}/api/students`);
       const response = await axios.post(`${API_URL}/api/students`, formData);
       setStatus({ type: "success", message: response.data.message });
       setFormData({
@@ -56,10 +60,12 @@ const ContactForm = () => {
         interestStream: "",
       });
     } catch (error) {
+      const API_URL = import.meta.env.VITE_API_URL;
       setStatus({
         type: "error",
-        message: error.response?.data?.message || "Something went wrong. Please try again.",
+        message: `Network Error: Could not reach ${API_URL}. Please check your connection.`,
       });
+      console.error("Axios Error:", error);
     } finally {
       setLoading(false);
     }
