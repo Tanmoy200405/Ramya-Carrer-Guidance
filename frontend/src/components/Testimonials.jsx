@@ -20,7 +20,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full py-16 md:py-20 bg-[#f9fafb] flex justify-center relative overflow-hidden">
+    <div ref={sectionRef} className="w-full py-10 md:py-16 bg-[#f9fafb] flex justify-center relative overflow-hidden">
       
       {/* 🔹 DOT GRID BACKGROUND */}
       <div className="absolute inset-0 z-0 opacity-[0.1]" 

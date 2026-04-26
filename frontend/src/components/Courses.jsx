@@ -89,7 +89,7 @@ const Courses = () => {
   }, [currentIndex]);
 
   return (
-    <section id="courses" className="w-full py-16 md:py-20 bg-white relative overflow-hidden flex flex-col items-center">
+    <section id="courses" className="w-full py-10 md:py-16 bg-white relative overflow-hidden flex flex-col items-center">
       
       {/* 🔹 DOT GRID OVERLAY */}
       <div className="absolute inset-0 z-0 opacity-[0.05] mix-blend-multiply" 
@@ -101,7 +101,7 @@ const Courses = () => {
 
       <div className="w-[90%] max-w-7xl relative z-10 flex flex-col items-center">
         {/* 🔹 HEADER */}
-        <div className="flex flex-col items-center mb-10 md:mb-12 px-4 relative w-full text-center">
+        <div className="flex flex-col items-center mb-6 md:mb-8 px-4 relative w-full text-center">
           <div className="relative z-10 flex flex-col items-center">
             {/* 🔹 WATERMARK TEXT BEHIND HEADER */}
             <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 text-[4.2rem] sm:text-[6rem] md:text-[8rem] font-serif font-bold text-[var(--primary)] opacity-[0.06] whitespace-nowrap pointer-events-none select-none z-0 tracking-widest overflow-hidden mix-blend-multiply">

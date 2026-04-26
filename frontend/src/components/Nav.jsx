@@ -17,7 +17,7 @@ const Nav = ({ showHead, open, setOpen }) => {
     >
 
       {/* 🔹 DESKTOP NAV (UNCHANGED) */}
-      <nav className="flex items-center justify-between h-[100px] md:h-[130px] px-6 md:px-16 lg:px-24">
+      <nav className="flex items-center justify-between h-[90px] md:h-[110px] px-6 md:px-16 lg:px-24">
 
             {/* LOGO */}
             <div className={`flex items-center transition-opacity duration-300 ${open ? "opacity-0 invisible" : "opacity-100"}`}>

@@ -31,7 +31,7 @@ const HowItWorks = () => {
   }, []);
 
   return (
-    <section id="how-it-works" ref={containerRef} className="w-full py-16 md:py-20 bg-[#F5F5F0] relative overflow-hidden flex justify-center">
+    <section id="how-it-works" ref={containerRef} className="w-full py-10 md:py-16 bg-[#F5F5F0] relative overflow-hidden flex justify-center">
       <div className="w-[90%] max-w-7xl mx-auto">
         
         {/* HEADER */}
