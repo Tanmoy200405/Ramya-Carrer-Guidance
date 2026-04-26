@@ -5,15 +5,15 @@ import { HeadData } from "../Data/HeadData";
 const Footer = () => {
   return (
     <footer className="bg-[var(--footer-bg)] text-[var(--primary)] overflow-hidden relative border-t border-gray-200">
-      <div className="w-[90%] max-w-7xl mx-auto py-8 relative z-10">
+      <div className="w-[90%] max-w-7xl mx-auto py-6 relative z-10">
         {/* TOP SECTION (LIGHT) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
           {/* 🔹 BRANDING */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2 md:gap-6">
             <img
               src={logo}
               alt="Ramya Career Guidance"
-              className="h-20 sm:h-24 w-auto md:h-36 object-contain"
+              className="h-24 sm:h-28 w-auto md:h-40 object-contain"
             />
           </div>
 
@@ -47,21 +47,21 @@ const Footer = () => {
       </div>
 
       {/* BOTTOM SECTION (DARK) */}
-      <div className="bg-[var(--primary)] text-white py-12 relative overflow-hidden">
+      <div className="bg-[var(--primary)] text-white py-8 relative overflow-hidden">
         {/* Background Glow */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--tertiary)] opacity-[0.1] blur-[120px] -mr-48 -mt-48 rounded-full"></div>
 
         <div className="w-[90%] max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-8">
             {/* 🔹 FOOTER STATEMENT (Now above Get In Touch) */}
-            <div className="pb-4">
+            <div className="pb-2">
               <p className="text-xl md:text-2xl text-white/90 font-serif tracking-wide text-center max-w-4xl mx-auto leading-relaxed px-4">
                 "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
               </p>
             </div>
 
             {/* 🔹 GET IN TOUCH (Now below Footer Statement) */}
-            <div className="flex flex-col items-center md:items-start gap-8 border-t border-white/10 pt-10">
+            <div className="flex flex-col items-center md:items-start gap-6 border-t border-white/10 pt-6">
               <h3 className="text-xs font-bold tracking-[0.25em] text-white uppercase border-b border-white/20 pb-1 w-fit">
                 Get In Touch
               </h3>
