@@ -21,15 +21,15 @@ import seacomLogo from "../assets/college-logos/seacom skill university logo.jpg
 import iiasLogo from "../assets/college-logos/international institute of advance studies logo.png";
 import nifLogo from "../assets/college-logos/nig global kolkata logo.svg";
 import ileadLogo from "../assets/college-logos/ilead.png";
-import bhawanipurLogo from "../assets/college-logos/bwanipur education society logo.jpeg";
+import bhawanipurLogo from "../assets/college-logos/bhawanipur global campus logo.svg";
 
 
 
 export const collegeData = [
   // 1. Top Priority
   {
-    name: "The Bhawanipur Education Society College",
-    shortName: "Bhawanipur College",
+    name: "Bhawanipur Global Campus",
+    shortName: "Bhawanipur Global",
     location: "Kolkata, West Bengal",
     type: "Private College",
     logo: bhawanipurLogo,
