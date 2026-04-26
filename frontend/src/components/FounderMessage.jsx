@@ -89,7 +89,15 @@ const FounderMessage = () => {
           </div>
 
           <div className="mt-10 flex justify-center md:justify-start">
-            <button className="bg-[var(--primary)] text-white px-8 py-3.5 rounded-xl font-bold tracking-wide shadow-lg hover:bg-[var(--secondary)] focus:bg-[var(--secondary)] active:bg-[var(--secondary)] active:scale-95 transition-all duration-200">
+            <button 
+              onClick={() => {
+                const phoneNumber = "917003973892";
+                const message = "Hi, I need guidance regarding college admissions.";
+                const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(url, "_blank");
+              }}
+              className="bg-[var(--primary)] text-white px-8 py-3.5 rounded-xl font-bold tracking-wide shadow-lg hover:bg-[var(--secondary)] focus:bg-[var(--secondary)] active:bg-[var(--secondary)] active:scale-95 transition-all duration-200"
+            >
               Get Free Guidance
             </button>
           </div>

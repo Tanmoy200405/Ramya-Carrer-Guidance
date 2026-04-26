@@ -47,7 +47,15 @@ const Home = () => {
                  Navigate your academic future with certainty. We provide end-to-end guidance for the most prestigious institutions in India.
                </p>
 
-               <button className="px-10 py-5 bg-[var(--primary)] text-white font-bold tracking-[0.2em] uppercase hover:bg-[var(--tertiary)] hover:tracking-[0.3em] transition-all duration-500 shadow-xl text-sm lg:text-base">
+               <button 
+                  onClick={() => {
+                    const phoneNumber = "917003973892";
+                    const message = "Hi, I need guidance regarding college admissions.";
+                    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    window.open(url, "_blank");
+                  }}
+                  className="px-10 py-5 bg-[var(--primary)] text-white font-bold tracking-[0.2em] uppercase hover:bg-[var(--tertiary)] hover:tracking-[0.3em] transition-all duration-500 shadow-xl text-sm lg:text-base"
+               >
                  Consult For Free
                </button>
             </div>
