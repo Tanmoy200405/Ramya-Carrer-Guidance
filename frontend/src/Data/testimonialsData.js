@@ -2,6 +2,8 @@ import photo1 from "../assets/testimonial/photo1.jpeg";
 import photo2 from "../assets/testimonial/photo2.jpeg";
 import photo3 from "../assets/testimonial/photo3.jpeg";
 import photo4 from "../assets/testimonial/photo4.jpeg";
+import photo5 from "../assets/testimonial/photo5.jpeg";
+import photo6 from "../assets/testimonial/photo6.jpeg";
 
 export const testimonialsData = [
     {
@@ -34,6 +36,22 @@ export const testimonialsData = [
         college: "Bhawanipur Global Campus",
         review: "I have benefited greatly from their guidance. It has helped me set my goals in life and find a good college.",
         photo: photo4,
+        rating: 5
+    },
+    {
+        id: 5,
+        name: "Vikram Mehta",
+        college: "Engineering Student",
+        review: "Excellent mentorship! They helped me understand the career roadmap very clearly and choose the best engineering path.",
+        photo: photo5,
+        rating: 5
+    },
+    {
+        id: 6,
+        name: "Anjali Singh",
+        college: "Paramedical Student",
+        review: "I was confused about my options, but their personalized guidance changed everything. Highly recommended!",
+        photo: photo6,
         rating: 5
     }
 ];
