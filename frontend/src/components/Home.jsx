@@ -57,7 +57,7 @@ const Home = () => {
                {[
                  { title: "100% Free Guidance", desc: "Expert counselling without any hidden consultation fees." },
                  { title: "Direct College Tie-Ups", desc: "We are direct partners with over 50+ premium institutions." },
-                 { title: "Expert Admission Support", desc: "From application to enrollment, we handle the details." }
+                 { title: "Expert Admission Support", desc: "From application to enrolment, we handle the details." }
                ].map((item, i) => (
                   <div key={i} className="flex items-start gap-6 p-6 sm:p-8 bg-[#FDFDFD] hover:bg-[var(--tertiary)]/5 transition-all duration-300 border border-gray-100 group">
                      <div className="text-3xl lg:text-4xl font-serif text-[var(--tertiary)] opacity-30 group-hover:opacity-100 transition-opacity">0{i+1}</div>

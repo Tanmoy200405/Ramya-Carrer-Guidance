@@ -33,7 +33,7 @@ const CollegePartners = () => {
         <h1 className="text-2xl md:text-3xl font-bold text-[var(--primary)] text-center">
           Our Partner Colleges
         </h1>
-        <p className="text-gray-500 mt-2 text-sm md:text-base text-center">
+        <p className="text-gray-500 mt-2 text-sm md:text-base text-center font-serif italic">
           We have tie-ups with top colleges across India.
         </p>
       </div>

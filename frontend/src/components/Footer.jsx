@@ -20,7 +20,7 @@ const Footer = () => {
                 className="h-32 w-auto md:h-56 object-contain"
               />
             </div>
-            <p className="text-2xl sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-sm md:max-w-md mt-4 font-light italic px-4 md:px-0">
+            <p className="text-2xl sm:text-lg md:text-xl text-gray-900 leading-tight max-w-sm md:max-w-md mt-1 font-bold italic px-4 md:px-0">
               "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
             </p>
           </div>

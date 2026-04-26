@@ -48,9 +48,9 @@ export const testimonialsData = [
     },
     {
         id: 6,
-        name: "Anjali Singh",
-        college: "Paramedical Student",
-        review: "I was confused about my options, but their personalized guidance changed everything. Highly recommended!",
+        name: "SOHAM GUCHAIT",
+        college: "Techno Main Salt lake",
+        review: "Great experience with this career counseling center. The counselors were supportive, knowledgeable, and gave clear, personalized guidance. It really helped me gain clarity and confidence about my career path. Highly recommended!",
         photo: photo6,
         rating: 5
     }

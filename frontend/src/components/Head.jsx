@@ -27,8 +27,8 @@ const Head = ({ show }) => {
         <div className="flex items-center gap-4 md:gap-6">
 
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <FaPhoneAlt className="text-[var(--tertiary)]" />
+            <div className="flex items-center gap-2 font-serif font-bold tracking-wide">
+              <FaPhoneAlt className="text-[var(--tertiary)] text-xs" />
               <span>{HeadData[0].call_whatsapp}</span>
             </div>
           </div>
