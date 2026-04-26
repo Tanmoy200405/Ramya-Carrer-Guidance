@@ -20,7 +20,7 @@ const Footer = () => {
                 className="h-32 w-auto md:h-56 object-contain"
               />
             </div>
-            <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed max-w-xs sm:max-w-sm mt-1 font-light italic px-4 md:px-0">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed max-w-sm md:max-w-md mt-2 font-light italic px-4 md:px-0">
               "Your sanctuary for academic excellence. We architect the bridges between ambitious students and world-class institutions."
             </p>
           </div>
@@ -82,8 +82,6 @@ const Footer = () => {
         {/* 🔹 BOTTOM BAR */}
         <div className="mt-6 md:mt-16 pt-4 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 font-bold uppercase tracking-[0.2em] gap-6">
           <div className="flex items-center gap-4">
-            <span className="text-[var(--tertiary)] italic">Built with Excellence</span>
-            <span className="w-1 h-1 bg-gray-200 rounded-full"></span>
             <span>© 2026 Ramya Career Guidance</span>
           </div>
         </div>
