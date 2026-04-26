@@ -43,7 +43,7 @@ const LandingPage = () => {
       {!isMenuOpen && <WhatsAppFloat />}
 
       {/* 🔹 CONTENT */}
-      <div className="pt-[140px] md:pt-[170px]">
+      <div className="pt-[100px] md:pt-[150px]">
         <Home />
         <CollegePartners />
         <HowItWorks />
