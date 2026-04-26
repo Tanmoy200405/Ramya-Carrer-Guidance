@@ -155,7 +155,7 @@ export const coursesData = [
     ],
     desc: "Expertise in trade, commerce, financial accounting, and the banking sector.",
     icon: FaBuilding,
-    image: "https://images.unsplash.com/photo-1454165833767-0270a6c021f1?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.unsplash.com/photo-1554224155-169641357599?auto=format&fit=crop&q=80&w=400&h=400"
   },
   {
     id: "10",
@@ -169,10 +169,10 @@ export const coursesData = [
     ],
     desc: "Exploring human culture, social behavior, and economic systems through diverse humanities programs.",
     icon: FaUniversity,
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=400&h=400"
   },
   {
-    id: "12",
+    id: "11",
     category: "SKILL-BASED",
     title: "Digital & Vocational",
     items: [
@@ -184,6 +184,6 @@ export const coursesData = [
     ],
     desc: "Modern vocational skills including digital marketing, data analytics, and professional entrepreneurship.",
     icon: FaTools,
-    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=400&h=400"
   }
 ];
