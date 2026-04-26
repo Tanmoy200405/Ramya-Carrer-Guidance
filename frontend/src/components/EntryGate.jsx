@@ -39,8 +39,16 @@ const EntryGate = ({ onUnlock }) => {
 
     try {
       console.log("Submitting formData:", formData);
-      // Connect to port 5001 as previously fixed
-      const response = await axios.post("http://127.0.0.1:5001/api/students", formData);
+      let API_URL = import.meta.env.VITE_API_URL;
+      if (API_URL) API_URL = API_URL.replace(/\/$/, "");
+      
+      if (!API_URL) {
+        setStatus({ type: "error", message: "API URL is missing. Please check Render Environment variables." });
+        setLoading(false);
+        return;
+      }
+
+      const response = await axios.post(`${API_URL}/api/students`, formData);
       setStatus({ type: "success", message: response.data.message });
       
       // Save to localStorage
