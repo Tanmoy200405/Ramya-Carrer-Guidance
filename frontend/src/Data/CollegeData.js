@@ -224,5 +224,87 @@ export const collegeData = [
     type: "Educational Group",
     logo: krishnaLogo,
     officialSite: "https://krishnacollegebijnor.in/"
+  },
+  {
+    name: "SITM",
+    shortName: "SITM",
+    location: "India",
+    type: "Institute",
+    logo: "https://ui-avatars.com/api/?name=SITM&color=002147&background=F3F4F6",
+    officialSite: "#"
+  },
+  {
+    name: "MR Group of Institutions",
+    shortName: "MR Group",
+    location: "India",
+    type: "Educational Group",
+    logo: "https://ui-avatars.com/api/?name=MR+Group&color=002147&background=F3F4F6",
+    officialSite: "#"
+  },
+
+  // --- TOP CLASS UNIVERSITIES IN INDIA (NAAC A++, NIRF < 200) ---
+  {
+    name: "Kalinga Institute of Industrial Technology (KIIT)",
+    shortName: "KIIT",
+    location: "Bhubaneswar, Odisha",
+    type: "Private Deemed University",
+    logo: "https://ui-avatars.com/api/?name=KIIT&color=002147&background=F3F4F6",
+    officialSite: "https://kiit.ac.in/"
+  },
+  {
+    name: "SRM Institute of Science and Technology",
+    shortName: "SRM",
+    location: "Chennai, Tamil Nadu",
+    type: "Private Deemed University",
+    logo: "https://ui-avatars.com/api/?name=SRM&color=002147&background=F3F4F6",
+    officialSite: "https://www.srmist.edu.in/"
+  },
+  {
+    name: "Vellore Institute of Technology (VIT)",
+    shortName: "VIT",
+    location: "Vellore, Tamil Nadu",
+    type: "Private Deemed University",
+    logo: "https://ui-avatars.com/api/?name=VIT&color=002147&background=F3F4F6",
+    officialSite: "https://vit.ac.in/"
+  },
+  {
+    name: "Birla Institute of Technology and Science (BITS)",
+    shortName: "BITS Pilani",
+    location: "Pilani, Rajasthan",
+    type: "Private Deemed University",
+    logo: "https://ui-avatars.com/api/?name=BITS&color=002147&background=F3F4F6",
+    officialSite: "https://www.bits-pilani.ac.in/"
+  },
+  {
+    name: "Siksha 'O' Anusandhan (SOA) University",
+    shortName: "SOA",
+    location: "Bhubaneswar, Odisha",
+    type: "Private Deemed University",
+    logo: "https://ui-avatars.com/api/?name=SOA&color=002147&background=F3F4F6",
+    officialSite: "https://www.soa.ac.in/"
+  },
+  {
+    name: "C. V. Raman Global University",
+    shortName: "CV Raman",
+    location: "Bhubaneswar, Odisha",
+    type: "Private University",
+    logo: "https://ui-avatars.com/api/?name=CV+Raman&color=002147&background=F3F4F6",
+    officialSite: "https://cgu-odisha.ac.in/"
+  },
+  {
+    name: "Manipal Academy of Higher Education",
+    shortName: "Manipal",
+    location: "Manipal, Karnataka",
+    type: "Private Deemed University",
+    logo: "https://ui-avatars.com/api/?name=Manipal&color=002147&background=F3F4F6",
+    officialSite: "https://manipal.edu/"
+  },
+  {
+    name: "M. S. Ramaiah University of Applied Sciences",
+    shortName: "MS Ramaiah",
+    location: "Bangalore, Karnataka",
+    type: "Private University",
+    logo: "https://ui-avatars.com/api/?name=MSRUAS&color=002147&background=F3F4F6",
+    officialSite: "https://www.msruas.ac.in/"
   }
 ];
