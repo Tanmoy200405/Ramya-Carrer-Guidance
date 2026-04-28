@@ -38,7 +38,7 @@ const FounderMessage = () => {
   }, { scope: containerRef });
 
   return (
-    <section ref={containerRef} className="w-full py-12 md:py-16 bg-[#f9fafb] relative overflow-hidden flex justify-center">
+    <section id="about" ref={containerRef} className="w-full py-12 md:py-16 bg-[#f9fafb] relative overflow-hidden flex justify-center">
       <div className="w-[90%] max-w-6xl flex items-center lg:items-start gap-12 lg:gap-20 flex-col md:flex-row">
 
         {/* 🔥 IMAGE SIDE */}

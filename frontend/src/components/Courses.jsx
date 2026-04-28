@@ -43,13 +43,13 @@ const CourseModal = ({ course, onClose }) => {
         {/* Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-6 right-6 z-20 p-3 bg-white/80 backdrop-blur-sm rounded-full text-[var(--primary)] hover:bg-[var(--tertiary)] hover:text-white transition-all shadow-lg"
+          className="absolute top-4 right-4 md:top-6 md:right-6 z-20 p-2.5 md:p-3 bg-white/80 backdrop-blur-sm rounded-full text-[var(--primary)] hover:bg-[var(--tertiary)] hover:text-white transition-all shadow-lg"
         >
           <FaTimes />
         </button>
 
         {/* Left Side: Image & Highlights */}
-        <div className="w-full md:w-[40%] bg-[var(--primary)] relative min-h-[300px] md:min-h-full">
+        <div className="w-full md:w-[40%] bg-[var(--primary)] relative h-[220px] md:h-auto md:min-h-full flex-shrink-0">
           <img 
             src={course.image} 
             alt={course.title} 
@@ -57,22 +57,22 @@ const CourseModal = ({ course, onClose }) => {
             onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=600&h=600'; }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)] via-transparent to-transparent"></div>
-          <div className="absolute bottom-8 left-8 right-8 text-white">
-            <div className="text-[10px] font-bold tracking-[0.3em] uppercase opacity-70 mb-2">{course.category}</div>
-            <h3 className="text-3xl font-serif font-bold leading-tight mb-4">{course.title}</h3>
+          <div className="absolute bottom-5 md:bottom-8 left-6 md:left-8 right-6 md:right-8 text-white">
+            <div className="text-[10px] font-bold tracking-[0.3em] uppercase opacity-70 mb-1.5 md:mb-2">{course.category}</div>
+            <h3 className="text-2xl md:text-3xl font-serif font-bold leading-tight mb-3 md:mb-4">{course.title}</h3>
             <div className="w-12 h-1 bg-[var(--tertiary)] rounded-full"></div>
           </div>
         </div>
 
         {/* Right Side: Details & CTA */}
-        <div className="w-full md:w-[60%] p-8 sm:p-12 overflow-y-auto">
+        <div className="w-full md:w-[60%] flex-1 p-6 sm:p-8 md:p-12 overflow-y-auto">
           <div className="space-y-8">
             <section>
               <h4 className="text-[var(--primary)] font-bold tracking-[0.2em] text-xs uppercase mb-4 flex items-center gap-2">
                 <span className="w-4 h-[1px] bg-[var(--tertiary)]"></span>
                 Overview
               </h4>
-              <p className="text-gray-600 leading-relaxed text-lg italic">
+              <p className="text-gray-600 leading-relaxed text-base sm:text-lg italic">
                 "{course.desc}"
               </p>
             </section>
@@ -92,19 +92,19 @@ const CourseModal = ({ course, onClose }) => {
               </div>
             </section>
 
-            <div className="pt-8 flex flex-col sm:flex-row gap-4 border-t border-gray-100">
+            <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 border-t border-gray-100">
               <a 
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-3 py-4 bg-[#25D366] text-white font-bold rounded-xl hover:shadow-[0_10px_20px_-5px_#25D366] transition-all duration-300"
+                className="flex-1 flex items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 bg-[#25D366] text-white font-bold rounded-xl hover:shadow-[0_10px_20px_-5px_#25D366] transition-all duration-300 text-sm sm:text-base"
               >
-                <FaWhatsapp className="text-xl" />
+                <FaWhatsapp className="text-lg sm:text-xl" />
                 GET FREE COUNSELLING
               </a>
               <button 
                 onClick={onClose}
-                className="px-8 py-4 border-2 border-[var(--primary)] text-[var(--primary)] font-bold rounded-xl hover:bg-[var(--primary)] hover:text-white transition-all"
+                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-[var(--primary)] text-[var(--primary)] font-bold rounded-xl hover:bg-[var(--primary)] hover:text-white transition-all text-sm sm:text-base"
               >
                 CLOSE
               </button>

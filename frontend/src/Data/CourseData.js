@@ -155,7 +155,7 @@ export const coursesData = [
     ],
     desc: "Expertise in trade, commerce, financial accounting, and the banking sector.",
     icon: FaBuilding,
-    image: "https://images.unsplash.com/photo-1554224155-169641357599?auto=format&fit=crop&q=80&w=400&h=400"
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400&h=400"
   },
   {
     id: "10",

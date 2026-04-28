@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavData } from "../Data/Data";
 import { HeadData } from "../Data/HeadData";
 import logo from "../assets/logo.png";
@@ -7,7 +7,29 @@ import { RxCross1 } from "react-icons/rx";
 import { FaWhatsapp } from "react-icons/fa";
 
 const Nav = ({ showHead, open, setOpen }) => {
-  const [active, setActive] = useState(0);
+  const [activeSection, setActiveSection] = useState("#home");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      const sections = NavData.map(item => document.querySelector(item.link)).filter(Boolean);
+      
+      let current = "#home";
+      sections.forEach(section => {
+        if (
+          section.offsetTop <= scrollPosition &&
+          (section.offsetTop + section.offsetHeight) > scrollPosition
+        ) {
+          current = `#${section.getAttribute("id")}`;
+        }
+      });
+      setActiveSection(current);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const whatsappUrl = `https://wa.me/${HeadData[0].floating_whatsapp.replace(/\s+/g, '')}?text=${encodeURIComponent("Hi, I need guidance regarding college admissions.")}`;
 
   return (
@@ -26,20 +48,24 @@ const Nav = ({ showHead, open, setOpen }) => {
 
         {/* LINKS */}
         <div className={`hidden md:flex items-center gap-8 transition-opacity duration-300 ${open ? "opacity-0 invisible" : "opacity-100"}`}>
-          {NavData.map((item, index) => (
-            <a
-              key={item.name}
-              href={item.link}
-              className={`relative text-[16px] font-medium text-black hover:text-[var(--primary)] transition
-                  ${index === 0 ? "text-[var(--primary)]" : ""}`}
-            >
-              {item.name}
+          {NavData.map((item) => {
+            const isActive = activeSection === item.link;
+            return (
+              <a
+                key={item.name}
+                href={item.link}
+                onClick={() => setActiveSection(item.link)}
+                className={`relative text-[16px] font-medium transition
+                    ${isActive ? "text-[var(--primary)]" : "text-black hover:text-[var(--primary)]"}`}
+              >
+                {item.name}
 
-              {index === 0 && (
-                <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-[var(--primary)]"></span>
-              )}
-            </a>
-          ))}
+                {isActive && (
+                  <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-[var(--primary)] transition-all duration-300"></span>
+                )}
+              </a>
+            );
+          })}
         </div>
 
         {/* CTA */}
@@ -93,15 +119,15 @@ const Nav = ({ showHead, open, setOpen }) => {
 
             {/* MENU */}
             <div className="flex flex-col gap-2 px-4">
-              {NavData.map((item, index) => (
+              {NavData.map((item) => (
                 <a
                   key={item.name}
                   href={item.link}
                   onClick={() => {
-                    setActive(index);
+                    setActiveSection(item.link);
                     setOpen(false);
                   }}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${active === index
+                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${activeSection === item.link
                       ? "bg-[var(--primary)] text-white"
                       : "text-gray-700 hover:bg-gray-100"
                     }`}

@@ -7,20 +7,20 @@ const Footer = () => {
     <footer className="bg-[var(--footer-bg)] text-[var(--primary)] overflow-hidden relative border-t border-gray-200 -mt-8">
       
       {/* 🔹 TOP SECTION (LIGHT) */}
-      <div className="w-[90%] max-w-7xl mx-auto py-0 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      <div className="w-[90%] max-w-7xl mx-auto py-2 md:py-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
           
           {/* 🔹 BRANDING */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left gap-1">
             <img
               src={logo}
               alt="Ramya Career Guidance"
-              className="h-20 sm:h-24 md:h-28 w-auto object-contain block"
+              className="h-32 sm:h-36 md:h-32 w-auto object-contain block -my-4 md:my-0"
             />
           </div>
 
           {/* 🔹 OUR EXCELLENCE */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left gap-2 -mt-2 md:mt-0 pb-4 md:pb-0">
             <h3 className="text-xs font-bold tracking-[0.25em] text-[var(--primary)] uppercase border-b border-gray-200 pb-1 w-fit">
               Our Excellence
             </h3>
