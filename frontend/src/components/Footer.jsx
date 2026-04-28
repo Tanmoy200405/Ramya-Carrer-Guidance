@@ -4,7 +4,7 @@ import { HeadData } from "../Data/HeadData";
 
 const Footer = () => {
   return (
-    <footer className="bg-[var(--footer-bg)] text-[var(--primary)] overflow-hidden relative border-t border-gray-200 -mt-12 md:-mt-8">
+    <footer className="bg-[var(--footer-bg)] text-[var(--primary)] overflow-hidden relative border-t border-gray-200 mt-0">
       
       {/* 🔹 TOP SECTION (LIGHT) */}
       <div className="w-[90%] max-w-7xl mx-auto pt-0 pb-2 md:py-6 relative z-10">
