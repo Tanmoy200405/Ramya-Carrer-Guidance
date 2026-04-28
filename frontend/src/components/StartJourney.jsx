@@ -23,7 +23,7 @@ const StartJourney = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full pt-16 pb-24 md:py-24 bg-[#000B18] flex justify-center text-white overflow-hidden relative">
+    <div ref={sectionRef} className="w-full pt-12 pb-16 md:py-20 bg-[#000B18] flex justify-center text-white overflow-hidden relative">
       
       {/* Subtle Grain/Texture Overlay (Optional style match) */}
       <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
