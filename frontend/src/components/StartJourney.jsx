@@ -30,21 +30,21 @@ const StartJourney = () => {
 
       <div className={`w-[90%] max-w-4xl flex flex-col items-center text-center relative z-10 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         
-        <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+        <h2 className="text-3xl md:text-6xl font-bold mb-4 md:mb-6 tracking-tight px-2">
           Start Your Journey.
         </h2>
         
-        <p className="text-gray-400 text-base md:text-lg mb-10 max-w-2xl leading-relaxed italic">
+        <p className="text-gray-400 text-sm md:text-lg mb-8 md:mb-10 max-w-2xl leading-relaxed italic px-4">
           Limited advisory slots available for the upcoming academic cycle. <br className="hidden md:block" />
           Secure your sanctuary today.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-6 sm:px-0">
           <a 
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 bg-[var(--tertiary)] text-black font-bold rounded-lg hover:bg-yellow-500 transition-all duration-300 uppercase tracking-wider"
+            className="w-full sm:w-auto px-4 py-4 md:px-10 bg-[var(--tertiary)] text-black font-bold rounded-lg hover:bg-yellow-500 transition-all duration-300 uppercase tracking-widest text-[13px] md:text-[15px] shadow-lg"
           >
             BOOK INITIAL ASSESSMENT
           </a>
