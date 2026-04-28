@@ -67,8 +67,8 @@ const Home = () => {
                  { title: "Direct College Tie-Ups", desc: "We are direct partners with over 50+ premium institutions." },
                  { title: "Expert Admission Support", desc: "From application to enrollment, we handle the details." }
                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-6 p-6 sm:p-8 bg-[#FDFDFD] hover:bg-[var(--tertiary)]/5 transition-all duration-300 border border-gray-100 group">
-                     <div className="text-3xl lg:text-4xl font-serif text-[var(--tertiary)] opacity-30 group-hover:opacity-100 transition-opacity">0{i+1}</div>
+                  <div key={i} className="flex items-start gap-6 p-6 sm:p-8 bg-[#FDFDFD] hover:bg-[var(--tertiary)]/5 active:bg-[var(--tertiary)]/10 transition-all duration-300 border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] lg:shadow-none group active:scale-[0.98] cursor-pointer rounded-xl lg:rounded-none">
+                     <div className="text-3xl lg:text-4xl font-serif text-[var(--tertiary)] opacity-80 lg:opacity-30 group-hover:opacity-100 transition-opacity">0{i+1}</div>
                      <div className="space-y-1">
                         <div className="text-[var(--primary)] font-bold text-lg lg:text-xl uppercase tracking-tight">{item.title}</div>
                         <p className="text-[var(--primary)]/60 text-sm leading-relaxed">{item.desc}</p>
