@@ -23,7 +23,16 @@ import nifLogo from "../assets/college-logos/nig global kolkata logo.svg";
 import ileadLogo from "../assets/college-logos/ilead.png";
 import bhawanipurLogo from "../assets/college-logos/bhawanipur global campus logo.svg";
 
-
+import sitmLogo from "../assets/college-logos/sitm logo.png";
+import mrGroupLogo from "../assets/college-logos/Mr group logo.png";
+import kiitLogo from "../assets/college-logos/kiit.png";
+import srmLogo from "../assets/college-logos/srm institue of science logo.jpg";
+import bitsLogo from "../assets/college-logos/Birla_Institute_of_Technology_Mesra_logo.png";
+import soaLogo from "../assets/college-logos/soa.png";
+import cvRamanLogo from "../assets/college-logos/cv Raman logo.png";
+import manipalLogo from "../assets/college-logos/manipal academy.jpg";
+import vitLogo from "../assets/college-logos/vit_logo.jpg";
+import msRamaiahLogo from "../assets/college-logos/ms_ramaiah_university_of_applied_sciences_bangalore_logo.jpg";
 
 export const collegeData = [
   // 1. Top Priority
@@ -230,7 +239,7 @@ export const collegeData = [
     shortName: "SITM",
     location: "India",
     type: "Institute",
-    logo: "https://ui-avatars.com/api/?name=SITM&color=002147&background=F3F4F6",
+    logo: sitmLogo,
     officialSite: "#"
   },
   {
@@ -238,7 +247,7 @@ export const collegeData = [
     shortName: "MR Group",
     location: "India",
     type: "Educational Group",
-    logo: "https://ui-avatars.com/api/?name=MR+Group&color=002147&background=F3F4F6",
+    logo: mrGroupLogo,
     officialSite: "#"
   },
 
@@ -248,7 +257,7 @@ export const collegeData = [
     shortName: "KIIT",
     location: "Bhubaneswar, Odisha",
     type: "Private Deemed University",
-    logo: "https://ui-avatars.com/api/?name=KIIT&color=002147&background=F3F4F6",
+    logo: kiitLogo,
     officialSite: "https://kiit.ac.in/"
   },
   {
@@ -256,7 +265,7 @@ export const collegeData = [
     shortName: "SRM",
     location: "Chennai, Tamil Nadu",
     type: "Private Deemed University",
-    logo: "https://ui-avatars.com/api/?name=SRM&color=002147&background=F3F4F6",
+    logo: srmLogo,
     officialSite: "https://www.srmist.edu.in/"
   },
   {
@@ -264,7 +273,7 @@ export const collegeData = [
     shortName: "VIT",
     location: "Vellore, Tamil Nadu",
     type: "Private Deemed University",
-    logo: "https://ui-avatars.com/api/?name=VIT&color=002147&background=F3F4F6",
+    logo: vitLogo,
     officialSite: "https://vit.ac.in/"
   },
   {
@@ -272,7 +281,7 @@ export const collegeData = [
     shortName: "BITS Pilani",
     location: "Pilani, Rajasthan",
     type: "Private Deemed University",
-    logo: "https://ui-avatars.com/api/?name=BITS&color=002147&background=F3F4F6",
+    logo: bitsLogo,
     officialSite: "https://www.bits-pilani.ac.in/"
   },
   {
@@ -280,7 +289,7 @@ export const collegeData = [
     shortName: "SOA",
     location: "Bhubaneswar, Odisha",
     type: "Private Deemed University",
-    logo: "https://ui-avatars.com/api/?name=SOA&color=002147&background=F3F4F6",
+    logo: soaLogo,
     officialSite: "https://www.soa.ac.in/"
   },
   {
@@ -288,7 +297,7 @@ export const collegeData = [
     shortName: "CV Raman",
     location: "Bhubaneswar, Odisha",
     type: "Private University",
-    logo: "https://ui-avatars.com/api/?name=CV+Raman&color=002147&background=F3F4F6",
+    logo: cvRamanLogo,
     officialSite: "https://cgu-odisha.ac.in/"
   },
   {
@@ -296,7 +305,7 @@ export const collegeData = [
     shortName: "Manipal",
     location: "Manipal, Karnataka",
     type: "Private Deemed University",
-    logo: "https://ui-avatars.com/api/?name=Manipal&color=002147&background=F3F4F6",
+    logo: manipalLogo,
     officialSite: "https://manipal.edu/"
   },
   {
@@ -304,7 +313,7 @@ export const collegeData = [
     shortName: "MS Ramaiah",
     location: "Bangalore, Karnataka",
     type: "Private University",
-    logo: "https://ui-avatars.com/api/?name=MSRUAS&color=002147&background=F3F4F6",
+    logo: msRamaiahLogo,
     officialSite: "https://www.msruas.ac.in/"
   }
 ];

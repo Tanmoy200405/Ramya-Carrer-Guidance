@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import axios from "axios";
 import gsap from "gsap";
 import { FaArrowLeft, FaArrowRight, FaTimes, FaWhatsapp, FaCheckCircle } from "react-icons/fa";
 import { coursesData } from "../Data/CourseData";
@@ -7,9 +8,16 @@ import { HeadData } from "../Data/HeadData";
 const CourseModal = ({ course, onClose }) => {
   const modalRef = useRef(null);
   const contentRef = useRef(null);
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ type: '', message: '' });
 
   useEffect(() => {
     if (course) {
+      setShowForm(false);
+      setFormData({ name: '', email: '', phone: '' });
+      setStatus({ type: '', message: '' });
       gsap.fromTo(modalRef.current, 
         { opacity: 0 }, 
         { opacity: 1, duration: 0.3, ease: "power2.out" }
@@ -28,6 +36,41 @@ const CourseModal = ({ course, onClose }) => {
   if (!course) return null;
 
   const whatsappUrl = `https://wa.me/${HeadData[0].floating_whatsapp.replace(/\s+/g, '')}?text=${encodeURIComponent(`Hi, I'm interested in learning more about ${course.category} / ${course.title} courses.`)}`;
+
+  const handleFormChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus({ type: '', message: '' });
+
+    try {
+      let API_URL = import.meta.env.VITE_API_URL;
+      if (API_URL) API_URL = API_URL.replace(/\/$/, "");
+      
+      if (!API_URL) {
+        setStatus({ type: "error", message: "API URL is missing." });
+        setLoading(false);
+        return;
+      }
+
+      await axios.post(`${API_URL}/api/students`, formData);
+      window.open(whatsappUrl, '_blank');
+      onClose();
+    } catch (error) {
+      console.error("Submission error:", error);
+      setStatus({ type: "error", message: "Failed to submit. Redirecting..." });
+      // Still redirect to whatsapp even if tracking fails?
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+        onClose();
+      }, 1500);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div 
@@ -66,50 +109,104 @@ const CourseModal = ({ course, onClose }) => {
 
         {/* Right Side: Details & CTA */}
         <div className="w-full md:w-[60%] flex-1 p-6 sm:p-8 md:p-12 overflow-y-auto">
-          <div className="space-y-8">
-            <section>
-              <h4 className="text-[var(--primary)] font-bold tracking-[0.2em] text-xs uppercase mb-4 flex items-center gap-2">
-                <span className="w-4 h-[1px] bg-[var(--tertiary)]"></span>
-                Overview
-              </h4>
-              <p className="text-gray-600 leading-relaxed text-base sm:text-lg italic">
-                "{course.desc}"
-              </p>
-            </section>
+          {!showForm ? (
+            <div className="space-y-8">
+              <section>
+                <h4 className="text-[var(--primary)] font-bold tracking-[0.2em] text-xs uppercase mb-4 flex items-center gap-2">
+                  <span className="w-4 h-[1px] bg-[var(--tertiary)]"></span>
+                  Overview
+                </h4>
+                <p className="text-gray-600 leading-relaxed text-base sm:text-lg italic">
+                  "{course.desc}"
+                </p>
+              </section>
 
-            <section>
-              <h4 className="text-[var(--primary)] font-bold tracking-[0.2em] text-xs uppercase mb-6 flex items-center gap-2">
-                <span className="w-4 h-[1px] bg-[var(--tertiary)]"></span>
-                Key Programs
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {course.items.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 group">
-                    <FaCheckCircle className="text-[var(--tertiary)] mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                    <span className="text-gray-700 text-sm font-medium leading-snug">{item}</span>
-                  </div>
-                ))}
+              <section>
+                <h4 className="text-[var(--primary)] font-bold tracking-[0.2em] text-xs uppercase mb-6 flex items-center gap-2">
+                  <span className="w-4 h-[1px] bg-[var(--tertiary)]"></span>
+                  Key Programs
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {course.items.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 group">
+                      <FaCheckCircle className="text-[var(--tertiary)] mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                      <span className="text-gray-700 text-sm font-medium leading-snug">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 border-t border-gray-100">
+                <button 
+                  onClick={() => setShowForm(true)}
+                  className="flex-1 flex items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 bg-[#25D366] text-white font-bold rounded-xl hover:shadow-[0_10px_20px_-5px_#25D366] transition-all duration-300 text-sm sm:text-base"
+                >
+                  <FaWhatsapp className="text-lg sm:text-xl" />
+                  GET FREE COUNSELLING
+                </button>
+                <button 
+                  onClick={onClose}
+                  className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-[var(--primary)] text-[var(--primary)] font-bold rounded-xl hover:bg-[var(--primary)] hover:text-white transition-all text-sm sm:text-base"
+                >
+                  CLOSE
+                </button>
               </div>
-            </section>
-
-            <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 border-t border-gray-100">
-              <a 
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 bg-[#25D366] text-white font-bold rounded-xl hover:shadow-[0_10px_20px_-5px_#25D366] transition-all duration-300 text-sm sm:text-base"
-              >
-                <FaWhatsapp className="text-lg sm:text-xl" />
-                GET FREE COUNSELLING
-              </a>
-              <button 
-                onClick={onClose}
-                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-[var(--primary)] text-[var(--primary)] font-bold rounded-xl hover:bg-[var(--primary)] hover:text-white transition-all text-sm sm:text-base"
-              >
-                CLOSE
-              </button>
             </div>
-          </div>
+          ) : (
+            <div className="space-y-6">
+              <div className="mb-6">
+                <h4 className="text-2xl font-serif font-bold text-[var(--primary)] mb-2">Almost there!</h4>
+                <p className="text-gray-500 text-sm">Please provide your details to connect with our counselor via WhatsApp.</p>
+              </div>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Name <span className="text-red-500">*</span></label>
+                  <input 
+                    type="text" name="name" value={formData.name} onChange={handleFormChange} required
+                    placeholder="Your Full Name"
+                    className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Email <span className="text-red-500">*</span></label>
+                  <input 
+                    type="email" name="email" value={formData.email} onChange={handleFormChange} required
+                    placeholder="Your Email Address"
+                    className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-[10px] uppercase font-bold tracking-widest text-gray-400 px-1">Phone Number <span className="text-red-500">*</span></label>
+                  <input 
+                    type="tel" name="phone" value={formData.phone} onChange={handleFormChange} required
+                    placeholder="Your Phone Number"
+                    className="w-full bg-[#f4f8f6] border border-gray-100 rounded-xl px-4 py-3 focus:ring-2 focus:ring-[var(--tertiary)] outline-none transition-all font-serif"
+                  />
+                </div>
+                {status.message && (
+                  <div className={`p-3 rounded-lg text-sm font-bold ${status.type === 'error' ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+                    {status.message}
+                  </div>
+                )}
+                <div className="pt-4 flex flex-col sm:flex-row gap-3">
+                  <button 
+                    type="submit" disabled={loading}
+                    className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#25D366] text-white font-bold rounded-xl hover:shadow-[0_10px_20px_-5px_#25D366] transition-all duration-300 disabled:opacity-70"
+                  >
+                    <FaWhatsapp className="text-lg" />
+                    {loading ? "CONNECTING..." : "PROCEED TO WHATSAPP"}
+                  </button>
+                  <button 
+                    type="button"
+                    onClick={() => setShowForm(false)}
+                    className="px-6 py-3 border-2 border-[var(--primary)] text-[var(--primary)] font-bold rounded-xl hover:bg-[var(--primary)] hover:text-white transition-all text-sm"
+                  >
+                    BACK
+                  </button>
+                </div>
+              </form>
+            </div>
+          )}
         </div>
       </div>
     </div>
