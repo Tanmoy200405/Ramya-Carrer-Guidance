@@ -7,9 +7,9 @@ const Home = () => {
       {/* 🏛️ Heritage Header Image Section */}
       <div className="w-full h-[55vh] lg:h-[65vh] relative overflow-hidden">
          <img 
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=100" 
-            className="w-full h-full object-cover scale-105" 
-            alt="Students Collaborating" 
+            src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=1920&q=100" 
+            className="w-full h-full object-cover object-center scale-105" 
+            alt="Knowledge and Education" 
          />
          {/* Academic Overlay */}
          <div className="absolute inset-0 bg-[var(--primary)]/65 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-6 sm:p-10">
