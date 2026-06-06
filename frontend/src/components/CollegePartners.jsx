@@ -4,6 +4,12 @@ import { collegeData } from "../Data/CollegeData";
 const CollegePartners = () => {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
+  const scrollRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+  
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -12,19 +18,60 @@ const CollegePartners = () => {
           setIsInView(true);
         }
       },
-      { threshold: 0.1 } // Start when 10% of the section is visible
+      { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
+
+  useEffect(() => {
+    let animationFrameId;
+    const scrollContainer = scrollRef.current;
+    
+    const scrollStep = () => {
+      if (scrollContainer && !isHovered && isInView && !isDragging.current) {
+        scrollContainer.scrollLeft += 0.5; 
+        
+        // Loop back when reaching halfway
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+          scrollContainer.scrollLeft -= scrollContainer.scrollWidth / 2;
+        }
+      }
+      animationFrameId = requestAnimationFrame(scrollStep);
+    };
+
+    if (isInView) {
+      animationFrameId = requestAnimationFrame(scrollStep);
+    }
+    
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isHovered, isInView]);
+
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    startX.current = e.pageX - scrollRef.current.offsetLeft;
+    scrollLeft.current = scrollRef.current.scrollLeft;
+  };
+
+  const handleMouseLeave = () => {
+    isDragging.current = false;
+    setIsHovered(false);
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5; 
+    if (scrollRef.current) scrollRef.current.scrollLeft = scrollLeft.current - walk;
+  };
 
   return (
     <section ref={sectionRef} className="w-full py-8 md:py-12 bg-white relative overflow-hidden border-t border-gray-100">
@@ -53,25 +100,44 @@ const CollegePartners = () => {
       </div>
 
       {/* 🔹 SLIDER */}
-      <div className="relative w-full flex overflow-hidden">
-        {/* We double the list inside a flex container that animates completely */}
-        <div className={`flex w-max gap-6 hover:[animation-play-state:paused] ${isInView ? 'animate-scroll' : ''}`}>
+      <div className="relative w-full overflow-hidden">
+        <div 
+          ref={scrollRef}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={handleMouseLeave}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          onTouchStart={() => setIsHovered(true)}
+          onTouchEnd={() => setIsHovered(false)}
+          className="flex w-full gap-6 overflow-x-auto select-none cursor-grab active:cursor-grabbing pb-4"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {/* Hide the scrollbar in webkit browsers using inline style or global css. Here we rely on tailwind or style. */}
+          <style>{`
+            .overflow-x-auto::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
           {[...collegeData, ...collegeData, ...collegeData, ...collegeData].map((college, index) => (
             <a
               href={college.officialSite}
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="flex items-center gap-4 px-6 py-5 bg-white border border-gray-100 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] min-w-[320px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 group cursor-pointer"
+              onClick={(e) => { if(isDragging.current) e.preventDefault(); }}
+              className="flex items-center gap-4 px-6 py-5 bg-white border border-gray-100 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.02)] min-w-[320px] hover:shadow-[0_15px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-500 group cursor-pointer flex-shrink-0"
+              draggable="false"
             >
               <div className="h-18 w-18 flex-shrink-0 flex items-center justify-center p-2 bg-gray-50/50 rounded-xl group-hover:bg-white transition-colors duration-500">
                 <img
                   src={college.logo}
                   alt={college.name}
-                  className="h-full w-full object-contain transition-all duration-500 scale-100"
+                  className="h-full w-full object-contain transition-all duration-500 scale-100 pointer-events-none"
+                  draggable="false"
                 />
               </div>
-              <div className="flex flex-col overflow-hidden">
+              <div className="flex flex-col overflow-hidden pointer-events-none">
                 <p className="text-[14px] font-bold text-[var(--primary)] leading-snug line-clamp-2 mb-1">
                   {college.name}
                 </p>
