@@ -7,9 +7,9 @@ const Home = () => {
       {/* 🏛️ Heritage Header Image Section */}
       <div className="w-full h-[55vh] lg:h-[65vh] relative overflow-hidden">
          <img 
-            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=100" 
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=100" 
             className="w-full h-full object-cover scale-105" 
-            alt="Classic University Campus" 
+            alt="Students Collaborating" 
          />
          {/* Academic Overlay */}
          <div className="absolute inset-0 bg-[var(--primary)]/65 backdrop-blur-[1px] flex flex-col items-center justify-center text-center p-6 sm:p-10">
@@ -63,9 +63,9 @@ const Home = () => {
             {/* Right Features Grid */}
             <div className="grid grid-cols-1 gap-5 lg:gap-8 animate-fadeUp">
                {[
-                 { title: "100% Free Guidance", desc: "Expert counselling without any hidden consultation fees." },
-                 { title: "Direct College Tie-Ups", desc: "We are direct partners with over 50+ premium institutions." },
-                 { title: "Expert Admission Support", desc: "From application to enrollment, we handle the details." }
+                 { title: "Explore Courses", desc: "Scroll down to discover our comprehensive range of premium courses." },
+                 { title: "Submit Enquiry", desc: "Select your desired path and fill out the quick enquiry form." },
+                 { title: "We Handle The Rest", desc: "Our expert counselors will call you and handle the admission process." }
                ].map((item, i) => (
                   <div key={i} className="flex items-start gap-6 p-6 sm:p-8 bg-[#FDFDFD] hover:bg-[var(--tertiary)]/5 active:bg-[var(--tertiary)]/10 transition-all duration-300 border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.04)] lg:shadow-none group active:scale-[0.98] cursor-pointer rounded-xl lg:rounded-none">
                      <div className="text-3xl lg:text-4xl font-serif text-[var(--tertiary)] opacity-80 lg:opacity-30 group-hover:opacity-100 transition-opacity">0{i+1}</div>
