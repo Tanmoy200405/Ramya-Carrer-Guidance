@@ -435,7 +435,7 @@ const CourseCard = ({ course, isActive, onLearnMore }) => {
           className={`text-xs sm:text-sm font-bold tracking-[0.15em] uppercase transition-colors flex items-center gap-3
                           ${isActive ? 'text-white' : 'text-[var(--primary)]'}`}
         >
-           LEARN MORE
+           ENQUIRE
            <span className={`h-[1px] transition-all duration-500
                           ${isActive ? 'bg-white w-12' : 'bg-[var(--primary)] w-8'}`}></span>
         </button>

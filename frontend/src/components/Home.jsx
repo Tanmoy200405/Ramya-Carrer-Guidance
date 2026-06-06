@@ -7,7 +7,7 @@ const Home = () => {
       {/* 🏛️ Heritage Header Image Section */}
       <div className="w-full h-[55vh] lg:h-[65vh] relative overflow-hidden">
          <img 
-            src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80" 
+            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=100" 
             className="w-full h-full object-cover scale-105" 
             alt="Classic University Campus" 
          />
