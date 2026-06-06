@@ -21,7 +21,7 @@ import seacomLogo from "../assets/college-logos/seacom skill university logo.jpg
 import iiasLogo from "../assets/college-logos/international institute of advance studies logo.png";
 import nifLogo from "../assets/college-logos/nig global kolkata logo.svg";
 import ileadLogo from "../assets/college-logos/ilead.png";
-import bhawanipurLogo from "../assets/college-logos/bhawanipur global campus logo.svg";
+import bhawanipurLogo from "../assets/college-logos/bwanipur education society logo.jpeg";
 
 import sitmLogo from "../assets/college-logos/sitm logo.png";
 import mrGroupLogo from "../assets/college-logos/Mr group logo.png";
@@ -42,7 +42,7 @@ export const collegeData = [
     location: "Kolkata, West Bengal",
     type: "Private College",
     logo: bhawanipurLogo,
-    officialSite: "https://www.thebges.edu.in"
+    officialSite: "https://bhawanipurglobal.edu.in/"
   },
   {
     name: "Adamas University",

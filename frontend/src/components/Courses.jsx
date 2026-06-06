@@ -142,7 +142,7 @@ const CourseModal = ({ course, onClose }) => {
                   className="flex-1 flex items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 bg-[#25D366] text-white font-bold rounded-xl hover:shadow-[0_10px_20px_-5px_#25D366] transition-all duration-300 text-sm sm:text-base"
                 >
                   <FaWhatsapp className="text-lg sm:text-xl" />
-                  GET FREE COUNSELLING
+                  FILL THE FORM
                 </button>
                 <button 
                   onClick={onClose}
@@ -435,7 +435,7 @@ const CourseCard = ({ course, isActive, onLearnMore }) => {
           className={`text-xs sm:text-sm font-bold tracking-[0.15em] uppercase transition-colors flex items-center gap-3
                           ${isActive ? 'text-white' : 'text-[var(--primary)]'}`}
         >
-           ENQUIRE
+           CLICK HERE TO ENQUIRE
            <span className={`h-[1px] transition-all duration-500
                           ${isActive ? 'bg-white w-12' : 'bg-[var(--primary)] w-8'}`}></span>
         </button>
