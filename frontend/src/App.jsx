@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import LandingPage from './pages/LandingPage'
+import Preloader from './components/Preloader'
 import Lenis from 'lenis'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -7,6 +8,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -33,6 +36,7 @@ const App = () => {
 
   return (
     <>
+      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
       <div className="">
         <LandingPage />
       </div>
